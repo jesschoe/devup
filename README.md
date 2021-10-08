@@ -3,7 +3,9 @@
 
 
 ## Project Description
+
 DevUp is an e-commerce application that allows IT professionals to improve the quality of their work space by providing them with the latest tech gadgets. On the home screen users are given different categories to explore including furniture, accessories, and additional gear. After choosing a category, users get access to its full library of items, where they can compare gadgets based on price and other characteristics. Once a user finds an item that they like,they can get detailed information on it before adding it to their favorites.
+
 
 
 ## Wireframes
@@ -32,12 +34,18 @@ MongoDB is returning the data for this base as follows:
 ### MVP
 
 
+
 #### MVP
 - Set up and deploy backend to heroku
 - Set up and deploy front end to netlify
 - Full CRUD on backend and front end
 - Authentication
 - Responsive styling
+
+#### MVP
+
+- 
+
 
 ## Project Schedule
 
@@ -48,7 +56,11 @@ MongoDB is returning the data for this base as follows:
 |Oct 9-10 | Pseudocode / structure components and set up backend  | Incomplete
 |Oct 10 | Initial Clickable Model  | incomplete
 |Oct 11| functional screens | Incomplete
+
 |Oct 12| syling and cleaning code | Incomplete
+
+|Oct 12| syling and cleaning code | Complete
+
 |Oct 13| Styling MVP| Incomplete
 |Oct 14| Post MVP | Incomplete
 |Oct 15| Post MVP | Incomplete
@@ -58,6 +70,7 @@ MongoDB is returning the data for this base as follows:
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
+
 | Proposal Approval         |    H     |      1hr       |           |         |
 | Create Database           |    H     |      3hr       |           |         |
 | Set up Routes/Controllers for Backend|    H   | 3hrs   |           |         |
@@ -75,6 +88,26 @@ MongoDB is returning the data for this base as follows:
 | Post MVP                  |    L     |  3hrs  |           |         |
 | Debug/clean up code       |    H     |      3hrs      |           |         |
 | Total                     |          |to MVP 53hrs    |           |         |
+
+| Proposal                  |    H     |      1hr       |           |         |
+| Proposal                  |    H     |      1hr       |           |         |
+| Set up Routes/Controllers for Backend|    H     |      1hr       |           |         |
+| Seed Data                 |    H     |      2hr       |           |         |
+| Set up/test all API calls |    H     |      3hrs      |           |         |
+| Create top10 component    |    H     |      3hrs      |           |         |
+| Create details component  |    H     |      3hr       |           |         |
+| Create submit component   |    H     |      3hrs      |           |         |
+| Create vote component     |    H     |      3hrs      |           |         |
+| Structure/Basic styling   |    H     |      3hrs      |           |         |
+| CSS Components            |    H     |      3hrs      |           |         |
+| Create Review Component   |    M     |      5hrs      |           |         |
+| Edit/Delete Reviews       |    L     |      5hrs      |           |         |
+| Style Review Component    |    M     |      3hrs      |           |         |
+| Advanced CSS              |    L     |      3hrs      |           |         |
+| Sort reviews and restrict edit/delete|    L  |  3hrs  |           |         |
+| Create modals             |    L     |      3hrs      |           |         |
+| Total                     |          |to MVP 26hrs    |           |         |
+
 
 ## Code Snippet
 
