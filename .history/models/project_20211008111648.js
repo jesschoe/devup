@@ -5,11 +5,11 @@ const Product = new Schema(
   {
     name: { type: String, required: true },
     category: { type: String, required: true },
-    keywords: { type: String, required: true },
+    keywords: { type: String, required: false },
     imgURL: { type: String, required: true },
     description: { type: String, required: true },
-    price: { type: String, required: true },
-    productURL: { type: String, required: true }
+    price: { type: String, required: true }
+    product: { type: String, required: true }
   },
   { timestamps: true }
 )
