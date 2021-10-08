@@ -9,7 +9,7 @@ const User = new Schema(
     },
     email: { type: String, required: true },
     password_digest: { type: String, required: true, select: false },
-    admin: {type: Boolean, required: true},
+    
   },
   { timestamps: true }
 )
