@@ -13,11 +13,8 @@ export const getProducts = async (req, res) => {
 export const getProduct = async (req, res) => {
   try {
     const { id } = req.params
-    const product = await Product.findById(id).populate('userId')
-    if (product) {
-      return res.json(product)
-    }
-    res.status(404).json({ message: 'Product not found!' })
+    const product = await Product.findById(id)
+    return res.json(product)
   } catch (error) {
     console.log(error.message)
     res.status(500).json({ error: error.message })
