@@ -8,7 +8,7 @@ const Product = new Schema(
     keywords: { type: String, required: true },
     imgURL: { type: String, required: true },
     description: { type: String, required: true },
-    details: { type: String, required: true},
+    details: [],
     price: { type: String, required: true },
     productURL: { type: String, required: true }
   },
