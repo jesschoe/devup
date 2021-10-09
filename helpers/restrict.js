@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken'
-const TOKEN_KEY = process.env.TOKEN_KEY || 'areallylonggoodkey'
+
+const TOKEN_KEY = process.env.NODE_ENV === 'production' ? process.env.TOKEN_KEY : 'areallylonggoodkey'
 
 const restrict = (req, res, next) => {
   try {
