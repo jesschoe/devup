@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-// import Layout from '../../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 import { getProducts } from '../../services/products'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
@@ -29,7 +29,7 @@ const Products = () => {
       setApplySort(false)
     }
   return (
-      <div>
+      <Layout>
         <Sort handleSort={handleSort} />
         <div className="flex flex-wrap justify-center items-center">
         {products.map((product,) => {

@@ -4,8 +4,6 @@ import { getProducts } from '../../services/products'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
 import { Link } from "react-router-dom"
-
-
 const Products = () => {
   const [products, setProducts] = useState([])
   const [applySort, setApplySort] = useState(false)
@@ -34,18 +32,20 @@ const Products = () => {
         <div className="flex flex-wrap justify-center items-center">
         {products.map((product,) => {
           return (
+            <>
             <Product
               _id={product._id}
               name={product.name}
               imgURL={product.imgURL}
               price={product.price}
+              <div>
               keywords={product.keywords.map((k) => {
                 return (
-                  <div>
                   <Link>
+                  <div className="flex">
                     #{k}
-                  </Link>
                     </div>
+                  </Link>
                 )
               })}
               key={product._id}
@@ -53,6 +53,7 @@ const Products = () => {
           )
         })}
         </div>
+        </>
       </div>
   )
 }

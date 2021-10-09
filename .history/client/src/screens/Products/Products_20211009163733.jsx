@@ -3,8 +3,6 @@ import { useState, useEffect } from "react"
 import { getProducts } from '../../services/products'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
-import { Link } from "react-router-dom"
-
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -41,11 +39,7 @@ const Products = () => {
               price={product.price}
               keywords={product.keywords.map((k) => {
                 return (
-                  <div>
-                  <Link>
-                    #{k}
-                  </Link>
-                    </div>
+                  "k.keyword"
                 )
               })}
               key={product._id}
