@@ -29,7 +29,7 @@ const Products = () => {
   return (
       <div>
         <Sort handleSort={handleSort} />
-        <div className="flex flex-wrap justify-center items-center">
+        <div>
         {products.map((product,) => {
           return (
             <Product

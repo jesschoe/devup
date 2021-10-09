@@ -29,7 +29,7 @@ const Products = () => {
   return (
       <div>
         <Sort handleSort={handleSort} />
-        <div className="flex flex-wrap justify-center items-center">
+        <div></div>
         {products.map((product,) => {
           return (
             <Product
@@ -42,7 +42,6 @@ const Products = () => {
             />
           )
         })}
-        </div>
       </div>
   )
 }

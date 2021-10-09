@@ -7,8 +7,8 @@ import Sort from '../../components/Sort/Sort'
 const Products = () => {
   const [products, setProducts] = useState([])
   const [applySort, setApplySort] = useState(false)
-  const [sortType, setSortType] = useState('name-ascending')
-
+  const [sortType, setSortType] = useState("name-ascending")
+  
   useEffect(() => {
       const fetchProducts = async () => {
         const allProducts = await getProducts()
@@ -16,20 +16,30 @@ const Products = () => {
       }
       fetchProducts()
     }, [])
-
     const handleSort = (type) => {
       if (type !== '' && type !== undefined) {
         setSortType(type)
       }
+      switch (type) {
+        case 'name-ascending':
+          setSearchResult(AZ(searchResult))
+          break
+        case 'name-descending':
+          setSearchResult(ZA(searchResult))
+          break
+        case 'price-ascending':
+          setSearchResult(lowestFirst(searchResult))
+          break
+        case 'price-descending':
+          setSearchResult(highestFirst(searchResult))
+          break
+        default:
+          break
+      }
     }
-    if (applySort) {
-      handleSort(sortType)
-      setApplySort(false)
-    }
+
   return (
       <div>
-        <Sort handleSort={handleSort} />
-        <div className="flex flex-wrap justify-center items-center">
         {products.map((product,) => {
           return (
             <Product
@@ -42,7 +52,6 @@ const Products = () => {
             />
           )
         })}
-        </div>
       </div>
   )
 }
