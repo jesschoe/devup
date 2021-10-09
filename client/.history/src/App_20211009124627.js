@@ -1,12 +1,12 @@
 import './App.css';
 import { Route } from "react-router-dom"
 import Home from "./screens/Home/Home"
+
 import ProductDetail from "./screens/ProductDetail/ProductDetail"
 import ProductEdit from "./screens/ProductEdit/ProductEdit"
 import ProductCreate from "./screens/ProductCreate/ProductCreate"
 import SignUp from "./screens/SignUp/SignUp"
 import SignIn from "./screens/SignIn/SignIn"
-import Products from './screens/Products/Products';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Home />
       </Route>
       <Route exact path="/products">
-       <Products />
+       <Produc
       </Route>
       <Route path="/products/:id">
         <ProductDetail />

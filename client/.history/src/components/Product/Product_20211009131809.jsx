@@ -6,10 +6,7 @@ const Product = (props) => {
             <Link to={`/products/${props._id}`}>
                 <img src={props.imgUrl} alt="" />
                 <div>{props.name}</div>
-                <div>{props.description}</div>
-                <div>{props.details}</div>
-                <div>{props.productURL}</div>
-                <div>{`$${props.price}`}</div>
+                {/* <div>{`$${props.price}`}</div> */}
             </Link>
         </>
     )

@@ -10,6 +10,7 @@ const Products = () => {
       const fetchProducts = async () => {
         const allProducts = await getProducts()
         setProducts(allProducts)
+        console.log(allProducts)
       }
       fetchProducts()
     }, [])
@@ -26,7 +27,6 @@ const Products = () => {
               details={product.details}
               imgURL={product.imgURL}
               price={product.price}
-              category={product.category}
               key={index}
             />
           )

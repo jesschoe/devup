@@ -1,6 +1,7 @@
 import './App.css';
 import { Route } from "react-router-dom"
 import Home from "./screens/Home/Home"
+
 import ProductDetail from "./screens/ProductDetail/ProductDetail"
 import ProductEdit from "./screens/ProductEdit/ProductEdit"
 import ProductCreate from "./screens/ProductCreate/ProductCreate"
@@ -15,7 +16,7 @@ function App() {
         <Home />
       </Route>
       <Route exact path="/products">
-       <Products />
+       <Products
       </Route>
       <Route path="/products/:id">
         <ProductDetail />

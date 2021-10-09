@@ -22,7 +22,7 @@ const Products = () => {
             <Product
               _id={product._id}
               name={product.name}
-              description={product.description}
+              description=""{product.description}
               details={product.details}
               imgURL={product.imgURL}
               price={product.price}
