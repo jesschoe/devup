@@ -18,7 +18,7 @@ const products = [
 {
   name: "Steel Series Apex Pro Keyboard",
   category: "gear",
-  keywords: "keyboard, gaming",
+  keywords: ["gear", "keyboard"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727697/devup/steelseriesapexpro_rph3hn.jpg",
   description:
     "Upgrade your accuracy with this SteelSeries Apex Pro mechanical gaming keyboard. Advanced OmniPoint switches make inputs feel fast and fluid, and the adjustable design lets you change the actuation distance to suit your play style. This SteelSeries Apex Pro mechanical gaming keyboard has a sturdy aluminum alloy frame that stands up to heavy use.",
@@ -35,7 +35,7 @@ const products = [
 {
   name: "Mount-It! Single Monitor Arm Desk Mount ",
   category: "accessories",
-  keywords: "mount, monitor",
+  keywords: ["accessories", "desk", "monitor"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727271/devup/mountit-monitor-arm_sh5bbf.jpg",
   description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
   details: [
@@ -50,7 +50,7 @@ const products = [
 {
   name: "UXL Desk Mat",
   category: "accessories",
-  keywords: "desk, mat",
+  keywords: ["accessories", "desk", "mat"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727267/devup/deskmat_q7tovg.jpg",
   description: "We were tired of the low quality desk mats out there so we designed and made our own. Made from vegan leather, it's been designed to be clean and minimal. It will protect your desk whilst also making it easier to use your mouse.",
   details: [
@@ -66,7 +66,7 @@ const products = [
 {
   name: "Airpod Max",
   category: "gear",
-  keywords: "headphones",
+  keywords: ["gear", "headphones"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633728954/devup/airpods_u4jmhg.png",
   description: "A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.",
   details: [
@@ -81,7 +81,7 @@ const products = [
 {
   name: "MacBook Air 13' M1",
   category: "gear",
-  keywords: "laptop",
+  keywords: ["gear", "laptop"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633729056/devup/macbook-air-og-202011_sxzbg7.jpg",
   description: "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning. The longest battery life ever in a MacBook Air. And a silent, fanless design. This much power has never been this ready to go.",
   details: [
@@ -96,7 +96,7 @@ const products = [
 {
   name: "EUREKA ERGONOMIC L Shaped Desk",
   category: "furniture",
-  keywords: "desk, gaming",
+  keywords: ["furniture", "desk"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633728743/devup/Ldesk_zq6mom.jpg",
   description: "The Eureka L60 Gaming Desk is the perfect choice for your gaming command center. The L60 boasts a sleek 60 inch L-shaped carbon fiber textured desktop. The L-shaped gaming surface has plenty of space for your gaming monitors, gaming consoles, gaming keyboard, and any other gaming gear you may have.",
   details: [
