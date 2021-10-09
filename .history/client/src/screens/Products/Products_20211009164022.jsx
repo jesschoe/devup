@@ -4,8 +4,6 @@ import { getProducts } from '../../services/products'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
 import { Link } from "react-router-dom"
-
-
 const Products = () => {
   const [products, setProducts] = useState([])
   const [applySort, setApplySort] = useState(false)
@@ -42,10 +40,8 @@ const Products = () => {
               keywords={product.keywords.map((k) => {
                 return (
                   <div>
-                  <Link>
                     #{k}
-                  </Link>
-                    </div>
+                  </div>
                 )
               })}
               key={product._id}

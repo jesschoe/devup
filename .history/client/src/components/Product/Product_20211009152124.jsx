@@ -9,7 +9,6 @@ const Product = (props) => {
                 <img className="w-full bg-cover"src={props.imgURL} alt={props._id} />
                 <div>{props.name}</div>
                 <div>{`$${props.price}`}</div>
-                <div>{props.keywords}</div>
             </Link>
             </div>
             </div>
