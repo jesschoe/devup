@@ -1,15 +1,13 @@
+import React from 'react'
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import Layout from "../../components/Layout/Layout"
 import { getProduct } from "../../services/products"
 
-
-export default function ProductDetail() {
+const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const { id } = useParams();
-
-
 
   useEffect(() => {
     const fecthProduct = async () => {
@@ -33,9 +31,7 @@ export default function ProductDetail() {
           <h1 className="product-name">{product.name}</h1>
           <h1 className="product-description">{product.description}</h1>
           <ul className="product-details">{product.details.map((detail) => {
-            return (
-              <li>{detail}</li>
-            )
+            return <li>{detail}</li>
           })}</ul>
           <div className="product-detail-buttons">
             <button className="see-more-button"><Link to={"/products"}>See More</Link></button>
@@ -49,5 +45,13 @@ export default function ProductDetail() {
       </div>
     </Layout>
   )
-
 }
+
+export default ProductDetail
+
+
+
+
+
+
+
