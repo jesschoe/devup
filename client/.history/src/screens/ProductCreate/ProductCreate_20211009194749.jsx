@@ -111,6 +111,6 @@ export default function ProductCreate() {
         </button>
       </form>
     </Layout>
-
+>>>>>>> dev
   )
 }

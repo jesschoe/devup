@@ -110,7 +110,10 @@ export default function ProductCreate() {
           Upload
         </button>
       </form>
+<<<<<<< bj-dev
+    </div>
+=======
     </Layout>
-
+>>>>>>> dev
   )
 }

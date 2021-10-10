@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './ProductEdit.css'
 import { useParams, Redirect } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
 import { getProduct, updateProduct } from '../../services/products'
@@ -9,8 +10,6 @@ const ProductEdit = (props) => {
     description: '',
     imgURL: '',
     price: '',
-    details: [],
-    keywords: []
   })
 
   const [isUpdated, setUpdated] = useState(false)
@@ -87,24 +86,6 @@ const ProductEdit = (props) => {
             placeholder='Description'
             value={product.description}
             name='description'
-            required
-            onChange={handleChange}
-          />
-          <textarea
-            className='textarea-description'
-            rows={10}
-            cols={78}
-            placeholder='Description'
-            value={product.details}
-            name='detaisl'
-            required
-            onChange={handleChange}
-          />
-          <input
-            className='input-price'
-            placeholder='Price'
-            value={product.keywords}
-            name='keywords'
             required
             onChange={handleChange}
           />

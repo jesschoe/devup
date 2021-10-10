@@ -96,15 +96,15 @@ const ProductEdit = (props) => {
             cols={78}
             placeholder='Description'
             value={product.details}
-            name='detaisl'
+            name='description'
             required
             onChange={handleChange}
           />
           <input
             className='input-price'
             placeholder='Price'
-            value={product.keywords}
-            name='keywords'
+            value={product.price}
+            name='price'
             required
             onChange={handleChange}
           />

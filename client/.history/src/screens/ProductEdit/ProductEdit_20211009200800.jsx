@@ -96,7 +96,7 @@ const ProductEdit = (props) => {
             cols={78}
             placeholder='Description'
             value={product.details}
-            name='detaisl'
+            name='description'
             required
             onChange={handleChange}
           />
