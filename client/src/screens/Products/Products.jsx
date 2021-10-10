@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react"
-import Layout from '../../components/Layout/Layout'
+import { Link } from "react-router-dom"
 import { getProducts } from '../../services/products'
+import Layout from '../../components/Layout/Layout'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
-import { Link } from "react-router-dom"
-
+import Categories from "../../components/Categories/Categories"
+import { priceLowHigh, priceHighLow } from "../../utils/sort"
 
 const Products = () => {
   const [products, setProducts] = useState([])
+  const [category, setCategory] = useState([])
   const [applySort, setApplySort] = useState(false)
-  const [sortType, setSortType] = useState('name-ascending')
+  const [sortType, setSortType] = useState('price-low-high')
 
   useEffect(() => {
       const fetchProducts = async () => {
         const allProducts = await getProducts()
         setProducts(allProducts)
+        setCategory(allProducts)
       }
       fetchProducts()
     }, [])
@@ -23,17 +26,35 @@ const Products = () => {
       if (type !== '' && type !== undefined) {
         setSortType(type)
       }
+      if (type === 'price-low-high') {
+        setCategory(priceLowHigh(category))
+      } else if (type === 'price-high-low') {
+        setCategory(priceHighLow(category))
+      }
     }
+
     if (applySort) {
       handleSort(sortType)
       setApplySort(false)
     }
+
+    const handleCategories = (option) => {
+      const results = products.filter((product) => 
+        product.category.includes(option)
+        
+      )
+      setCategory(results)
+      setApplySort(true)
+    }
+
+
   return (
     <Layout>
-        <Sort className=""handleSort={handleSort} />
+        <Categories handleCategories={handleCategories}/>
+        <Sort className="" handleSort={handleSort} />
         <div>
         <div className="flex flex-wrap justify-center items-center">
-        {products.map((product) => {
+        {category.map((product) => {
           return (
             <Product
               _id={product._id}
