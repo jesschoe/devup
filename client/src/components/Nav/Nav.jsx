@@ -4,26 +4,26 @@ import MobileNav from "../MobileNav/MobileNav";
 const Nav = () => {
   return (
     <div>
-      <nav className="bg-black dark:bg-gray-800  shadow ">
+      <nav className="bg-black">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             <div className="w-full justify-between flex items-center">
-              <NavLink className="h-8 w-8" to="/">
-                <img src="../../public/logo.png" alt="Devup Logo" />{" "}
+              <NavLink className="h-8" to="/">
+                <img src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="Devup Logo" />{" "}
               </NavLink>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <NavLink
-                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
                     to="/signup"
                   >
                     Sign Up
                   </NavLink>
                   <NavLink
-                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/signin">
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/signin">
                     Sign In
                   </NavLink>
-                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/products">
+                  <NavLink className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/products">
                     Products
                   </NavLink>
                 </div>

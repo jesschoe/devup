@@ -31,7 +31,7 @@ const Products = () => {
   return (
     <Layout>
         <Sort className=""handleSort={handleSort} />
-        <div className=" bg-gray-700">
+        <div>
         <div className="flex flex-wrap justify-center items-center">
         {products.map((product) => {
           return (
