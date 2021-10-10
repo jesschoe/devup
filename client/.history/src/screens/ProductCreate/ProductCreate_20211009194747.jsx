@@ -110,7 +110,8 @@ export default function ProductCreate() {
           Upload
         </button>
       </form>
-    </Layout>
 
+    </Layout>
+>>>>>>> dev
   )
 }

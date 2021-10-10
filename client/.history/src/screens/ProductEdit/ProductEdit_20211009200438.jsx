@@ -90,24 +90,6 @@ const ProductEdit = (props) => {
             required
             onChange={handleChange}
           />
-          <textarea
-            className='textarea-description'
-            rows={10}
-            cols={78}
-            placeholder='Description'
-            value={product.details}
-            name='detaisl'
-            required
-            onChange={handleChange}
-          />
-          <input
-            className='input-price'
-            placeholder='Price'
-            value={product.keywords}
-            name='keywords'
-            required
-            onChange={handleChange}
-          />
           <button type='submit' className='save-button'>
             Save
           </button>

@@ -39,6 +39,7 @@ export default function ProductCreate() {
   return (
 
     <Layout>
+>>>>>>> dev
       <form className='create-product' onSubmit={handleSubmit}>
         <input
           className='input-name'
@@ -110,7 +111,10 @@ export default function ProductCreate() {
           Upload
         </button>
       </form>
+<<<<<<< bj-dev
+    </div>
+=======
     </Layout>
-
+>>>>>>> dev
   )
 }

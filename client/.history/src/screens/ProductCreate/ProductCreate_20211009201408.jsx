@@ -31,7 +31,7 @@ export default function ProductCreate() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await createProduct(product)
-    console.log(res)
+
     history.push("/products");
   }
 
