@@ -61,7 +61,7 @@ const SignIn = (props) => {
             Sign In
           </div>
           <div class="p-6 mt-8">
-            <form onsubmit={onSignIn}>
+            <form>
               <div class="flex flex-col mb-2">
                 <div class=" relative ">
                   <input
@@ -81,20 +81,23 @@ const SignIn = (props) => {
                     required
                     type="password"
                     value={password}
-                    onChange={handleChange}
                     placeholder="password"
+                    onChange={handleChange}
                   />
                 </div>
               </div>
               <div class="flex w-full my-4">
-                <div
-                  class="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                <button
                   type="submit"
+                  class="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
                 >
-                  {renderError()}
-                </div>
+                  Sign In
+                </button>
               </div>
             </form>
+            <div class="flex items-center justify-center mt-6">
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -103,3 +106,30 @@ const SignIn = (props) => {
 };
 
 export default SignIn;
+
+{
+  /* <div className="min-h-screen min-w-max flex justify-center items-center text-center">
+      <div className="text-black block">Sign In</div>
+      <form onSubmit={onSignIn}>
+        <label>Email</label>
+        <input
+          required
+          type="text"
+          name="email"
+          value={username}
+          placeholder="username"
+          onChange={handleChange}
+        />
+        <label>Password</label>
+        <input
+          required
+          name="password"
+          value={password}
+          type="password"
+          placeholder="password"
+          onChange={handleChange}
+        />
+        {renderError()}
+      </form>
+    </div> */
+}

@@ -103,3 +103,30 @@ const SignIn = (props) => {
 };
 
 export default SignIn;
+
+{
+  /* <div className="min-h-screen min-w-max flex justify-center items-center text-center">
+      <div className="text-black block">Sign In</div>
+      <form onSubmit={onSignIn}>
+        <label>Email</label>
+        <input
+          required
+          type="text"
+          name="email"
+          value={username}
+          placeholder="username"
+          onChange={handleChange}
+        />
+        <label>Password</label>
+        <input
+          required
+          name="password"
+          value={password}
+          type="password"
+          placeholder="password"
+          onChange={handleChange}
+        />
+        {renderError()}
+      </form>
+    </div> */
+}
