@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import "./ProductDetail.css"
 import Layout from "../../components/Layout/Layout"
-import { getProduct } from "../../services/posts"
+import { getProduct } from "../../services/products"
 
 
 export default function ProductDetail() {
@@ -19,6 +18,7 @@ export default function ProductDetail() {
       setIsLoaded(true)
     }
     fecthProduct();
+    // eslint-disable-next-line
   }, { id })
 
 
