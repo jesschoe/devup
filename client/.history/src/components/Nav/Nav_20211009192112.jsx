@@ -9,7 +9,7 @@ const Nav = () => {
           <div class="flex items-center justify-between h-16">
             <div class="w-full justify-between flex items-center">
               <NavLink className="h-8 w-8" to="/">
-                <img src="../../../public/logo.png" alt="Devup Logo" />{" "}
+                <img src="/Users/aaron/hummingbird/devup/client/public/logo.png" alt="Devup Logo" />{" "}
               </NavLink>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">

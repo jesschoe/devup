@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import MobileNav from "../MobileNav/MobileNav";
 
 const Nav = () => {
   return (
@@ -25,11 +24,8 @@ const Nav = () => {
                   >
                     Sign In
                   </NavLink>
-                  <NavLink
-                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
-                    to="/products"
-                  >
-                    Products
+                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium" to="/products">
+                  Products
                   </NavLink>
                 </div>
               </div>
@@ -54,7 +50,23 @@ const Nav = () => {
           </div>
         </div>
         <div class="md:hidden">
-          <MobileNav />
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium" to="/signup">
+                    Sign Up
+                  </NavLink>
+                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium" to="/signin">
+                    Sign In
+                  </NavLink>
+                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium" to="/signup">
+                    
+                  </NavLink>
+            <a
+              class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              href="/#"
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </nav>
     </div>
@@ -62,3 +74,26 @@ const Nav = () => {
 };
 
 export default Nav;
+
+// <nav className="bg-black text-white">
+// <div className="max-w-7xl mx-auto px-8">
+//   <div class="flex items-center justify-between h-16">
+//     <div class="w-full justify-between flex items-center">
+//       <NavLink className="h-8 w-8" to="/">
+//         <img src="../../../public/logo.png" alt="Devup Logo" />
+//       </NavLink>
+//       <div className="links">
+//         <NavLink className="link" to="/signup">
+//           Sign Up
+//         </NavLink>
+//         <NavLink className="link" to="/signin">
+//           Sign In
+//         </NavLink>
+//         <NavLink className="link" to="/products">
+//           Products
+//         </NavLink>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+// </nav>

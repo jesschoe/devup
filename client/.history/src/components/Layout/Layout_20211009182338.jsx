@@ -1,14 +1,14 @@
-import Footer from '../Footer/Footer'
+import React from 'react'
 import Nav from '../Nav/Nav'
 
 const Layout = (props) => {
   return (
     <div>
       <Nav />
-      <div className="">
+      <div>
         {props.children}
       </div>
-      <Footer />
+      <footer
     </div>
   )
 }

@@ -29,10 +29,9 @@ const Products = () => {
       setApplySort(false)
     }
   return (
-    <Layout>
-        <Sort className=""handleSort={handleSort} />
-        <div className=" bg-black">
-        <div className="flex flex-wrap justify-center items-center">
+      <Layout>
+        <Sort className="text-white bg-black"handleSort={handleSort} />
+        <div className="flex flex-wrap justify-center items-center bg-black">
         {products.map((product,) => {
           return (
             <Product
@@ -54,7 +53,6 @@ const Products = () => {
           )
         })}
         </div>
-      </div>
       </Layout>
   )
 }

@@ -54,8 +54,8 @@ const Products = () => {
           )
         })}
         </div>
-      </div>
       </Layout>
+      </div>
   )
 }
 

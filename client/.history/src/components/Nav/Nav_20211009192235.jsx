@@ -54,7 +54,7 @@ const Nav = () => {
           </div>
         </div>
         <div class="md:hidden">
-          <MobileNav />
+          <MobileNav
         </div>
       </nav>
     </div>

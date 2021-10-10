@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import MobileNav from "../MobileNav/MobileNav";
 
 const Nav = () => {
   return (
@@ -54,7 +53,7 @@ const Nav = () => {
           </div>
         </div>
         <div class="md:hidden">
-          <MobileNav />
+          
         </div>
       </nav>
     </div>

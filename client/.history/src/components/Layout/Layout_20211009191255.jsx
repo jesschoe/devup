@@ -5,7 +5,7 @@ const Layout = (props) => {
   return (
     <div>
       <Nav />
-      <div className="">
+      <div className="bg-black">
         {props.children}
       </div>
       <Footer />

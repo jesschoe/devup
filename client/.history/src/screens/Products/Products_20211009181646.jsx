@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Layout from '../../components/Layout/Layout'
+// import Layout from '../../components/Layout/Layout'
 import { getProducts } from '../../services/products'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
@@ -29,9 +29,8 @@ const Products = () => {
       setApplySort(false)
     }
   return (
-    <Layout>
-        <Sort className=""handleSort={handleSort} />
-        <div className=" bg-black">
+      <Layout>
+        <Sort handleSort={handleSort} />
         <div className="flex flex-wrap justify-center items-center">
         {products.map((product,) => {
           return (
@@ -54,8 +53,7 @@ const Products = () => {
           )
         })}
         </div>
-      </div>
-      </Layout>
+      <>
   )
 }
 
