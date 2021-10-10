@@ -33,7 +33,7 @@ const Products = () => {
         <Sort className=""handleSort={handleSort} />
         <div className=" bg-gray-700">
         <div className="flex flex-wrap justify-center items-center">
-        {products.map((product) => {
+        {products.map((product,) => {
           return (
             <Product
               _id={product._id}
@@ -43,7 +43,7 @@ const Products = () => {
               keywords={product.keywords.map((k) => {
                 return (
                   <div>
-                  <Link to=''>
+                  <Link>
                     #{k}
                   </Link>
                     </div>

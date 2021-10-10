@@ -20,10 +20,15 @@ const Nav = () => {
                     Sign Up
                   </NavLink>
                   <NavLink
-                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/signin">
+                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
+                    to="/signin"
+                  >
                     Sign In
                   </NavLink>
-                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/products">
+                  <NavLink
+                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
+                    to="/products"
+                  >
                     Products
                   </NavLink>
                 </div>
@@ -33,7 +38,7 @@ const Nav = () => {
               <div className="ml-4 flex items-center md:ml-6"></div>
             </div>
             <div className="-mr-2 flex md:hidden">
-              <button className="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+              <button className="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                 <svg
                   width="20"
                   height="20"

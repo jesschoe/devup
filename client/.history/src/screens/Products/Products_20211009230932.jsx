@@ -43,7 +43,7 @@ const Products = () => {
               keywords={product.keywords.map((k) => {
                 return (
                   <div>
-                  <Link to=''>
+                  <Link>
                     #{k}
                   </Link>
                     </div>

@@ -3,19 +3,30 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="px-3 py-8 bg-black text-2 text-gray-500 transition-colors duration-200">
+      <footer className="px-3 py-8 bg-black text-2 text-gray-500 dark:text-gray-200 transition-colors duration-200">
         <div className="flex flex-col">
           <div className="md:hidden mt-7 mx-auto w-11 h-px rounded-full"></div>
           <div class="mt-4 md:mt-0 flex flex-col md:flex-row">
             <nav className="flex-1 flex flex-col items-center justify-center md:items-end md:border-r border-gray-100 md:pr-5">
-              <Link to="/" className="hover:text-white">
+              <Link to='/'
+                className="hover:text-gray-700 dark:hover:text-white"
+              >
                 About us
               </Link>
-              <Link className="hover:text-white">Contacts</Link>
+              <Link
+                className="hover:text-gray-700 dark:hover:text-white"
+              >
+                Contacts
+              </Link>
+              <Link
+                className="hover:text-gray-700 dark:hover:text-white"
+              ></Link>
             </nav>
             <div className="md:hidden mt-4 mx-auto w-11 h-px rounded-full"></div>
             <div className="mt-4 md:mt-0 flex-1 flex items-center justify-center md:border-r border-gray-100 hover:text-white">
-              <Link to="/">DevUp</Link>
+                <Link to="/">
+              DevUp
+              </Link>
             </div>
             <div className="md:hidden mt-4 mx-auto w-11 h-px rounded-full "></div>
             <div className="mt-7 md:mt-0 flex-1 flex flex-col items-center justify-center md:items-start md:pl-5">
