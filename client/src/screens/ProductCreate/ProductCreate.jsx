@@ -9,10 +9,10 @@ export default function ProductCreate() {
   const [product, setProduct] = useState({
     name: "",
     category: "",
-    keywords: "",
+    keywords: [],
     imgURL: "",
     description: "",
-    details: "",
+    details: [],
     price: "",
     productURL: "",
   })
@@ -36,7 +36,7 @@ export default function ProductCreate() {
 
 
   return (
-    <Layout>
+    <div>
       <form className='create-product' onSubmit={handleSubmit}>
         <input
           className='input-name'
@@ -108,6 +108,6 @@ export default function ProductCreate() {
           Upload
         </button>
       </form>
-    </Layout>
+    </div>
   )
 }
