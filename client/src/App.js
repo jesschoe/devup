@@ -1,5 +1,7 @@
 import './App.css';
-import { Route } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { Route, Redirect } from "react-router-dom"
+import { verifyUser } from './services/users';
 import Home from "./screens/Home/Home"
 import ProductDetail from "./screens/ProductDetail/ProductDetail"
 import ProductEdit from "./screens/ProductEdit/ProductEdit"
@@ -9,28 +11,38 @@ import SignIn from "./screens/SignIn/SignIn"
 import Products from './screens/Products/Products';
 
 function App() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
+
   return (
     <div className="App">
       <Route exact path="/">
-        <Home />
+        <Home user={user} />
       </Route>
       <Route exact path="/products">
-        <Products />
+        <Products user={user} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail />
+        <ProductDetail user={user}/>
       </Route>
       <Route path="/products/:id/edit">
-        <ProductEdit />
+        {user ? <ProductEdit user={user} /> : <Redirect to='/products/:id' />}
       </Route>
       <Route path="/add-product">
-        <ProductCreate />
+        {user ? <ProductCreate user={user} /> : <rRedirect to='signup' />}
       </Route>
       <Route path="/signup">
-        <SignUp />
+        <SignUp setUser={setUser}/>
       </Route>
       <Route path="/signin">
-        <SignIn />
+        <SignIn setUser={setUser}/>
       </Route>
     </div>
   );

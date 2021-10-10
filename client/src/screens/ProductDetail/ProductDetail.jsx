@@ -39,7 +39,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className="product-detail-column-two">
-          <img className="product-title" src={product.imgURl} alt={product.title} />
+          <img className="product-title" src={product.imgUR} alt={product.title} />
           <h1 className="product-price">{product.price}</h1>
         </div>
       </div>
