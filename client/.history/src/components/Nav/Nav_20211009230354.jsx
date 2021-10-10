@@ -33,7 +33,7 @@ const Nav = () => {
               <div className="ml-4 flex items-center md:ml-6"></div>
             </div>
             <div className="-mr-2 flex md:hidden">
-              <button className="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+              <button className="text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                 <svg
                   width="20"
                   height="20"

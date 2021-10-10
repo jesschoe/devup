@@ -7,12 +7,12 @@ const Nav = () => {
       <nav className="bg-black dark:bg-gray-800  shadow ">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="w-full justify-between flex items-center">
+            <div class="w-full justify-between flex items-center">
               <NavLink className="h-8 w-8" to="/">
                 <img src="../../../public/logo.png" alt="Devup Logo" />{" "}
               </NavLink>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+              <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
                   <NavLink
                     className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
                     to="/signup"
@@ -20,25 +20,30 @@ const Nav = () => {
                     Sign Up
                   </NavLink>
                   <NavLink
-                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/signin">
+                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
+                    to="/signin"
+                  >
                     Sign In
                   </NavLink>
-                  <NavLink className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"to="/products">
+                  <NavLink
+                    className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium"
+                    to="/products"
+                  >
                     Products
                   </NavLink>
                 </div>
               </div>
             </div>
-            <div className="block">
-              <div className="ml-4 flex items-center md:ml-6"></div>
+            <div class="block">
+              <div class="ml-4 flex items-center md:ml-6"></div>
             </div>
-            <div className="-mr-2 flex md:hidden">
-              <button className="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+            <div class="-mr-2 flex md:hidden">
+              <button class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                 <svg
                   width="20"
                   height="20"
                   fill="currentColor"
-                  className="h-8 w-8"
+                  class="h-8 w-8"
                   viewBox="0 0 1792 1792"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -48,7 +53,7 @@ const Nav = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden">
+        <div class="md:hidden">
           <MobileNav />
         </div>
       </nav>

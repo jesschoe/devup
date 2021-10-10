@@ -10,12 +10,14 @@ const MobileNav = () => {
       </NavLink>
       <NavLink
         className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium block"
-        to="/signin">
+        to="/signin"
+>
         Sign In
       </NavLink>
       <NavLink
         className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium block"
-        to="/products">
+        to="/products"
+      >
         Products
       </NavLink>
     </div>
