@@ -35,7 +35,7 @@ const products = [
 {
   name: "Mount-It! Single Monitor Arm Desk Mount ",
   category: "accessories",
-  keywords: ["accessories", "desk", "monitor"],
+  keywords: ["accessories", "desk", "stand"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727271/devup/mountit-monitor-arm_sh5bbf.jpg",
   description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
   details: [
@@ -106,7 +106,83 @@ const products = [
   price: "289.99",
   productURL: "https://eurekaergonomic.com/l60l-b/"
 },
-
+{
+  name: "Nouhaus Ergo3D Ergonomic Office Chair",
+  category: "furniture",
+  keywords: ["furniture", "chair"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633880998/devup/nouhauchair_ociuc6.png",
+  description: "For a chair that goes beyond ergonomics, one that conforms to your body and your life, take a seat with the Ergo3D. The 4D-Orbital Armrests glide and tilt to a perfect and precise position, while our unique ‘Just-For-Me’ Lumbar Support System adjusts and hugs your back into perfect alignment to reduce compression and pain. The Ergo3D is so comfy, you’ll forget you’re even working.he Eureka L60 Gaming Desk is the perfect choice for your gaming command center. The L60 boasts a sleek 60 inch L-shaped carbon fiber textured desktop. The L-shaped gaming surface has plenty of space for your gaming monitors, gaming consoles, gaming keyboard, and any other gaming gear you may have.",
+  details: [
+    "The E4D-Orbital Armrests: Glide forwards, back, sideways, up and down, and pivots left and right.", 
+    "‘Just-For-Me’ Lumbar Support: Adjusts as you shift position for optimized back support.",
+    "Breathable Soft HD ElastoMesh: Optimal airflow to reduce sweating and sticking.",
+    "2D-Adjust Headrest: Adjusts up and down with ErgoTilt for ideal neck placement",
+    "135 Degree Super Lounge Recline With Recline Lock"
+  ],
+  price: "309.99",
+  productURL: "https://www.nouhaus.com/collections/sale/products/ergo3d?gclid=Cj0KCQjwnoqLBhD4ARIsAL5JedKv73MEDw_Tk_hIXhZ613Lal0KDgOBDYGt9YHjYEghzkeNiYcUrpUAaApoLEALw_wcB"
+},
+{
+  name: 'Apex Elite Standing Desk 71"',
+  category: "furniture",
+  keywords: ["furniture", "desk"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633881800/devup/apexelitedesk_gdtyxp.jpg",
+  description: "Debuted in 2015 and for six years running, the Elite Series has been the favorite of reviewers and users. Many improvements have been made over the years. The desk has become more stable, quieter. We’ve updated packaging to reduce shipping damages to a minimum.",
+  details: [
+    "One-piece solid 1” thick top. At 71” wide and 33” deep (27.6” at mid-section), it can hold up to three screens and is one of the largest standing desks in the market.", 
+    "With a fast speed of 1.5” per second, the desk can move anywhere between 29” to 49” with a push of a button. The load capacity is 235 lbs.",
+    "Originally sold separately, we are now including a full-size cable management tray. Measuring 35.5” x 5.5”, the tray is large enough to hide all cables that comes with the desk and has space for one 12-outlet power strip and a few power adapters."
+  ],
+  price: "679.99",
+  productURL: "https://www.apexdesk.com/collections/elite-71-series/products/elite-series-71-electric-height-adjustable-standing-desk"
+},
+{
+  name: "minder Laptop Tower Stand",
+  category: "accessories",
+  keywords: ["accessories", "stand"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633882216/devup/laptopstand_ekqwln.png",
+  description: "A laptop stand will enable you to transform your desk to an effective workspace so you can work comfortably, whether you’re sitting, standing or changing positions frequently.",
+  details: [
+    "This vertical laptop stand positions your laptop at eye level while sitting or standing, which improves your posture and saves you from back and neck pains.", 
+    "Work in your most comfortable position for a boost of productivity and comfort. You can modify and set the height of this adjustable laptop stand according to your preferences and needs.",
+    "It’s built for stability so height adjustments do not compromise durability. This stand is built with strong materials and a sturdy structure so your laptop and other devices remain safe while you’re working or studying.",
+    "Setting up a workstation is now easier than ever, even when you’re on the go! This laptop holder is detachable, collapses and easily fits into a backpack or messenger bag, so you can bring it anywhere and everywhere with ease."
+  ],
+  price: "64.99",
+  productURL: "https://www.obvus.me/products/laptoptower"
+},
+{
+  name: "Taotronics LED Desk Lap",
+  category: "accessories",
+  keywords: ["accessories", "lighting"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633882586/devup/taotronicslamp_tq2zzu.jpg",
+  description: "13 Eye-caring table lamp with USB Charging port.",
+  details: [
+    "Wonderfully Gentle on the Eyes: Shines a flicker-free light that brightens your space without harming your eyes; ideal for reading, working and studying.", 
+    "Endless Lighting Possibilities: Create the perfect ambience with our LED desk lamp’s unique combination of 5 color modes & 7 brightness levels.",
+    "Functional USB charging port: Don’t sacrifice charging for lighting - built-in USB port keeps your phone at a full charge & within reach.",
+    "Adjustable Design: Freedom to cast the perfect spotlight, tilt the head up 135 degrees & swivel 90 degrees; the base tilts down to 150 degrees & swivels 45 degrees.",
+    "Energy Efficient LED: Featuring outstanding environmental performance, switch your traditional desk lamp to ours to help reduce the electricity bill by up to 75%."
+  ],
+  price: "39.99",
+  productURL: "https://www.taotronics.com/products/tt-dl13-led-desk-lamp"
+},
+{
+  name: "Autonomous ErgoChair Pro",
+  category: "furniture",
+  keywords: ["furniture", "chair"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633883540/devup/ergochairpro_rtpmgn.png",
+  description: "Every element you see and feel is engineered to increase mobility and eliminate pain. Because everything starts with well-being.",
+  details: [
+    "Featuring adjustable tension and 22° of recline. Lockable across 5 key positions, each designed to keep your spine stable and support your lumbar area. And it’s wrapped in ultra-breathable woven mesh, for gentle posture-perfecting resistance.", 
+    "Back and seat move in tandem at an ergonomic 2:1 ratio, so you can recline and stretch without putting pressure on your legs, thighs, and lower back. End your day with as much energy as when you started.",
+    "The flexible lumbar cushion protects the natural curvature of your spine and eases both pain and stiffness. Instead of dictating the inward curve, it responds to the unique shape of your body to provide tailored support.",
+    "Both height and angle are adjustable, so you can stop straining your neck. Explore 45° of flexibility to find ideal support – whether you’re writing at your desk, looking at a monitor, or leaning back to relax.",
+    "10° of adjustable tilt allows you to properly align your sacrum and ensure even muscle development in your back, side, and core. And it keeps your pelvis in a neutral position to prevent future postural issues."
+  ],
+  price: "499.00",
+  productURL: "https://www.autonomous.ai/office-chairs/ergonomic-chair?option20=53&purchase_method=1"
+},
 ]
 
 await Product.insertMany(products)
