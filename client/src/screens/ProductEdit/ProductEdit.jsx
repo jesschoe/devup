@@ -10,10 +10,11 @@ export default function ProductEdit() {
   const [product, setProduct] = useState({
     name: "",
     category: "",
-    keywords: "",
+
+    keywords: [],
     imgURL: "",
     description: "",
-    details: "",
+    details: [],
     price: "",
     productURL: "",
   })
@@ -33,7 +34,8 @@ export default function ProductEdit() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await updateProduct(id, product)
-    history.push(`/products/${id}`);
+    // update the link
+    history.push(`/products/`);
   }
 
 
@@ -47,12 +49,21 @@ export default function ProductEdit() {
 
   const handleDelete = () => {
     deleteProduct(id);
-    history.push("/");
+
+    history.push("/products");
+
   }
 
 
 
   return (
+
+    <div>
+      <div className='edit-products'>
+        <form className='create-product' onSubmit={handleSubmit}>
+          <input
+            className='input-name'
+
     <Layout>
       <div className='edit-products'>
         <div className='image-container'>
@@ -75,6 +86,7 @@ export default function ProductEdit() {
         <form className='edit-product' onSubmit={handleSubmit}>
           <input
             className='edit-name'
+
             name='name'
             value={product.name}
             placeholder='Name'
@@ -83,7 +95,6 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className='edit-category'
             name='category'
             value={product.category}
             placeholder='Categorty'
@@ -91,7 +102,6 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className='edit-keywords'
             name='keywords'
             value={product.keywords}
             placeholder='Keywords'
@@ -99,7 +109,7 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className='edit-imgURL'
+
             name='imgURL'
             value={product.imgURL}
             placeholder='ImgUrl'
@@ -107,7 +117,7 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <textarea
-            className='edit-textarea-description'
+
             name='description'
             value={product.description}
             placeholder='Description'
@@ -116,7 +126,7 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className="edit-details"
+
             name='details'
             value={product.details}
             placeholder='Product Details'
@@ -124,7 +134,7 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className='edit-price'
+
             name='price'
             value={product.price}
             placeholder='$'
@@ -132,7 +142,6 @@ export default function ProductEdit() {
             onChange={handleChange}
           />
           <input
-            className='edit-productURL'
             name='productURL'
             value={product.productURL}
             placeholder='Product Url'
@@ -146,6 +155,8 @@ export default function ProductEdit() {
           </div>
         </form>
       </div>
+
     </Layout>
+
   )
 }
