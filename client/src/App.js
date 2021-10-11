@@ -30,19 +30,19 @@ function App() {
         <Products user={user} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail user={user}/>
+        <ProductDetail user={user} />
       </Route>
       <Route path="/products/:id/edit">
         {user ? <ProductEdit user={user} /> : <Redirect to='/products/:id' />}
       </Route>
       <Route path="/add-product">
-        {user ? <ProductCreate user={user} /> : <rRedirect to='signup' />}
+        {user ? <ProductCreate user={user} /> : <Redirect to='signup' />}
       </Route>
       <Route path="/signup">
-        <SignUp setUser={setUser}/>
+        <SignUp setUser={setUser} />
       </Route>
       <Route path="/signin">
-        <SignIn setUser={setUser}/>
+        <SignIn setUser={setUser} />
       </Route>
     </div>
   );
