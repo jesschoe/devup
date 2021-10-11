@@ -7,10 +7,11 @@ const SignUp = (props) => {
   const history = useHistory()
 
   const [form, setForm] = useState({
+    name: "",
     username: "",
     email: "",
     password: "",
-    passwordConfirmation: "",
+    confirmPassword: "",
     isError: false,
     errorMsg: "",
   });
@@ -27,19 +28,21 @@ const SignUp = (props) => {
         try {
           const user = await signUp(form)
           setUser(user)
-          history.push('/')
+          history.push('/signin')
         } catch (error) {
           console.error(error)
           setForm({
-            username: '',
-            email: '',
-            password: '',
+            name: "",
+            username: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
             isError: true,
             errorMsg: 'Sign Up Details Invalid',
           })
         }
       }
-      const { username, email, password } = form
+      const { name, username, email, password, confirmPassword } = form
 
       const renderError = () => {
         const toggleForm = form.isError ? 'danger' : ''
@@ -66,6 +69,21 @@ const SignUp = (props) => {
             <form onSubmit={onSignUp}>
               <div className="flex flex-col mb-2">
                 <div className=" relative ">
+                  <label>Name</label>
+                  <input
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    required
+                    type="text"
+                    name='name'
+                    value={name}
+                    onChange={handleChange}
+                    placeholder="name"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col mb-2">
+                <div className=" relative ">
+                  <label>Username</label>
                   <input
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     required
@@ -79,6 +97,7 @@ const SignUp = (props) => {
               </div>
               <div className="flex flex-col mb-2">
                 <div className=" relative ">
+                  <label>Email</label>
                   <input
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     required
@@ -92,12 +111,27 @@ const SignUp = (props) => {
               </div>
               <div className="flex flex-col mb-2">
                 <div className=" relative ">
+                  <label>Password</label>
                   <input
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     required
                     type="password"
-                    name='password'
+                    name="password"
                     value={password}
+                    onChange={handleChange}
+                    placeholder="password"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col mb-2">
+                <div className=" relative ">
+                  <label>Confirm Password</label>
+                  <input
+                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    required
+                    type="password"
+                    name="confirmPassword"
+                    value={confirmPassword}
                     onChange={handleChange}
                     placeholder="password"
                   />
