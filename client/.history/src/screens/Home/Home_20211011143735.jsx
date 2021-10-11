@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Layout>
       <div className="min-h-screen min-w-max flex items-center justify-center ">
-        <div className="grid grid-cols-3 w-full gap-y-6">
+        <div className="grid grid-cols-3 w-full gap-">
           <div className="bg-black p-10 col-span-3">
               <div className=" bg-hero bg-cover bg-center h-96 flex items-center justify-end">
                 <div className="pr-10">
