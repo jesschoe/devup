@@ -112,9 +112,11 @@ export default function ProductCreate() {
           rows={3}
           onChange={handleChange}
         />
-        <input
+        <textarea
           className="input-details"
           name='details'
+          rows={10}
+          cols={78}
           value={product.details}
           placeholder='Product Details'
           required
