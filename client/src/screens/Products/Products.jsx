@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { getProducts } from '../../services/products'
 import Layout from '../../components/Layout/Layout'
 import Product from '../../components/Product/Product'
@@ -14,69 +14,70 @@ const Products = () => {
   const [sortType, setSortType] = useState('price-low-high')
 
   useEffect(() => {
-      const fetchProducts = async () => {
-        const allProducts = await getProducts()
-        setProducts(allProducts)
-        setCategory(allProducts)
-      }
-      fetchProducts()
-    }, [])
-
-    const handleSort = (type) => {
-      if (type !== '' && type !== undefined) {
-        setSortType(type)
-      }
-      if (type === 'price-low-high') {
-        setCategory(priceLowHigh(category))
-      } else if (type === 'price-high-low') {
-        setCategory(priceHighLow(category))
-      }
+    const fetchProducts = async () => {
+      const allProducts = await getProducts()
+      setProducts(allProducts)
+      setCategory(allProducts)
     }
+    fetchProducts()
+  }, [])
 
-    if (applySort) {
-      handleSort(sortType)
-      setApplySort(false)
+  const handleSort = (type) => {
+    if (type !== '' && type !== undefined) {
+      setSortType(type)
     }
+    if (type === 'price-low-high') {
+      setCategory(priceLowHigh(category))
+    } else if (type === 'price-high-low') {
+      setCategory(priceHighLow(category))
+    }
+  }
 
-    const handleCategories = (option) => {
-      const results = products.filter((product) => 
-        product.category.includes(option)
-        
-      )
-      setCategory(results)
-      setApplySort(true)
-    }
+  if (applySort) {
+    handleSort(sortType)
+    setApplySort(false)
+  }
+
+  const handleCategories = (option) => {
+    const results = products.filter((product) =>
+      product.category.includes(option)
+
+    )
+    setCategory(results)
+    setApplySort(true)
+  }
 
 
   return (
     <Layout>
-        <Categories handleCategories={handleCategories}/>
-        <Sort className="" handleSort={handleSort} />
-        <div>
+      <Categories handleCategories={handleCategories} />
+      <Sort className="" handleSort={handleSort} />
+      <div>
         <div className="flex flex-wrap justify-center items-center">
-        {category.map((product) => {
-          return (
-            <Product
-              _id={product._id}
-              name={product.name}
-              imgURL={product.imgURL}
-              price={product.price}
-              keywords={product.keywords.map((k) => {
-                return (
-                  <div>
-                  <Link to=''>
-                    #{k}
-                  </Link>
-                    </div>
-                )
-              })}
-              key={product._id}
-            />
-          )
-        })}
+          {category.map((product) => {
+            return (
+              <div key={product._id}>
+                <Product
+                  _id={product._id}
+                  name={product.name}
+                  imgURL={product.imgURL}
+                  price={product.price}
+                  keywords={product.keywords.map((k, i) => {
+                    return (
+                      <div key={i}>
+
+
+                        #{k}
+
+                      </div>
+                    )
+                  })}
+                /> </div>
+            )
+          })}
         </div>
       </div>
-      </Layout>
+    </Layout>
   )
 }
 
