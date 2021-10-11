@@ -14,7 +14,6 @@ const Products = () => {
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
   const {cat}= useParams();
-  console.log(cat)
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts()

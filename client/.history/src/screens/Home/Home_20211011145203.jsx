@@ -37,7 +37,7 @@ const Home = () => {
                   <br />
                   for comfort and style
                 </h2>
-                <Link to="/products/" params={{ cat: "furniture" }}>
+                <Link to="/products/" params={{ category: "furniture" }}>
                   <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">
                     Browse Furniture
                   </button>
