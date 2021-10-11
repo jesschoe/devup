@@ -26,7 +26,29 @@ The following wireframes depict desktop screen layouts for the app.
 MongoDB is returning the data for this base as follows:
 
 ```
-
+{
+"_id": "6164550bcab4fdb3706f69ad",
+"name": "Steel Series Apex Pro Keyboard",
+"category": "gear",
+"keywords": [
+"gear",
+"keyboard"
+],
+"imgURL": "https://res.cloudinary.com/devupapp/image/upload/v1633727697/devup/steelseriesapexpro_rph3hn.jpg",
+"description": "Upgrade your accuracy with this SteelSeries Apex Pro mechanical gaming keyboard. Advanced OmniPoint switches make inputs feel fast and fluid, and the adjustable design lets you change the actuation distance to suit your play style. This SteelSeries Apex Pro mechanical gaming keyboard has a sturdy aluminum alloy frame that stands up to heavy use.",
+"details": [
+"First-of-its kind adjustable mechanical switches for customizable per-key sensitivity",
+"Faster response, 5x faster actuation, and 2x durability",
+"OLED Smart Display delivers information straight from games and apps",
+"Series 5000 Aircraft grade aluminum frame",
+"Detachable soft touch magnetic wrist rest"
+],
+"price": "199.99",
+"productURL": "https://steelseries.com/gaming-keyboards/apex-pro",
+"__v": 0,
+"createdAt": "2021-10-11T15:15:23.418Z",
+"updatedAt": "2021-10-11T15:15:23.418Z"
+},
 
 
 ```
@@ -42,7 +64,7 @@ MongoDB is returning the data for this base as follows:
 - Authentication
 - Responsive styling
 
-#### MVP
+#### PMVP
 
 - 
 
@@ -52,15 +74,12 @@ MongoDB is returning the data for this base as follows:
 |  Day | Deliverable | Status
 |---|---| ---|
 |Oct 7| Wire Frame building and approval | Complete
-|Oct 8| Component  hierarchy/ Repo Approval | Incomplete
-|Oct 9-10 | Pseudocode / structure components and set up backend  | Incomplete
-|Oct 10 | Initial Clickable Model  | incomplete
-|Oct 11| functional screens | Incomplete
-
+|Oct 8| Component  hierarchy/ Repo Approval | Complete
+|Oct 9-10 | Pseudocode / structure components and set up backend  | Complete
+|Oct 10 | Initial Clickable Model  | Complete
+|Oct 11| functional screens | Complete
 |Oct 12| syling and cleaning code | Incomplete
-
 |Oct 12| syling and cleaning code | Complete
-
 |Oct 13| Styling MVP| Incomplete
 |Oct 14| Post MVP | Incomplete
 |Oct 15| Post MVP | Incomplete
@@ -70,14 +89,13 @@ MongoDB is returning the data for this base as follows:
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-
-| Proposal Approval         |    H     |      1hr       |           |         |
-| Create Database           |    H     |      3hr       |           |         |
-| Set up Routes/Controllers for Backend|    H   | 3hrs   |           |         |
-| Create and Seed Data      |    H     |      2hr       |           |         |
-| Set up front end          |    H     |      4hrs      |           |         |
-| Set up front end routes   |    H     |      4hrs      |           |         |
-| Create/test API calls     |    H     |      3hrs      |           |         |
+| Proposal Approval         |    H     |      1hr       |     1hr      |    1hr     |
+| Create Database           |    H     |      3hr       |     3hrs      |   3hrs      |
+| Set up Routes/Controllers for Backend|    H   | 3hrs   |    3hrs       |   3hrs      |
+| Create and Seed Data      |    H     |      2hr       |     3hrs      |     3hrs    |
+| Set up front end          |    H     |      4hrs      |     4hrs      |     4hrs    |
+| Set up front end routes   |    H     |      4hrs      |      4hrs     |     4hrs    |
+| Create/test API calls     |    H     |      3hrs      |     3hrs      |     3hrs    |
 | Create products component |    H     |      3hr       |           |         |
 | Create details component  |    H     |      3hrs      |           |         |
 | Create/Edit component     |    H     |      3hrs      |           |         |
@@ -85,29 +103,9 @@ MongoDB is returning the data for this base as follows:
 | Basic styling             |    H     |      6hrs      |           |         |
 | Categories/sorting        |    M     |      3hrs      |           |         |
 | Advanced CSS              |    H     |      6hrs      |           |         |
-| Post MVP                  |    L     |  3hrs  |           |         |
+| Post MVP                  |    L     |      3hrs      |           |         |
 | Debug/clean up code       |    H     |      3hrs      |           |         |
 | Total                     |          |to MVP 53hrs    |           |         |
-
-| Proposal                  |    H     |      1hr       |           |         |
-| Proposal                  |    H     |      1hr       |           |         |
-| Set up Routes/Controllers for Backend|    H     |      1hr       |           |         |
-| Seed Data                 |    H     |      2hr       |           |         |
-| Set up/test all API calls |    H     |      3hrs      |           |         |
-| Create top10 component    |    H     |      3hrs      |           |         |
-| Create details component  |    H     |      3hr       |           |         |
-| Create submit component   |    H     |      3hrs      |           |         |
-| Create vote component     |    H     |      3hrs      |           |         |
-| Structure/Basic styling   |    H     |      3hrs      |           |         |
-| CSS Components            |    H     |      3hrs      |           |         |
-| Create Review Component   |    M     |      5hrs      |           |         |
-| Edit/Delete Reviews       |    L     |      5hrs      |           |         |
-| Style Review Component    |    M     |      3hrs      |           |         |
-| Advanced CSS              |    L     |      3hrs      |           |         |
-| Sort reviews and restrict edit/delete|    L  |  3hrs  |           |         |
-| Create modals             |    L     |      3hrs      |           |         |
-| Total                     |          |to MVP 26hrs    |           |         |
-
 
 ## Code Snippet
 
