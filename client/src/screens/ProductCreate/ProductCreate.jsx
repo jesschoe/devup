@@ -3,13 +3,15 @@ import Layout from "../../components/Layout/Layout"
 import { useHistory } from "react-router-dom"
 import { createProduct } from "../../services/products"
 
+let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
 export default function ProductCreate() {
+
+  const [loading, setLoading] = useState(false);
 
   const [product, setProduct] = useState({
     name: "",
     category: "",
-
     keywords: [],
     imgURL: "",
     description: "",
@@ -25,8 +27,11 @@ export default function ProductCreate() {
     setProduct({
       ...product,
       [name]: value
+
     })
   }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -35,11 +40,44 @@ export default function ProductCreate() {
     history.push("/products");
   }
 
+  const uploadImage = async (e) => {
+    const files = e.target.files;
+    const data = new FormData()
+    data.append("file", files[0])
+    data.append("upload_preset", "itemImages");
+    setLoading(true);
+
+    const res = await fetch(`${cloudinaryUrl}/image/upload`,
+      {
+        method: 'POST',
+        body: data
+      })
+    const file = await res.json();
+    setProduct({
+      ...product,
+      imgURL: file.secure_url
+    });
+    setLoading(false);
+    console.log(file);
+  }
+
 
   return (
 
     <Layout>
       <form className='create-product' onSubmit={handleSubmit}>
+        <div className="uploadImage">
+          <input
+            type="file" name="file" placeholder="Upload Image" onChange={uploadImage}
+          />
+          {
+            loading ? (
+              <h2>Loading...</h2>
+            ) : (
+              <img src={product.imgURL} style={{ width: "300px" }} alt="product" />
+            )
+          }
+        </div>
         <input
           className='input-name'
           name='name'
@@ -62,14 +100,6 @@ export default function ProductCreate() {
           name='keywords'
           value={product.keywords}
           placeholder='Keywords'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-imgURL'
-          name='imgURL'
-          value={product.imgURL}
-          placeholder='ImgUrl'
           required
           onChange={handleChange}
         />
