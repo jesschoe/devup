@@ -9,7 +9,7 @@ const AboutUs = () => {
           <div>
             <img
               className="object-cover w-24 h-24 rounded-full shadow"
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+              src="https://media-exp1.licdn.com/dms/image/C5603AQHNFuqLr5Luzw/profile-displayphoto-shrink_200_200/0/1628515508367?e=1639612800&v=beta&t=08PiaCFjTaTKORtUGI78qU8HtXwZq2GaOXNoVk4-I7E"
               alt="Person"
             />
             <div className="flex flex-col justify-center mt-2">
@@ -24,7 +24,7 @@ const AboutUs = () => {
           <div>
             <img
               className="object-cover w-24 h-24 rounded-full shadow"
-              src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="https://ca.slack-edge.com/T0351JZQ0-U02B5PMG43B-1330ac72c757-512"
               alt="Person"
             />
             <div className="flex flex-col justify-center mt-2">
@@ -40,7 +40,7 @@ const AboutUs = () => {
           <div>
             <img
               className="object-cover w-24 h-24 rounded-full shadow"
-              src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="https://ca.slack-edge.com/T0351JZQ0-U028123V9D4-2bd3f6eb0cb3-512"
               alt="Person"
             />
             <div className="flex flex-col justify-center mt-2">
@@ -55,7 +55,7 @@ const AboutUs = () => {
           <div>
             <img
               className="object-cover w-24 h-24 rounded-full shadow"
-              src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="https://media-exp1.licdn.com/dms/image/C4D03AQG_y2Av5r-80g/profile-displayphoto-shrink_200_200/0/1633124185752?e=1639612800&v=beta&t=jybH114XMAoDjs9DIyWMNMUe4TfPSGBt-4wA-aOAqUY"
               alt="Person"
             />
             <div className="flex flex-col justify-center mt-2">
