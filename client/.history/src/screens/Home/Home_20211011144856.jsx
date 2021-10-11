@@ -35,7 +35,7 @@ const Home = () => {
                     <h1 className="text-orange text-5xl text-left">Gear Up</h1>
                     <h2 className="text-white text-lg">Maximize your productivity<br/>with the latest tech gear</h2>
                     <Link to='/products'>
-                    <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">Browse Gear</button>
+                    <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">Browse all</button>
                     </Link>
                     </div>
               </div>
@@ -46,7 +46,7 @@ const Home = () => {
                     <h1 className="text-orange text-5xl text-left">Level Up</h1>
                     <h2 className="text-white text-lg">Optimize your space<br/>for efficiency and convienience</h2>
                     <Link to='/products'>
-                    <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">Browse Accessories</button>
+                    <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">Browse all</button>
                     </Link>
                     </div>
               </div>
