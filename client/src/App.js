@@ -8,6 +8,7 @@ import ProductEdit from "./screens/ProductEdit/ProductEdit"
 import ProductCreate from "./screens/ProductCreate/ProductCreate"
 import SignUp from "./screens/SignUp/SignUp"
 import SignIn from "./screens/SignIn/SignIn"
+import AboutUs from "./screens/AboutUs/AboutUs"
 import Products from './screens/Products/Products';
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
       </Route>
       <Route path="/signin">
         <SignIn setUser={setUser} />
+      </Route>
+      <Route exact path="/aboutus">
+        <AboutUs />
       </Route>
     </div>
   );

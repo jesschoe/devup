@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="md:hidden mt-7 mx-auto w-11 h-px rounded-full"></div>
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row">
             <nav className="flex-1 flex flex-col items-center justify-center md:items-end md:border-r border-gray-100 md:pr-5">
-              <Link to="/" className="hover:text-white">
+              <Link to="/aboutus" className="hover:text-white">
                 About us
               </Link>
               <Link to="/" className="hover:text-white">Contacts</Link>
