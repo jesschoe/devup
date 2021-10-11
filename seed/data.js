@@ -183,6 +183,40 @@ const products = [
   price: "499.00",
   productURL: "https://www.autonomous.ai/office-chairs/ergonomic-chair?option20=53&purchase_method=1"
 },
+{
+  name: "SAMSON Pro USB Microphone",
+  category: "gear",
+  keywords: ["gear", "microphone"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633956541/devup/G-Track-Pro-HO-display_lmbacq.jpg",
+  description: 'The G-Track Pro is a USB microphone designed to provide the high audio quality to podcasters, streamers, singer/songwriters and content creators. The dual 1" condenser capsules capture all the detail and nuance of your voice elevating the quality of your recording, live stream or broadcast. The G-Track Pro combines 24-bit digital recording resolution with the flexibility of three mic pickup pattens and a 1/4" audio input for professional sounding recordings, no matter the application.',
+  details: [
+    "All-in-one professional USB microphone with audio interface",
+    'Dual 1" condenser capsules',
+    "Cardioid, bidirectional and omnidirectional pickup patterns",
+    "24-bit resolution",
+    '1/4" instrument input for connecting guitars or line level devices',
+    '1/8" stereo headphone output for zero-latency monitoring'
+  ],
+  price: "129.00",
+  productURL: "http://www.samsontech.com/samson/products/microphones/usb-microphones/gtrackpro/"
+},
+{
+  name: 'Sceptre Curved 30" LED Monitor',
+  category: "gear",
+  keywords: ["gear", "monitor"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633956956/devup/sceptremonitor_pjcblf.jpg",
+  description: "Sceptre's 21:9 UltraWide curved monitor immerses the attention of a larger audience with a 30 inch screen that accurately resembles the contours of the human eye.",
+  details: [
+    '30" 21: 9 curved monitor 2560 x 1080P resolution',
+    "Dp up to 85Hz refresh rate/ HDMI up to 85Hz refresh rate",
+    "AdaptiveSync",
+    "FPS and RTS are Sceptre custom set Display settings",
+    "Blue light shift reduce your MONITORS Blue light to protect you from eye fatigue", 
+    "Edgeless design"
+  ],
+  price: "399.99",
+  productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html"
+},
 ]
 
 await Product.insertMany(products)
