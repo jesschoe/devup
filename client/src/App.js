@@ -30,6 +30,9 @@ function App() {
       <Route exact path="/products">
         <Products user={user} />
       </Route>
+      <Route exact path="/products/:cat">
+        <Products user={user} />
+      </Route>
       <Route exact path="/products/:id">
         <ProductDetail user={user} />
       </Route>
