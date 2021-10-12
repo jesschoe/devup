@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
-  const cat = ["furniture", "gear", "accessories"]
-
   return (
     <Layout>
       <div className="container" >
@@ -23,7 +21,12 @@ const Home = () => {
                   <br />
                   leads to better code
                 </h2>
-                <Link to="/products">
+                <Link to={{
+                  pathname:"/products",
+                  state:{
+                    cat:""
+                    }
+                }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse all
                   </button>
@@ -42,7 +45,12 @@ const Home = () => {
                   <br />
                   for comfort and style
                 </h2>
-                <Link to={`/products/${cat[0]}`}>
+                <Link to={{
+                  pathname:"/products",
+                  state:{
+                    cat:"furniture"
+                    }
+                }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Furniture
                   </button>
@@ -61,7 +69,12 @@ const Home = () => {
                   <br />
                   with the latest tech gear
                 </h2>
-                <Link to={`/products/${cat[1]}`}>
+                <Link to={{
+                  pathname:"/products",
+                  state:{
+                    cat:"gear"
+                    }
+                }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Gear
                   </button>
@@ -80,7 +93,12 @@ const Home = () => {
                   <br />
                   for efficiency and convienience
                 </h2>
-                <Link to={`/products/${cat[2]}`}>
+                <Link to={{
+                  pathname:"/products",
+                  state:{
+                    cat:"accessories"
+                    }
+                }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Accessories
                   </button>
