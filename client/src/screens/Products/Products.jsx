@@ -60,12 +60,15 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen flex-col justify-center w-full items-center p-20">
-        <div className="flex justify-between w-full text-sm text-orange">
+      <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-y-scroll">
+        <div className="flex-col self-center">
+        <div className="flex justify-between text-sm text-orange ml-24 mr-36">
+          <div className="flex" >
           <Categories handleCategories={handleCategories} />
+          </div>
           <Sort handleSort={handleSort} />
         </div>
-        <div>
+        <div className="w-11/12">
           <div className="flex flex-wrap justify-center items-center">
             {category.map((product) => {
               return (
@@ -86,6 +89,7 @@ const Products = () => {
               )
             })}
           </div>
+        </div>
         </div>
       </div>
     </Layout>
