@@ -43,10 +43,10 @@ const ProductDetail = () => {
             <div class="flex justify-between mt-3 item-center">
                 <h1 class="text-lg font-bold text-white md:text-xl">{`$${product.price}`}</h1>
             </div>
-            <Link to={"/products"}>
+            <Link to="">
                 <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded m-4">See More</button>
                 </Link>
-                <Link to={`/products/${id}/edit`}>
+                <Link to=>
                 <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded ">Edit Product</button>
                 </Link>
         </div>
