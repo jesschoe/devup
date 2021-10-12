@@ -3,16 +3,14 @@ import Nav from '../Nav/Nav'
 
 const Layout = (props) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="w-screen">
-      <Nav />
+    <div className="flex flex-col w-screen min-h-screen">
+      <div className="">
+        <Nav />
       </div>
-      <div className="flex-1 overflow-hidden bg-background">
+      <div className="flex-col justify-center overflow-hidden align-center items-center bg-background">
         {props.children}
       </div>
-      <div>
       <Footer />
-      </div>
     </div>
   )
 }
