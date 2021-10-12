@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
+  const cat = ["furniture", "gear", "accessories"]
+
   return (
     <Layout>
       <div className="min-h-screen min-w-max flex items-center justify-center ">
@@ -37,7 +39,7 @@ const Home = () => {
                   <br />
                   for comfort and style
                 </h2>
-                <Link to="/products/" params={{ cat: "furniture" }}>
+                <Link to={`/products/${cat[0]}`}>
                   <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">
                     Browse Furniture
                   </button>
@@ -54,7 +56,7 @@ const Home = () => {
                   <br />
                   with the latest tech gear
                 </h2>
-                <Link to="/products">
+                <Link to={`/products/${cat[1]}`}>
                   <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">
                     Browse Gear
                   </button>
@@ -71,7 +73,7 @@ const Home = () => {
                   <br />
                   for efficiency and convienience
                 </h2>
-                <Link to="/products">
+                <Link to={`/products/${cat[2]}`}>
                   <button className="flex items-center px-6 text-xl my-4 rounded text-white bg-orange">
                     Browse Accessories
                   </button>

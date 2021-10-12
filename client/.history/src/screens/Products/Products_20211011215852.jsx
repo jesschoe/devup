@@ -52,6 +52,7 @@ const Products = () => {
 
   return (
     <Layout>
+      
       <Categories handleCategories={handleCategories} />
       <Sort className="" handleSort={handleSort} />
       <div>

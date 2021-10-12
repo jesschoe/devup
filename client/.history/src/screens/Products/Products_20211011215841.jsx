@@ -55,7 +55,7 @@ const Products = () => {
       <Categories handleCategories={handleCategories} />
       <Sort className="" handleSort={handleSort} />
       <div>
-        <div className="flex flex-wrap justify-center items-center">
+        <div className="flex flex-wrap justify-center">
           {category.map((product) => {
             return (
               <div key={product._id}>

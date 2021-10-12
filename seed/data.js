@@ -66,7 +66,7 @@ const products = [
 {
   name: "Airpod Max",
   category: "gear",
-  keywords: ["gear", "headphones"],
+  keywords: ["gear", "audio"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633728954/devup/airpods_u4jmhg.png",
   description: "A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.",
   details: [
@@ -186,7 +186,7 @@ const products = [
 {
   name: "SAMSON Pro USB Microphone",
   category: "gear",
-  keywords: ["gear", "microphone"],
+  keywords: ["gear", "audio"],
   imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633956541/devup/G-Track-Pro-HO-display_lmbacq.jpg",
   description: 'The G-Track Pro is a USB microphone designed to provide the high audio quality to podcasters, streamers, singer/songwriters and content creators. The dual 1" condenser capsules capture all the detail and nuance of your voice elevating the quality of your recording, live stream or broadcast. The G-Track Pro combines 24-bit digital recording resolution with the flexibility of three mic pickup pattens and a 1/4" audio input for professional sounding recordings, no matter the application.',
   details: [

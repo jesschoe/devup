@@ -6,15 +6,13 @@ import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
 import Categories from "../../components/Categories/Categories"
 import { priceLowHigh, priceHighLow } from "../../utils/sort"
-import { useParams } from "react-router"
 
 const Products = () => {
   const [products, setProducts] = useState([])
   const [category, setCategory] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
-  const {cat}= useParams();
-  console.log(cat)
+
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts()
