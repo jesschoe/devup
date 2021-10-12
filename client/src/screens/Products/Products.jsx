@@ -14,7 +14,16 @@ const Products = () => {
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
   const location = useLocation()
+
   const { cat } = location.state
+
+
+  let cat = ""
+
+  if (location.state) {
+    cat = location.state.cat
+  }
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -60,9 +69,17 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-y-scroll">
 
+      <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-y-scroll">
         <div className="flex justify-between text-sm text-orange ml-24 mr-36 flex-col">
+        <div className="flex-col self-center">
+          <div className="flex" >
+          <Categories handleCategories={handleCategories} />
+          </div>
+          <Sort handleSort={handleSort} />
+        </div>
+        <div className="w-11/12">
+
           <div className="flex flex-wrap justify-center items-center">
             <div className="w-11/12 self-center">
               <div className="flex justify-between m-4">
