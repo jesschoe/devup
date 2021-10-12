@@ -20,6 +20,9 @@ module.exports = {
       white: '#ffffff',
       black: '#000000'
     },
+    flex: {
+      basis: '1 1 33%',
+    },
   },
   variants: {
     extend: {
