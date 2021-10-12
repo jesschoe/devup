@@ -4,6 +4,10 @@ import Layout from '../../components/Layout/Layout'
 import { getProduct, updateProduct } from '../../services/products'
 
 const ProductEdit = (props) => {
+
+  const [loading, setLoading] = useState(false);
+  let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
+
   const [product, setProduct] = useState({
     name: '',
     description: '',
@@ -38,6 +42,27 @@ const ProductEdit = (props) => {
     setUpdated(updated)
   }
 
+  const uploadImage = async (e) => {
+    const files = e.target.files;
+    const data = new FormData()
+    data.append("file", files[0])
+    data.append("upload_preset", "itemImages");
+    setLoading(true);
+
+    const res = await fetch(`${cloudinaryUrl}/image/upload`,
+      {
+        method: 'POST',
+        body: data
+      })
+    const file = await res.json();
+    setProduct({
+      ...product,
+      imgURL: file.secure_url
+    });
+    setLoading(false);
+    console.log(file);
+  }
+
   if (isUpdated) {
     return <Redirect to={`/products/${id}`} />
   }
@@ -51,16 +76,18 @@ const ProductEdit = (props) => {
             src={product.imgURL}
             alt={product.name}
           />
-          <form onSubmit={handleSubmit}>
+          <div className="uploadImage">
             <input
-              className='edit-input-image-link'
-              placeholder='Image Link'
-              value={product.imgURL}
-              name='imgURL'
-              required
-              onChange={handleChange}
+              type="file" name="file" placeholder="Upload Image" onChange={uploadImage}
             />
-          </form>
+            {
+              loading ? (
+                <h2>Loading...</h2>
+              ) : (
+                <img src={product.imgURL} style={{ width: "300px" }} alt="product" />
+              )
+            }
+          </div>
         </div>
         <form className='edit-form' onSubmit={handleSubmit}>
           <input
