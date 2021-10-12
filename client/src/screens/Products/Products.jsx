@@ -1,28 +1,36 @@
 import { useState, useEffect } from "react"
-// import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import { getProducts } from '../../services/products'
 import Layout from '../../components/Layout/Layout'
 import Product from '../../components/Product/Product'
 import Sort from '../../components/Sort/Sort'
 import Categories from "../../components/Categories/Categories"
 import { priceLowHigh, priceHighLow } from "../../utils/sort"
-import { useParams } from "react-router"
+
 
 const Products = () => {
   const [products, setProducts] = useState([])
   const [category, setCategory] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
-  const {cat}= useParams();
-  console.log(cat)
+  const location = useLocation()
+  const {cat} = location.state
+  
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts()
       setProducts(allProducts)
-      setCategory(allProducts)
+      if (cat.length>0) {
+        const results = allProducts.filter((product) =>
+        product.category.includes(cat))
+        setCategory(results)
+      } else {
+        setCategory(allProducts)
+      }
+
     }
     fetchProducts()
-  }, [])
+  }, [cat])
 
   const handleSort = (type) => {
     if (type !== '' && type !== undefined) {
@@ -68,10 +76,7 @@ const Products = () => {
                   keywords={product.keywords.map((k, i) => {
                     return (
                       <div key={i}>
-
-
                         #{k}
-
                       </div>
                     )
                   })}

@@ -14,16 +14,26 @@ const Nav = () => {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <NavLink
-                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
                     to="/signup"
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
                   >
                     Sign Up
                   </NavLink>
                   <NavLink
-                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/signin">
+                    to="/signin"
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                    >
                     Sign In
                   </NavLink>
-                  <NavLink className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/products">
+                  <NavLink 
+                    to={{
+                      pathname:"/products",
+                      state:{
+                        cat:""
+                      }
+                    }}
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                  >
                     Products
                   </NavLink>
                 </div>
