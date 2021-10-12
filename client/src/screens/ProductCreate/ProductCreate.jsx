@@ -27,14 +27,23 @@ export default function ProductCreate() {
     setProduct({
       ...product,
       [name]: value
-
     })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    const res = await createProduct(product)
-    console.log(res)
+    const array = product.details.split('/n')
+    setProduct({
+      ...product,
+      details: array
+    })
+    console.log(array)
+    console.log(product)
+    addProduct()
+  }
+
+  const addProduct = async () => {
+    await createProduct(product)
     history.push("/products");
   }
 
@@ -56,7 +65,6 @@ export default function ProductCreate() {
       imgURL: file.secure_url
     });
     setLoading(false);
-    console.log(file);
   }
 
 
@@ -64,7 +72,7 @@ export default function ProductCreate() {
 
     <Layout>
       
-        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white overflow-auto">
+        <div className="self-start ml-20 mt-10 mb-2 text-2xl font-black text-white overflow-auto">
               Add Product
         </div>
         <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
