@@ -14,19 +14,24 @@ const Products = () => {
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
   const location = useLocation()
+
+  const { cat } = location.state
+
+
   let cat = ""
 
   if (location.state) {
     cat = location.state.cat
   }
   
+
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts()
       setProducts(allProducts)
-      if (cat.length>0) {
+      if (cat.length > 0) {
         const results = allProducts.filter((product) =>
-        product.category.includes(cat))
+          product.category.includes(cat))
         setCategory(results)
       } else {
         setCategory(allProducts)
@@ -64,37 +69,49 @@ const Products = () => {
 
   return (
     <Layout>
+
       <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-y-scroll">
+        <div className="flex justify-between text-sm text-orange ml-24 mr-36 flex-col">
         <div className="flex-col self-center">
-        <div className="flex justify-between text-sm text-orange ml-24 mr-36">
           <div className="flex" >
           <Categories handleCategories={handleCategories} />
           </div>
           <Sort handleSort={handleSort} />
         </div>
         <div className="w-11/12">
+
           <div className="flex flex-wrap justify-center items-center">
-            {category.map((product) => {
-              return (
-                <div key={product._id}>
-                  <Product
-                    _id={product._id}
-                    name={product.name}
-                    imgURL={product.imgURL}
-                    price={product.price}
-                    keywords={product.keywords.map((k, i) => {
-                      return (
-                        <div key={i}>
-                          #{k}
-                        </div>
-                      )
-                    })}
-                  /> </div>
-              )
-            })}
+            <div className="w-11/12 self-center">
+              <div className="flex justify-between m-4">
+                <div className="flex" >
+                  <Categories handleCategories={handleCategories} />
+                </div>
+                <Sort handleSort={handleSort} />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-11/12">
+              {category.map((product) => {
+                return (
+                  <div key={product._id}>
+                    <Product
+                      _id={product._id}
+                      name={product.name}
+                      imgURL={product.imgURL}
+                      price={product.price}
+                      keywords={product.keywords.map((k, i) => {
+                        return (
+                          <div key={i}>
+                            #{k}
+                          </div>
+                        )
+                      })}
+                    /> </div>
+                )
+              })}
+            </div>
           </div>
         </div>
-        </div>
+
       </div>
     </Layout>
   )
