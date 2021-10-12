@@ -37,7 +37,7 @@ function App() {
         {user ? <ProductEdit user={user} /> : <Redirect to='/products/:id' />}
       </Route>
       <Route path="/add-product">
-        {user ? <ProductCreate user={user} /> : <Redirect to='signup' />}
+        {user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />}
       </Route>
       <Route path="/signup">
         <SignUp setUser={setUser} />

@@ -6,24 +6,34 @@ const Nav = () => {
     <div>
       <nav className="bg-black">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="w-full justify-between flex items-center">
+          <div className="flex items-center justify-between">
+            <div className="w-full justify-between flex items-center h-20">
               <NavLink className="h-8" to="/">
-                <img src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="Devup Logo" />{" "}
+                <img className="h-12" src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="Devup Logo" />{" "}
               </NavLink>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <NavLink
-                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
                     to="/signup"
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
                   >
                     Sign Up
                   </NavLink>
                   <NavLink
-                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/signin">
+                    to="/signin"
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                    >
                     Sign In
                   </NavLink>
-                  <NavLink className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"to="/products">
+                  <NavLink 
+                    to={{
+                      pathname:"/products",
+                      state:{
+                        cat:""
+                      }
+                    }}
+                    className="text-purple hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                  >
                     Products
                   </NavLink>
                 </div>
