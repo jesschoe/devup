@@ -1,0 +1,22 @@
+.container {
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh); */
+  overflow-y: scroll;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+/* className="min-h-screen min-w-max flex-col items-center content-center justify-center " */
+.section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #262626;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* className="w-full h-screen bg-background flex-col justify-center mt-20" */
