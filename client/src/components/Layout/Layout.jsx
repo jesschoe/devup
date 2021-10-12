@@ -5,15 +5,13 @@ const Layout = (props) => {
   return (
     <div className="flex flex-col w-screen min-h-screen">
       <div className="">
-      <Nav />
+        <Nav />
       </div>
-      <div className="flex-col flex-1 justify-center overflow-hidden align-center items-center bg-background">
+      <div className="flex-col justify-center overflow-hidden align-center items-center bg-background">
         {props.children}
-        </div>
-      <Footer />
-      
       </div>
-    
+      <Footer />
+    </div>
   )
 }
 

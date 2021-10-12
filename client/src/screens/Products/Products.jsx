@@ -64,7 +64,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-y-scroll">
+      <div className="max-h-screen flex-col justify-center w-full items-center p-20 bg-background overflow-auto">
         <div className="flex-col self-center">
         <div className="flex justify-between text-sm text-orange ml-24 mr-36">
           <div className="flex" >
