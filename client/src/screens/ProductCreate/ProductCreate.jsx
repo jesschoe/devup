@@ -63,7 +63,7 @@ export default function ProductCreate() {
   return (
 
     <Layout>
-      <div className="">
+      
         <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
               Add Product
         </div>
@@ -174,7 +174,7 @@ export default function ProductCreate() {
             </button>
           </div>
         </form>
-      </div>
+      
     </Layout>
 
   )
