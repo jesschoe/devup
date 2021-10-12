@@ -7,13 +7,13 @@ const Layout = (props) => {
       <div className="">
       <Nav />
       </div>
-      <div className="flex-col flex-1 justify-center overflow-auto align-center items-center bg-background">
+      <div className="flex-col flex-1 justify-center overflow-hidden align-center items-center bg-background">
         {props.children}
-      </div>
-      <div>
+        </div>
       <Footer />
+      
       </div>
-    </div>
+    
   )
 }
 
