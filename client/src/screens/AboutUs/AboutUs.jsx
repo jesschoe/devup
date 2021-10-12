@@ -14,11 +14,7 @@ const AboutUs = () => {
             />
             <div className="flex flex-col justify-center mt-2">
               <p className="text-lg font-bold">Jessica Choe</p>
-              <p className="mb-4 text-xs text-gray-800">Product Manager</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Pommy ipsum bent as a nine bob note naff off biscuits nowt, a
-                cuppa unhand me sir hadn't done it in donkey's years sod's law.
-              </p>
+              <p className="mb-4 text-xs text-gray-800">Softaware Developer/React Regulator</p>
             </div>
           </div>
           <div>
@@ -29,12 +25,7 @@ const AboutUs = () => {
             />
             <div className="flex flex-col justify-center mt-2">
               <p className="text-lg font-bold">Benjamin Jean</p>
-              <p className="mb-4 text-xs text-gray-800">Design Team Lead</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Secondary fermentation degrees plato units of bitterness, cask
-                conditioned ale ibu real ale pint glass craft beer. krausen goblet
-                grainy ibu.
-              </p>
+              <p className="mb-4 text-xs text-gray-800">Software Developer/</p>
             </div>
           </div>
           <div>
@@ -45,11 +36,7 @@ const AboutUs = () => {
             />
             <div className="flex flex-col justify-center mt-2">
               <p className="text-lg font-bold">Aaron Harris</p>
-              <p className="mb-4 text-xs text-gray-800">Human Resources</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                I just closed my eyes and in a nanosecond I cured myself from this
-                ridiculous model of disease, addiction and obsession.
-              </p>
+              <p className="mb-4 text-xs text-gray-800">Software Developer/CSS Sorcerer</p>
             </div>
           </div>
           <div>
@@ -60,12 +47,7 @@ const AboutUs = () => {
             />
             <div className="flex flex-col justify-center mt-2">
               <p className="text-lg font-bold">Tyler Washington</p>
-              <p className="mb-4 text-xs text-gray-800">Good guy</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Est Schlitz shoreditch fashion axe. Messenger bag cupidatat
-                Williamsburg sustainable aliqua, umami shabby chic artisan duis
-                pickled.
-              </p>
+              <p className="mb-4 text-xs text-gray-800">Software Developer/Method Master</p>
             </div>
           </div>
         </div>
