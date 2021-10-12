@@ -13,23 +13,16 @@ const Products = () => {
   const [category, setCategory] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
-  const { cat }= useParams();
-
-
+  const {cat}= useParams();
+  console.log(cat)
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts()
       setProducts(allProducts)
-      if (cat) {
-        const results = allProducts.filter((product) =>
-        product.category.includes(cat))
-        setCategory(results)
-      } else {
-        setCategory(allProducts)
-      }
+      setCategory(allProducts)
     }
     fetchProducts()
-  }, [cat])
+  }, [])
 
   const handleSort = (type) => {
     if (type !== '' && type !== undefined) {
@@ -59,6 +52,7 @@ const Products = () => {
 
   return (
     <Layout>
+      <div className="max-h-screen">
       <Categories handleCategories={handleCategories} />
       <Sort className="" handleSort={handleSort} />
       <div>
@@ -85,6 +79,7 @@ const Products = () => {
             )
           })}
         </div>
+      </div>
       </div>
     </Layout>
   )
