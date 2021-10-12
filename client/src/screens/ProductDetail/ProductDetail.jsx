@@ -11,16 +11,14 @@ const ProductDetail = () => {
 
   useEffect(
     () => {
-      const fecthProduct = async () => {
+      const fetchProduct = async () => {
         const res = await getProduct(id);
         setProduct(res);
         setIsLoaded(true);
       };
-      fecthProduct();
+      fetchProduct();
       // eslint-disable-next-line
-    },
-    { id }
-  );
+    }, [id]);
 
   if (!isLoaded) {
     return <h1>Loading..</h1>;
@@ -28,7 +26,6 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-
       <div class="flex justify-center flex-column items-center min-h-screen">
         <div class="flex max-w-5xl mx-auto overflow-hidden bg-black rounded justify-center items-center my-24">
           <div class="flex flex-row ">
