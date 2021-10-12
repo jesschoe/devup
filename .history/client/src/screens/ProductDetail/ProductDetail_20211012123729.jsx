@@ -32,7 +32,7 @@ const ProductDetail = () => {
     <div class="flex max-w-2xl mx-auto overflow-hidden bg-black rounded justify-center items-center my-24">
 
         <div class="w-2/3 p-4 md:p-4">
-            <h1 class="text-3xl font-bold text-white">{product.name}</h1>
+            <h1 class="text-3xl font-bold text-white dark:text-white">{product.name}</h1>
 
             <p class="mt-2 text-xs text-white">{product.description}</p>
             <p class="mt-2 text-xs text-white">
