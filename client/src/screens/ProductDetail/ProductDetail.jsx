@@ -94,6 +94,8 @@ const ProductDetail = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
 
 
 {/* <div className="flex justify-center items-center min-h-screen">
@@ -129,6 +131,7 @@ const ProductDetail = () => {
       </div> */}
 
 
+>>>>>>> 7df4d1bd096511665938d6bfe2064e33cc069922
 export default ProductDetail;
 
 
