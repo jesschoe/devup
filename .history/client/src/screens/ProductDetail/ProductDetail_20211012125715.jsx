@@ -70,4 +70,31 @@ const ProductDetail = () => {
 
 export default ProductDetail;
 
+{
+  /* <div className="flex justify-center min-h-screen min-w-max">
+        <div class="bg-black flex justify-center max-w-56">
+          <div class="">
+            <div class="">
+              <h1 class="">{product.name}</h1>
+              <h1 className="">{product.description}</h1>
+              <ul className="">{product.details.map((detail) => {
+                return <li> - {detail}</li>
+              })}</ul>
+              <div className="">
+                <button className=""><Link to={"/products"}>See More</Link></button>
+                <button className=""><Link to={`/products/${id}/edit`}>Edit Product</Link></button>
+              </div>
+            </div>
+            <div class="">
+              <img class="" src={product.imgURL} alt={product.title} />
+              <h1 className="">{product.price}</h1>
+            </div>
+          </div>
+        </div>
 
+        <div className="product-detail-column-two">
+          <img className="product-title" src={product.imgURL} alt={product.title} />
+          <h1 className="product-price">{product.price}</h1>
+        </div>
+      </div> */
+}
