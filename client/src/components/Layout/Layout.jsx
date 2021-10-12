@@ -1,4 +1,4 @@
-import Footer from "../Footer/Footer";
+
 import Nav from "../Nav/Nav";
 import { useState, useEffect } from "react";
 import MobileNav from "../MobileNav/MobileNav";
@@ -26,7 +26,6 @@ const Layout = (props) => {
       <div className="flex-col justify-center overflow-hidden align-center items-center bg-background">
         {props.children}
       </div>
-      <Footer />
     </div>
   );
 };
