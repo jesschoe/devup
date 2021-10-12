@@ -7,13 +7,13 @@ const Home = () => {
     <Layout>
       <div className="container" >
         <div className="section">
-          <div className="bg-black py-20">
+          <div className="bg-black py-20 my-24">
             <div className=" bg-hero bg-cover bg-center h-80 flex items-center justify-end">
               <div className="pr-10">
-                <h1 className="text-orange text-5xl text-left font-extrabold">
+                <h1 className="text-orange text-5xl text-left font-serif">
                   DevUp
                 </h1>
-                <h1 className="text-orange text-5xl text-left">
+                <h1 className="text-orange text-5xl text-left font-serif mb-2">
                   your space
                 </h1>
                 <h2 className="text-white text-lg">
@@ -36,10 +36,10 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-20">
+          <div className="bg-black py-20 my-24">
             <div className=" bg-setup bg-cover bg-center h-80 flex items-center justify-start">
               <div className="pl-10">
-                <h1 className="text-orange text-5xl text-left">Set Up</h1>
+                <h1 className="text-orange text-5xl text-left font-serif mb-2">Set Up</h1>
                 <h2 className="text-white text-lg">
                   Customize your space
                   <br />
@@ -60,10 +60,10 @@ const Home = () => {
           </div>
         </div>
         <div className="section">
-          <div className="bg-black py-20">
+          <div className="bg-black py-20  my-24">
             <div className=" bg-gearup bg-cover bg-center h-80 flex items-center justify-end">
               <div className="pr-10">
-                <h1 className="text-orange text-5xl text-left">Gear Up</h1>
+                <h1 className="text-orange text-5xl text-left font-serif mb-2">Gear Up</h1>
                 <h2 className="text-white text-lg">
                   Maximize your productivity
                   <br />
@@ -84,10 +84,10 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-20">
+          <div className="bg-black py-20  my-24">
             <div className=" bg-levelup bg-cover bg-center h-80 flex items-center justify-start">
               <div className="pl-10">
-                <h1 className="text-orange text-5xl text-left">Level Up</h1>
+                <h1 className="text-orange text-5xl text-left font-serif mb-2">Level Up</h1>
                 <h2 className="text-white text-lg">
                   Optimize your space
                   <br />
