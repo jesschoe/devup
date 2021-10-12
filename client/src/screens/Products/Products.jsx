@@ -60,31 +60,33 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen">
-      <Categories handleCategories={handleCategories} />
-      <Sort className="" handleSort={handleSort} />
-      <div>
-        <div className="flex flex-wrap justify-center items-center">
-          {category.map((product) => {
-            return (
-              <div key={product._id}>
-                <Product
-                  _id={product._id}
-                  name={product.name}
-                  imgURL={product.imgURL}
-                  price={product.price}
-                  keywords={product.keywords.map((k, i) => {
-                    return (
-                      <div key={i}>
-                        #{k}
-                      </div>
-                    )
-                  })}
-                /> </div>
-            )
-          })}
+      <div className="max-h-screen flex-col justify-center w-full items-center p-20">
+        <div className="flex justify-between w-full text-sm text-orange">
+          <Categories handleCategories={handleCategories} />
+          <Sort handleSort={handleSort} />
         </div>
-      </div>
+        <div>
+          <div className="flex flex-wrap justify-center items-center">
+            {category.map((product) => {
+              return (
+                <div key={product._id}>
+                  <Product
+                    _id={product._id}
+                    name={product.name}
+                    imgURL={product.imgURL}
+                    price={product.price}
+                    keywords={product.keywords.map((k, i) => {
+                      return (
+                        <div key={i}>
+                          #{k}
+                        </div>
+                      )
+                    })}
+                  /> </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </Layout>
   )

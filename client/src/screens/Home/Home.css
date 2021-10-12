@@ -1,8 +1,8 @@
 .container {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   /* scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh); */
-  overflow-y: scroll;
+  overflow: hidden;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -13,7 +13,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #262626;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   display: flex;
   flex-direction: column;
   justify-content: center;
