@@ -3,13 +3,12 @@ import MobileNav from "../MobileNav/MobileNav";
 
 const Nav = ({ toggle }) => {
   return (
-    <nav className="flex justify-between items-center h-16 bg-black text-white 
-    top-0 shadow-lg z-10 w-screen">
-      <NavLink className="h-8" to="/">
+    <nav className="flex justify-between items-center h-20 bg-black shadow-lg z-10 w-screen">
+      <NavLink className="h-20 p-2" to="/">
         <img
-          className="h-12"
+          className="h-16 mx-8"
           src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png"
-          alt="Devup Logo"/>{" "}
+          alt="Devup Logo"/>
       </NavLink>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg

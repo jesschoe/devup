@@ -2,6 +2,7 @@ import { useState } from "react";
 import { signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import Footer from "../../components/Footer/Footer"
 
 const SignIn = (props) => {
   const history = useHistory();
@@ -55,8 +56,8 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center mb-10 h-screen overflow-scroll">
-        <div className="max-w-md">
+      <div className="flex flex-col items-center mb-10 max-h-screen w-full overflow-y-scroll">
+        <div className="max-w-md mb-36">
           <div className="mt-20 mb-2 text-2xl max-w-md font-extrabold text-white">
             Sign In
           </div>
@@ -84,7 +85,7 @@ const SignIn = (props) => {
               />
               <div className="flex mt-8 w-full my-4 justify-center">
                 <div
-                  className="py-2 px-4 bg-orange hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-1/2 transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md"
+                  className="py-2 px-6 bg-orange text-white rounded-md"
                   type="submit"
                 >
                   {renderError()}
@@ -93,6 +94,7 @@ const SignIn = (props) => {
             </form>
           </div>
         </div>
+        <Footer />
       </div>
     </Layout>
   );
