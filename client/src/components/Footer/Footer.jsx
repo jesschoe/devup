@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
+
       <footer className="pt-2 bottom-0 bg-black text-2 flex flex-col justify-center items-center ">
         <img className="self-center h-4" src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="DevUp Logo" />
         <div className="flex items-center justify-center">
