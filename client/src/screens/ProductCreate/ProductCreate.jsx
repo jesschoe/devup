@@ -63,13 +63,13 @@ export default function ProductCreate() {
   return (
 
     <Layout>
-      <div className="flex-col items-center">
+      <div className="flex-col items-center content-center justify-center min-h-screen bg-background overflow-y-scroll">
         <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
               Add Product
         </div>
         <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
           <div className="flex">
-            <div className="flex-col m-8 max-w-xs">
+            <div className="flex-col m-8 w-40">
               <div className="border-orange m-2">
                 <input
                   className="text-xs"
@@ -123,7 +123,7 @@ export default function ProductCreate() {
                 </select>
               </div>
             </div>
-            <div className="flex-col m-8 max-w-md">
+            <div className="flex-col m-8 max-w-md justify-center items-center content-center">
               <label className="text-xs">Product Name:</label>
               <input
                 className="flex-1 mr-5 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
