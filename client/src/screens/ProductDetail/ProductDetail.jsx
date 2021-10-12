@@ -58,43 +58,6 @@ const ProductDetail = () => {
   );
 };
 
-
-
-
-
-{/* <div className="flex justify-center items-center min-h-screen">
-        <div class="flex max-w-5xl mx-auto overflow-hidden bg-black rounded justify-center items-center my-24">
-
-          <div class="w-2/3 p-96 md:p-4">
-            <h1 class="text-3xl font-bold text-white">{product.name}</h1>
-
-            <p class="mt-2 text-xs text-white">{product.description}</p>
-            <div class="flex justify-between mt-3 item-center">
-              <h1 class="text-lg font-bold text-white md:text-xl">{`$${product.price}`}</h1>
-            </div>
-            <Link to="">
-              <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded m-4">See More</button>
-            </Link>
-            <Link to="">
-              <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded ">See More</button>
-            </Link>
-          </div>
-
-
-
-
-          <div class="flex-column m-10  ">
-            <img class="max-h-80 overflow-hidden relative right-10 m-10" src={product.imgURL} alt="" />
-            <p class="max-w-sm max-w-30 text-xs mb-8 text-white">
-              <ul className="">{product.details.map((detail) => {
-                return <li> - {detail}</li>
-              })}</ul>
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-
 export default ProductDetail;
 
 
