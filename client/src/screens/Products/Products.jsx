@@ -14,19 +14,11 @@ const Products = () => {
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('price-low-high')
   const location = useLocation()
-<<<<<<< HEAD
-=======
-
->>>>>>> ad6edcdb3f59dc27b80ba6fe8e0012b5558bf1d6
   let cat = ""
 
   if (location.state) {
     cat = location.state.cat
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> ad6edcdb3f59dc27b80ba6fe8e0012b5558bf1d6
 
   useEffect(() => {
     const fetchProducts = async () => {
