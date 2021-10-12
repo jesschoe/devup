@@ -31,8 +31,6 @@ export default function ProductCreate() {
     })
   }
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await createProduct(product)
@@ -65,83 +63,118 @@ export default function ProductCreate() {
   return (
 
     <Layout>
-      <form className='create-product' onSubmit={handleSubmit}>
-        <div className="uploadImage">
-          <input
-            type="file" name="file" placeholder="Upload Image" onChange={uploadImage}
-          />
-          {
-            loading ? (
-              <h2>Loading...</h2>
-            ) : (
-              <img src={product.imgURL} style={{ width: "300px" }} alt="product" />
-            )
-          }
+      <div className="flex-col items-center">
+        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
+              Add Product
         </div>
-        <input
-          className='input-name'
-          name='name'
-          value={product.name}
-          placeholder='Name'
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className='input-category'
-          name='category'
-          value={product.category}
-          placeholder='Categorty'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-keywords'
-          name='keywords'
-          value={product.keywords}
-          placeholder='Keywords'
-          required
-          onChange={handleChange}
-        />
-        <textarea
-          className='textarea-description'
-          name='description'
-          value={product.description}
-          placeholder='Description'
-          required
-          rows={3}
-          onChange={handleChange}
-        />
-        <textarea
-          className="input-details"
-          name='details'
-          rows={10}
-          cols={78}
-          value={product.details}
-          placeholder='Product Details'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-price'
-          name='price'
-          value={product.price}
-          placeholder='$'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className='input-productURL'
-          name='productURL'
-          value={product.productURL}
-          placeholder='Product Url'
-          required
-          onChange={handleChange}
-        />
-        <button className='submit-btn' type='submit'>
-          Upload
-        </button>
-      </form>
+        <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
+          <div className="flex">
+            <div className="flex-col m-8 max-w-xs">
+              <div className="border-orange m-2">
+                <input
+                  className="text-xs"
+                  type="file" 
+                  name="file" 
+                  placeholder="Upload Image" 
+                  onChange={uploadImage}
+                />
+                {
+                  loading ? (
+                    <h2>Loading...</h2>
+                  ) : (
+                    <img className='border border-orange w-full' src={product.imgURL} alt="product" />
+                  )
+                }
+              </div>
+              <div className="flex-col">
+                <label className="text-xs">Price:</label>
+                <input
+                  className="border border-orange py-2 px-4 bg-black w-full text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name='price'
+                  value={product.price}
+                  placeholder='$'
+                  required
+                  onChange={handleChange}
+                />
+                <label className="text-xs">Category:</label>
+                <select
+                  className="border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name="category"
+                  onChange={handleChange}
+                >
+                  <option value="furniture">furniture</option>
+                  <option value="gear">gear</option>
+                  <option value="accessories">accessories</option>
+                </select>
+                <label className="text-xs">Keyword:</label>
+                <select
+                  className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name="keyword"
+                  onChange={handleChange}
+                >
+                  <option value="desk">desk</option>
+                  <option value="chair">chair</option>
+                  <option value="laptop">laptop</option>
+                  <option value="monitor">monitor</option>
+                  <option value="keyboard">keyboard</option>
+                  <option value="mouse">mouse</option>
+                  <option value="mount">mount</option>
+                  <option value="audio">audio</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex-col m-8 max-w-md">
+              <label className="text-xs">Product Name:</label>
+              <input
+                className="flex-1 mr-5 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                name="name"
+                value={product.name}
+                placeholder=""
+                required
+                autoFocus
+                onChange={handleChange}
+              />
+              <label className="text-xs">Product URL:</label>
+              <input
+                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                name="productURL"
+                value={product.productURL}
+                placeholder=""
+                required
+                onChange={handleChange}
+              />
+              <label className="text-xs">Description:</label>
+              <textarea
+                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                name="description"
+                value={product.description}
+                placeholder=""
+                required
+                rows={3}
+                onChange={handleChange}
+              />
+              <label className="text-xs">Details (enter new line for each bullet point):</label>
+              <textarea
+                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                name="details"
+                rows={7}
+                value={product.details}
+                placeholder=""
+                required
+                onChange={handleChange}
+              />
+              
+              
+            </div>
+          
+          </div>
+          <div className="flex justify-center m-10">
+            <button className="py-2 px-4 bg-orange text-white w-1/3 transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
+              Upload
+            </button>
+          </div>
+        </form>
+      </div>
     </Layout>
 
   )

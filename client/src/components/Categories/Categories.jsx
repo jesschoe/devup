@@ -6,8 +6,8 @@ const Categories = (props) => {
 
   return (
       <form className="" onSubmit={props.handleCategories}>
-          <label htmlFor="">categories:</label>
-          <select className="" onChange={handleChange}>
+          <label for="category">Category:</label>
+          <select name="category" id="category" onChange={handleChange}>
               <option className="" value="" >All</option>
               <option value="furniture">Furniture</option>
               <option value="gear">Gear</option>

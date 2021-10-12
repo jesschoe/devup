@@ -58,7 +58,7 @@ const SignIn = (props) => {
       <div className="flex flex-col items-center min-h-screen min-w-max">
       <div className="flex flex-col items-center max-w-md mb-10">
       <div className="self-start mt-8 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
-            Sign Up
+            Sign In
           </div>
         <div className="flex flex-col justify-center items-center max-w-lg bg-black sm:px-6 md:px-8 lg:px-10">
           <div className="p-6 mt-4">
@@ -73,7 +73,7 @@ const SignIn = (props) => {
                     name='username'
                     value={username}
                     onChange={handleChange}
-                    placeholder="username"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -87,7 +87,7 @@ const SignIn = (props) => {
                     name='password'
                     value={password}
                     onChange={handleChange}
-                    placeholder="password"
+                    placeholder=""
                   />
                 </div>
               </div>
