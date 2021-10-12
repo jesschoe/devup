@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div>
+    <>
       <footer className="px-3 py-8 bg-black text-2 text-gray-500 transition-colors duration-200">
         <div className="flex flex-col">
           <div className="md:hidden mt-7 mx-auto w-11 h-px rounded-full"></div>
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 

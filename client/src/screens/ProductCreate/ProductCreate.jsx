@@ -63,7 +63,7 @@ export default function ProductCreate() {
   return (
 
     <Layout>
-      <div className="flex-col items-center content-center justify-center min-h-screen bg-background overflow-y-scroll">
+      <div className="">
         <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
               Add Product
         </div>
