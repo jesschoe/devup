@@ -20,9 +20,15 @@ module.exports = {
       white: '#ffffff',
       black: '#000000'
     },
+
+    flex: {
+      basis: '1 1 33%',
+    },
+
     fontFamily: {
       'serif': ['DM Serif Display', 'serif']
     }
+
   },
   variants: {
     extend: {
