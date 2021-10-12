@@ -2,5 +2,8 @@
   font-family: 'Gothic A1', sans-serif;
   background-color: #262626;
   color: #BABABA;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
 
