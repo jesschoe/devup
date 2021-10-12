@@ -52,7 +52,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen">
+      
       <Categories handleCategories={handleCategories} />
       <Sort className="" handleSort={handleSort} />
       <div>
@@ -79,7 +79,6 @@ const Products = () => {
             )
           })}
         </div>
-      </div>
       </div>
     </Layout>
   )

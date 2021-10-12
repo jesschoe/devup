@@ -12,7 +12,7 @@ const Categories = (props) => {
               <option value="furniture">Furniture</option>
               <option value="gear">Gear</option>
               <option value="accessories">Accessories</option>
-          </select> 
+          </select>
       </form>
   )
 }
