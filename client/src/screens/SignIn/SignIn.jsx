@@ -55,7 +55,7 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center min-h-screen min-w-max">
+      <div className="flex flex-col justify-center items-center min-h-screen min-w-max">
       <div className="flex flex-col items-center max-w-md mb-10">
       <div className="self-start mt-8 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
             Sign In
