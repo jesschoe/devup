@@ -29,26 +29,17 @@ const ProductDetail = () => {
   return (
     <Layout>
       <div className="flex justify-center items-center min-h-screen">
-    <div class="flex max-w-2xl mx-auto overflow-hidden bg-black rounded justify-center items-center my-24">
+    <div class="flex max-w-xl mx-auto overflow-hidden bg-black rounded justify-center items-center my">
 
         <div class="w-2/3 p-4 md:p-4">
-            <h1 class="text-3xl font-bold text-white">{product.name}</h1>
+            <h1 class="text-2xl font-bold text-gray-800 dark:text-white">{product.name}</h1>
 
             <p class="mt-2 text-xs text-white">{product.description}</p>
-            <p class="mt-2 text-xs text-white">
-            <ul className="">{product.details.map((detail) => {
-                return <li> - {detail}</li>
-              })}</ul>
-            </p>
+            <p class="mt-2 text-xs text-white">{product.details}</p>
             <div class="flex justify-between mt-3 item-center">
                 <h1 class="text-lg font-bold text-white md:text-xl">{`$${product.price}`}</h1>
-            </div>
-            <Link to="">
-                <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded m-4">See More</button>
-                </Link>
-                <Link to="">
                 <button class="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded ">See More</button>
-                </Link>
+            </div>
         </div>
         <div class="w-full my-auto">
           <img className="overflow-hidden"src={product.imgURL} alt="" />
