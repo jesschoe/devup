@@ -66,7 +66,7 @@ const SignUp = (props) => {
             <div className="mt-20 mb-2 text-2xl font-black text-white">
               Sign Up
             </div>
-            <div className="flex flex-col justify-center items-center w-5/12 bg-black mb-10 py-10">
+            <div className="flex flex-col justify-center items-center w-5/12 bg-black mb-10 py-10 sm:bg-purple">
                 <form className="w-56" onSubmit={onSignUp}>
                   <div className="flex flex-col mb-2">
                       <label className="text-xs">Name</label>
