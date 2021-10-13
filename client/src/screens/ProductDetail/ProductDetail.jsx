@@ -38,7 +38,7 @@ const ProductDetail = () => {
               <div className="flex text-3xl font-black text-white mb-5">{product.name}</div>
               <div className="text-lg font-bold text-white mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
-                <ul className="">{product.details.map((detail, i) => {
+                <ul className="">{(product.details[0]).split("/n").map((detail, i) => {
                   return <li key={i}>- {detail}</li>
                 })}</ul>
               </div>
