@@ -5,10 +5,10 @@ const Categories = (props) => {
   }
 
   return (
-      <form className="" onSubmit={props.handleCategories}>
-          <label htmlFor="">categories:</label>
-          <select className="" onChange={handleChange}>
-              <option className="" value="" >All</option>
+      <form className="text-orange" onSubmit={props.handleCategories}>
+          {/* <label htmlFor="">categories:</label> */}
+          <select className="bg-black border border-orange text-center" onChange={handleChange}>
+              <option className="" value="" >All Categories</option>
               <option value="furniture">Furniture</option>
               <option value="gear">Gear</option>
               <option value="accessories">Accessories</option>

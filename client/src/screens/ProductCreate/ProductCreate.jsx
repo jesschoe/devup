@@ -1,7 +1,8 @@
 import { useState } from "react"
-import Layout from "../../components/Layout/Layout"
 import { useHistory } from "react-router-dom"
 import { createProduct } from "../../services/products"
+import Layout from "../../components/Layout/Layout"
+import Footer from "../../components/Footer/Footer"
 
 let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
@@ -27,14 +28,23 @@ export default function ProductCreate() {
     setProduct({
       ...product,
       [name]: value
-
     })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    const res = await createProduct(product)
-    console.log(res)
+    const array = product.details.split('/n')
+    setProduct({
+      ...product,
+      details: array
+    })
+    console.log(array)
+    console.log(product)
+    addProduct()
+  }
+
+  const addProduct = async () => {
+    await createProduct(product)
     history.push("/products");
   }
 
@@ -56,125 +66,126 @@ export default function ProductCreate() {
       imgURL: file.secure_url
     });
     setLoading(false);
-    console.log(file);
   }
 
 
   return (
 
     <Layout>
-      
-        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white overflow-auto">
-              Add Product
-        </div>
-        <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
-          <div className="flex">
-            <div className="flex-col m-8 w-40">
-              <div className="border-orange m-2">
-                <input
-                  className="text-xs"
-                  type="file" 
-                  name="file" 
-                  placeholder="Upload Image" 
-                  onChange={uploadImage}
-                />
-                {
-                  loading ? (
-                    <h2>Loading...</h2>
-                  ) : (
-                    <img className='border border-orange w-full' src={product.imgURL} alt="product" />
-                  )
-                }
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <div className="mt-10 text-2xl font-black text-white overflow-y-scroll">
+                Add Product
+          </div>
+          <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
+            <div className="flex">
+              <div className="flex-col m-8 w-40">
+                <div className="border-orange m-2">
+                  <input
+                    className="text-xs"
+                    type="file" 
+                    name="file" 
+                    placeholder="Upload Image" 
+                    onChange={uploadImage}
+                  />
+                  {
+                    loading ? (
+                      <h2>Loading...</h2>
+                    ) : (
+                      <img className='border border-orange w-full' src={product.imgURL} alt="product" />
+                    )
+                  }
+                </div>
+                <div className="flex-col">
+                  <label className="text-xs">Price:</label>
+                  <input
+                    className="border border-orange py-2 px-4 bg-black w-full text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                    name='price'
+                    value={product.price}
+                    placeholder='$'
+                    required
+                    onChange={handleChange}
+                  />
+                  <label className="text-xs">Category:</label>
+                  <select
+                    className="border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                    name="category"
+                    onChange={handleChange}
+                  >
+                    <option value="furniture">furniture</option>
+                    <option value="gear">gear</option>
+                    <option value="accessories">accessories</option>
+                  </select>
+                  <label className="text-xs">Keyword:</label>
+                  <select
+                    className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                    name="keyword"
+                    onChange={handleChange}
+                  >
+                    <option value="desk">desk</option>
+                    <option value="chair">chair</option>
+                    <option value="laptop">laptop</option>
+                    <option value="monitor">monitor</option>
+                    <option value="keyboard">keyboard</option>
+                    <option value="mouse">mouse</option>
+                    <option value="mount">mount</option>
+                    <option value="audio">audio</option>
+                  </select>
+                </div>
               </div>
-              <div className="flex-col">
-                <label className="text-xs">Price:</label>
+              <div className="flex-col m-8 max-w-md justify-center items-center content-center">
+                <label className="text-xs">Product Name:</label>
                 <input
-                  className="border border-orange py-2 px-4 bg-black w-full text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                  name='price'
-                  value={product.price}
-                  placeholder='$'
+                  className="flex-1 mr-5 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name="name"
+                  value={product.name}
+                  placeholder=""
+                  required
+                  autoFocus
+                  onChange={handleChange}
+                />
+                <label className="text-xs">Product URL:</label>
+                <input
+                  className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name="productURL"
+                  value={product.productURL}
+                  placeholder=""
                   required
                   onChange={handleChange}
                 />
-                <label className="text-xs">Category:</label>
-                <select
-                  className="border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                  name="category"
-                  onChange={handleChange}
-                >
-                  <option value="furniture">furniture</option>
-                  <option value="gear">gear</option>
-                  <option value="accessories">accessories</option>
-                </select>
-                <label className="text-xs">Keyword:</label>
-                <select
+                <label className="text-xs">Description:</label>
+                <textarea
                   className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                  name="keyword"
+                  name="description"
+                  value={product.description}
+                  placeholder=""
+                  required
+                  rows={2}
                   onChange={handleChange}
-                >
-                  <option value="desk">desk</option>
-                  <option value="chair">chair</option>
-                  <option value="laptop">laptop</option>
-                  <option value="monitor">monitor</option>
-                  <option value="keyboard">keyboard</option>
-                  <option value="mouse">mouse</option>
-                  <option value="mount">mount</option>
-                  <option value="audio">audio</option>
-                </select>
+                />
+                <label className="text-xs">Details (enter new line for each bullet point):</label>
+                <textarea
+                  className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  name="details"
+                  rows={5}
+                  value={product.details}
+                  placeholder=""
+                  required
+                  onChange={handleChange}
+                />
               </div>
             </div>
-            <div className="flex-col m-8 max-w-md justify-center items-center content-center">
-              <label className="text-xs">Product Name:</label>
-              <input
-                className="flex-1 mr-5 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                name="name"
-                value={product.name}
-                placeholder=""
-                required
-                autoFocus
-                onChange={handleChange}
-              />
-              <label className="text-xs">Product URL:</label>
-              <input
-                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                name="productURL"
-                value={product.productURL}
-                placeholder=""
-                required
-                onChange={handleChange}
-              />
-              <label className="text-xs">Description:</label>
-              <textarea
-                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                name="description"
-                value={product.description}
-                placeholder=""
-                required
-                rows={3}
-                onChange={handleChange}
-              />
-              <label className="text-xs">Details (enter new line for each bullet point):</label>
-              <textarea
-                className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                name="details"
-                rows={7}
-                value={product.details}
-                placeholder=""
-                required
-                onChange={handleChange}
-              />
-              
-              
+            <div className="flex justify-center m-10">
+              <button className="py-2 px-4 bg-orange text-white w-1/3 rounded-md" type="submit">
+                Upload
+              </button>
             </div>
-          
+          </form>
+          <div className="mt-10">
+            <Footer />
           </div>
-          <div className="flex justify-center m-10">
-            <button className="py-2 px-4 bg-orange text-white w-1/3 transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
-              Upload
-            </button>
-          </div>
-        </form>
-      
+        </div>
+      </div>
     </Layout>
 
   )

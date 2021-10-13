@@ -10,6 +10,7 @@ import SignUp from "./screens/SignUp/SignUp"
 import SignIn from "./screens/SignIn/SignIn"
 import AboutUs from "./screens/AboutUs/AboutUs"
 import Products from './screens/Products/Products';
+import Blog from './screens/Blog/Blog';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -47,6 +48,9 @@ function App() {
       </Route>
       <Route exact path="/aboutus">
         <AboutUs />
+      </Route>
+      <Route exact path="/blog">
+        <Blog />
       </Route>
     </div>
   );

@@ -1,20 +1,23 @@
 import { NavLink } from "react-router-dom";
 
-const MobileNav = () => {
+const MobileNav = ({ isOpen, toggle }) => {
   return (
-    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+    <div className={
+      isOpen ? "" : "hidden"
+    }
+      onClick={toggle}>
       <NavLink
-        className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium block"
+        className="text-white px-3 py-2 text-smblock"
         to="/signup">
         Sign Up
       </NavLink>
       <NavLink
-        className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium block"
+        className="text-white px-3 py-2 text-sm block"
         to="/signin">
         Sign In
       </NavLink>
       <NavLink
-        className="text-white hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium block"
+        className="text-white px-3 py-2 text-sm block"
         to="/products">
         Products
       </NavLink>

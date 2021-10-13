@@ -217,6 +217,21 @@ const products = [
   price: "399.99",
   productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html"
 },
+{
+  name: "LG Gram 17",
+  category: "gear",
+  keywords: ["gear", "laptop"],
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634127184/devup/lg-gram-17-2021-hero_kjygi9.jpg",
+  description: "Meet an ultra-lightweight laptop with a 16:10 professional display, a new design, and Intel® Evo™ platform.",
+  details: [
+    "16GB LPDDR4X 4266mhz RAM delivers a high level of performance for memory-intensive content creation, designing, editing, and multitasking", 
+    "Improve productivity with 2TB PCIe M.2 NVMe SSD for dependable storage accessible in a flash", 
+    "Connect with Confidence: Two USB-C ports with Thunderbolt 4 support, two USB-A 3.2 ports, a full-size HDMI port, a microSD card reader, and a 3.5mm audio jack", 
+    "Get more done on the go with up to 19.5 hours battery life with a single charge (Disclaimer: battery life will vary from specifications depending on model"
+  ],
+  price: "1,695.00",
+  productURL: "https://www.lg.com/us/laptops?gclid=Cj0KCQjwnoqLBhD4ARIsAL5JedJDHWljCS0tnhoRr63DExowHaZeVK_CkJM8WuoYu-785xl2gTH_B88aAijeEALw_wcB&gclsrc=aw.ds"
+},
 ]
 
 await Product.insertMany(products)
