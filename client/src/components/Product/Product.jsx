@@ -13,7 +13,8 @@ const Product = (props) => {
             <Link to={{
               pathname:"/products",
               state:{
-                cat: `${props.category}`
+                cat: `${props.category}`,
+                keyword: ""
               }
             }}>
               {`#${props.category} `}
@@ -21,7 +22,8 @@ const Product = (props) => {
             <Link to={{
               pathname:"/products",
               state:{
-                cat: ``
+                cat: "",
+                keyword: `${props.keywords}`
               }
             }}
             >
