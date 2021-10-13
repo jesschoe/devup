@@ -8,6 +8,7 @@ import ProductEdit from "./screens/ProductEdit/ProductEdit"
 import ProductCreate from "./screens/ProductCreate/ProductCreate"
 import SignUp from "./screens/SignUp/SignUp"
 import SignIn from "./screens/SignIn/SignIn"
+import AboutUs from "./screens/AboutUs/AboutUs"
 import Products from './screens/Products/Products';
 
 function App() {
@@ -36,13 +37,16 @@ function App() {
         {user ? <ProductEdit user={user} /> : <Redirect to='/products/:id' />}
       </Route>
       <Route path="/add-product">
-        {user ? <ProductCreate user={user} /> : <Redirect to='signup' />}
+        {user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />}
       </Route>
       <Route path="/signup">
         <SignUp setUser={setUser} />
       </Route>
       <Route path="/signin">
         <SignIn setUser={setUser} />
+      </Route>
+      <Route exact path="/aboutus">
+        <AboutUs />
       </Route>
     </div>
   );

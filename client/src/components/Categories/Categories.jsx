@@ -5,14 +5,13 @@ const Categories = (props) => {
   }
 
   return (
-      <form className="" onSubmit={props.handleCategories}>
-          <label htmlFor="">categories:</label>
-          <select className="" onChange={handleChange}>
-              <option className="" value="" >All</option>
+      <form className="text-white text-xs" onSubmit={props.handleCategories}>
+          <select className="bg-background border border-orange text-center p-px " onChange={handleChange}>
+              <option className="" value="" >All Categories</option>
               <option value="furniture">Furniture</option>
               <option value="gear">Gear</option>
               <option value="accessories">Accessories</option>
-          </select>
+          </select> 
       </form>
   )
 }
