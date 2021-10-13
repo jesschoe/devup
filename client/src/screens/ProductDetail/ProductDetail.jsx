@@ -30,7 +30,7 @@ const ProductDetail = () => {
       <div className="container">
       <div className="w-9/12 flex flex-col mt-10">
         <div className="flex flex-col overflow-y-scroll bg-black justify-center items-center mb-20">
-          <div className="flex flex-col flex-wrap lg:flex-row ">
+          <div className="flex flex-col justify-center items-center flex-wrap lg:flex-row ">
             <div className="flex justify-center content-center">
               <img className="max-h-64 max-w-lg m-10" src={product.imgURL} alt="" />
             </div>
