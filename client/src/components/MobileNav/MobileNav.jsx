@@ -7,7 +7,7 @@ const MobileNav = ({ isOpen, toggle }) => {
     }
       onClick={toggle}>
       <NavLink
-        className="text-white px-3 py-2 text-smblock"
+        className="text-white px-3 py-2 text-sm block"
         to="/signup">
         Sign Up
       </NavLink>

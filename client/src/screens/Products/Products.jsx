@@ -65,7 +65,7 @@ const Products = () => {
     <Layout>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
-        <div className="flex flex-col items-end mx-8">
+        <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
           <div>
             <Categories handleCategories={handleCategories} />
           </div>
