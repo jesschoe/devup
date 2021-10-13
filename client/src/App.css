@@ -12,3 +12,22 @@
   overflow: hidden;
 }
 
+.container {
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  height: 100%;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+/* className="min-h-screen min-w-max flex-col items-center content-center justify-center " */
+.section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #262626;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

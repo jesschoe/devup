@@ -18,12 +18,12 @@ const Layout = (props) => {
     window.addEventListener("resize", hideMenu);
   });
   return (
-    <div className="flex flex-col w-screen min-h-screen">
+    <div className="flex-auto flex flex-col w-screen min-h-screen">
       <div className="">
         <Nav toggle={toggle} />
         <MobileNav isOpen={isOpen} toggle={toggle} />
       </div>
-      <div className="flex-col justify-center overflow-hidden align-center items-center bg-background">
+      <div className="flex-1 flex-col justify-center overflow-hidden align-center items-center bg-background">
         {props.children}
       </div>
     </div>
