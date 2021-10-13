@@ -31,7 +31,7 @@ const products = [
   name: "Mount-It! Single Monitor Arm Desk Mount ",
   category: "accessories",
   keywords: "desk",
-  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727271/devup/mountit-monitor-arm_sh5bbf.jpg",
+  imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634155941/devup/mountit-monitor-arm_sh5bbf_adobespark_xy5lz9.png",
   description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
   details: 
     "Gas spring monitor arm is heavy duty, counterbalanced and makes for effortless adjustments and comes with integrated, hide-away cable management./nAircraft grade aluminum alloy construction will stand the test of time./nMonitor arm desk mount quickly mounts to desks and comes with all mounting hardware, tools, and instructions necessary for assembly./nQuick-release detachable VESA plate mounts to back of monitor first, then slides onto arm in seconds!",
