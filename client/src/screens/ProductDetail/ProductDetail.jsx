@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import Footer from "../../components/Footer/Footer"
 import { getProduct } from "../../services/products";
 
 const ProductDetail = () => {
@@ -26,37 +27,40 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      <div className="flex justify-center flex-column items-center min-h-screen">
-        <div className="flex flex-column flex-wrap max-w-5xl mx-auto overflow-hidden bg-black rounded justify-center items-center my-24 mb-96 ">
-          <div className="flex flex-row ">
+      <div className="container">
+      <div className="w-9/12 flex flex-col mt-10">
+        <div className="flex flex-col overflow-y-scroll bg-black justify-center items-center mb-20">
+          <div className="flex flex-col flex-wrap lg:flex-row ">
             <div className="flex justify-center content-center">
-              <img className="max-h-64 max-w-lg overflow-hidden m-10" src={product.imgURL} alt="" />
+              <img className="max-h-64 max-w-lg m-10" src={product.imgURL} alt="" />
             </div>
-            <div className=" m-10">
-              <h1 className="text-3xl font-bold stroke-orange text-white mb-5  ">{product.name}</h1>
-              <h3 className="text-lg font-bold text-white mb-1.5">Features</h3>
-              <div className="max-w-sm text-xs mb-8 text-white">
+            <div className="flex flex-col flex-wrap md:m-10 m-4">
+              <div className="flex text-3xl font-black text-white mb-5">{product.name}</div>
+              <div className="text-lg font-bold text-white mb-1.5">Features</div>
+              <div className="text-xs mb-8 text-white">
                 <ul className="">{product.details.map((detail, i) => {
                   return <li key={i}>- {detail}</li>
                 })}</ul>
               </div>
               <h1 className="text-lg font-bold text-white md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
-              <div className="relative right-5">
+              <div className="flex flex-col sm:flex-row">
                 <Link to="">
-                  <button className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded m-4 h-8 w-40">See More</button>
+                  <button className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 w-40">See More</button>
                 </Link>
                 <Link to="">
-                  <button className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded m-4 h-8 w-40">Edit Product</button>
+                  <button className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 w-40">Edit Product</button>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="flex flex-column flex-wrap max-w-3xl m-3 mb-16 relative right-5">
+          <div className="flex flex-col flex-wrap mb-16 p-8">
             <div className="mb-1.5 text-lg font-bold text-white">Description</div>
             <p className="text-white" >{product.description}</p>
           </div>
         </div>
-      </div>Name
+        <Footer />
+        </div>
+      </div>
     </Layout>
   );
 };
