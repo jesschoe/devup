@@ -82,10 +82,8 @@ const Products = () => {
                   name={product.name}
                   imgURL={product.imgURL}
                   price={product.price}
-                  keywords={product.keywords.map((k, i) => {
-                    return <div key={i}>#{k}</div>;
-                  })}
-                />{" "}
+                  keywords={product.keywords}
+                />
               </div>
             );
           })}
