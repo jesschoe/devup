@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
-import Layout from '../../components/Layout/Layout'
 import { getProduct, updateProduct } from '../../services/products'
+import Layout from '../../components/Layout/Layout'
+import Footer from "../../components/Footer/Footer"
 
 const ProductEdit = (props) => {
 
@@ -70,8 +71,9 @@ const ProductEdit = (props) => {
   return (
 
     <Layout>
-      <div className="flex-col items-center">
-        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white sm:text-2xl dark:text-white">
+      <div className="container">
+        <div className="section">
+        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white">
               Add Product
         </div>
         <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
@@ -181,6 +183,10 @@ const ProductEdit = (props) => {
             </button>
           </div>
         </form>
+        <div className="section">
+          <Footer />
+        </div>
+        </div>
       </div>
     </Layout>
 
