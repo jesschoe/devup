@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 const Nav = ({ toggle }) => {
   return (
     <nav className="flex justify-between items-center h-20 bg-black shadow-lg z-10 w-screen">
-      <NavLink className="h-20 p-2" to="/">
+      <NavLink className="h-20 p-2 mt-4" to="/">
         <img
-          className="h-16 mx-8"
+          className="h-12 mx-8"
           src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png"
           alt="Devup Logo"/>
       </NavLink>
