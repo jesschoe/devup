@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import MobileNav from "../MobileNav/MobileNav";
 
 const Nav = ({ toggle }) => {
   return (

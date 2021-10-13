@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import Product from "../../components/Product/Product";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
+import Footer from "../../components/Footer/Footer"
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
 
 const Products = () => {
@@ -88,6 +89,7 @@ const Products = () => {
             );
           })}
         </div>
+        <Footer />
       </div>
     </Layout>
   );
