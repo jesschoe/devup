@@ -8,7 +8,7 @@ const getToken = () => {
 
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
-        ? 'https://devupapp.herokuapp.com//api'
+        ? 'https://devupapp.herokuapp.com/api'
         : 'http://localhost:3000/api'
 })
 
