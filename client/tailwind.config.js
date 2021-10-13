@@ -21,21 +21,12 @@ module.exports = {
     extend: {
       backgroundImage: {
 
-        hero: 'url("https://res.cloudinary.com/devupapp/image/upload/v1633969053/devup/homeimage_jaucdr.png")',
-        setup:
-          'url("https://res.cloudinary.com/devupapp/image/upload/v1633967360/devup/desk4_d9n5j0.jpg")',
-        gearup:
-          'url("https://res.cloudinary.com/devupapp/image/upload/v1633979273/devup/devup-headphoneGirl_gzj2iv.png")',
-        levelup:
-          'url("https://res.cloudinary.com/devupapp/image/upload/v1633979303/devup/desk-asc_iys574.jpg")',
-      },
-
         'hero': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633969053/devup/homeimage_jaucdr.png")',
         'setup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633967360/devup/desk4_d9n5j0.jpg")',
         'gearup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633979273/devup/devup-headphoneGirl_gzj2iv.png")',
         'levelup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633979303/devup/desk-asc_iys574.jpg")',
         'blog': 'url("https://www.hdnicewallpapers.com/Walls/Big/Computers/Superb_HD_Laptop_Background_Wallpaper.jpg")',
-      },
+      }
 
     },
     colors: {
@@ -54,7 +45,7 @@ module.exports = {
     fontFamily: {
       serif: ["DM Serif Display", "serif"],
     },
-  
+  },
   variants: {
     extend: {
       borderStyle: ["hover"],
