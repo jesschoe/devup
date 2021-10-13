@@ -66,10 +66,9 @@ const SignUp = (props) => {
             <div className="mt-20 mb-2 text-2xl font-black text-white">
               Sign Up
             </div>
-            <div className="flex flex-col justify-center items-center max-w-lg bg-black mb-10">
-                <form className="p-8" onSubmit={onSignUp}>
+            <div className="flex flex-col justify-center items-center max-w-xl bg-black mb-10">
+                <form className="p-20" onSubmit={onSignUp}>
                   <div className="flex flex-col mb-2">
-                    <div className=" relative ">
                       <label className="text-xs">Name</label>
                       <input
                         className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -80,10 +79,8 @@ const SignUp = (props) => {
                         onChange={handleChange}
                         placeholder=""
                       />
-                    </div>
                   </div>
                   <div className="flex flex-col mb-2">
-                    <div className=" relative ">
                       <label className="text-xs">Username</label>
                       <input
                         className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -94,10 +91,8 @@ const SignUp = (props) => {
                         onChange={handleChange}
                         placeholder=""
                       />
-                    </div>
                   </div>
                   <div className="flex flex-col mb-2">
-                    <div className=" relative ">
                       <label className="text-xs">E-mail</label>
                       <input
                         className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -109,9 +104,7 @@ const SignUp = (props) => {
                         placeholder=""
                       />
                     </div>
-                  </div>
                   <div className="flex flex-col mb-2">
-                    <div className=" relative ">
                       <label className="text-xs">Password</label>
                       <input
                         className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -122,10 +115,8 @@ const SignUp = (props) => {
                         onChange={handleChange}
                         placeholder=""
                       />
-                    </div>
                   </div>
                   <div className="flex flex-col mb-2">
-                    <div className=" relative ">
                       <label className="text-xs">Confirm Password</label>
                       <input
                         className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -136,7 +127,6 @@ const SignUp = (props) => {
                         onChange={handleChange}
                         placeholder=""
                       />
-                    </div>
                   </div>
                   <div className="flex mt-8 w-full my-4 justify-center">
                     <div
