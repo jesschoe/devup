@@ -35,7 +35,7 @@ module.exports = {
         'gearup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633979273/devup/devup-headphoneGirl_gzj2iv.png")',
         'levelup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633979303/devup/desk-asc_iys574.jpg")',
         'blog': 'url("https://www.hdnicewallpapers.com/Walls/Big/Computers/Superb_HD_Laptop_Background_Wallpaper.jpg")',
-      }
+      },
 
     },
     colors: {
@@ -54,7 +54,7 @@ module.exports = {
     fontFamily: {
       serif: ["DM Serif Display", "serif"],
     },
-  },
+  
   variants: {
     extend: {
       borderStyle: ["hover"],
