@@ -83,6 +83,7 @@ const Products = () => {
                   imgURL={product.imgURL}
                   price={product.price}
                   keywords={product.keywords}
+                  category={product.category}
                 />
               </div>
             );
