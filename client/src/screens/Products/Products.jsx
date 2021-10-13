@@ -63,7 +63,7 @@ const Products = () => {
   return (
     <Layout>
       <div className="max-h-screen flex-col justify-center w-full items-center bg-background overflow-y-auto">
-        <div className="flex flex-col items-end my-6 mr-16">
+        <div className="flex flex-col items-end mt-4 mr-20">
           <div>
             <Categories handleCategories={handleCategories} />
           </div>

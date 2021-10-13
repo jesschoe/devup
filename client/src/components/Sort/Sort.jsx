@@ -6,13 +6,13 @@ const Sort = (props) => {
     }
 
     return (
-        <form className="sort-container" onSubmit={props.handleSubmit}>
-            <label htmlFor="sort">sort by:</label>
-            <select className="sort" onChange={handleSort}>
+        <form className="text-orange" onSubmit={props.handleSubmit}>
+            {/* <label htmlFor="sort">sort by:</label> */}
+            <select className="bg-black border border-orange" onChange={handleSort}>
                 {/* <option className="option" value="name-ascending" >Product Name, A-Z</option>
                 <option value="name-descending">Product Name, Z-A</option> */}
-                <option value="price-low-high">Price, low to high</option>
-                <option value="price-high-low">Price, high to low</option>
+                <option value="price-low-high">price, low to high</option>
+                <option value="price-high-low">price, high to low</option>
             </select>
         </form>
     )
