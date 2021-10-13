@@ -13,10 +13,10 @@ export default function ProductCreate() {
   const [product, setProduct] = useState({
     name: "",
     category: "",
-    keywords: [],
+    keywords: "",
     imgURL: "",
     description: "",
-    details: [],
+    details: "",
     price: "",
     productURL: "",
   })

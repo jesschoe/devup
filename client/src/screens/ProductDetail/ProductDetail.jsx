@@ -30,7 +30,7 @@ const ProductDetail = () => {
       <div className="container">
       <div className="w-9/12 flex flex-col mt-10">
         <div className="flex flex-col overflow-y-scroll bg-black justify-center items-center mb-20">
-          <div className="flex flex-col justify-center items-center flex-wrap lg:flex-row ">
+          <div className="flex flex-col flex-wrap lg:flex-row ">
             <div className="flex justify-center content-center">
               <img className="max-h-64 max-w-lg m-10" src={product.imgURL} alt="" />
             </div>
@@ -38,7 +38,7 @@ const ProductDetail = () => {
               <div className="flex text-3xl font-black text-white mb-5">{product.name}</div>
               <div className="text-lg font-bold text-white mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
-                <ul className="">{product.details.map((detail, i) => {
+                <ul className="">{(product.details[0]).split("/n").map((detail, i) => {
                   return <li key={i}>- {detail}</li>
                 })}</ul>
               </div>

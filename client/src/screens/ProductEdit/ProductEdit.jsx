@@ -10,12 +10,14 @@ const ProductEdit = (props) => {
   let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
   const [product, setProduct] = useState({
-    name: '',
-    description: '',
-    imgURL: '',
-    price: '',
-    details: [],
-    keywords: []
+    name: "",
+    category: "",
+    keywords: "",
+    imgURL: "",
+    description: "",
+    details: "",
+    price: "",
+    productURL: "",
   })
 
   const [isUpdated, setUpdated] = useState(false)
