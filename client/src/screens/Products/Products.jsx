@@ -63,8 +63,9 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="max-h-screen flex-col justify-center w-full items-center bg-background overflow-y-auto">
-        <div className="flex flex-col items-end mt-4 mr-20">
+      <div className="container">
+        <div className="w-9/12 flex flex-col mt-10">
+        <div className="flex flex-col items-end mx-8">
           <div>
             <Categories handleCategories={handleCategories} />
           </div>
@@ -72,7 +73,7 @@ const Products = () => {
             <Sort handleSort={handleSort} />
           </div>
         </div>
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center mb-24">
           {category.map((product) => {
             return (
               <div key={product._id}>
@@ -90,6 +91,7 @@ const Products = () => {
           })}
         </div>
         <Footer />
+        </div>
       </div>
     </Layout>
   );

@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer"
 const Home = () => {
   return (
     <Layout>
-      <div className="container" >
+      <div className="container-home" >
         <div className="section">
           <div className="bg-black py-20 my-24">
             <div className=" bg-hero bg-cover bg-center h-80 flex items-center justify-end">
