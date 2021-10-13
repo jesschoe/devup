@@ -36,7 +36,7 @@ module.exports = {
         'levelup': 'url("https://res.cloudinary.com/devupapp/image/upload/v1633979303/devup/desk-asc_iys574.jpg")',
         'blog': 'url("https://www.hdnicewallpapers.com/Walls/Big/Computers/Superb_HD_Laptop_Background_Wallpaper.jpg")',
       }
->>>>>>> f2dc2ae6c048ab3801730fa629b02b6def2d1834
+
     },
     colors: {
       background: "#262626",
