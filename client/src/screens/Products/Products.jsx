@@ -16,9 +16,13 @@ const Products = () => {
   const location = useLocation();
 
   let cat = "";
+  let keyword= "";
 
   if (location.state) {
     cat = location.state.cat;
+  }
+  if (location.state) {
+    keyword = location.state.keyword;
   }
 
   useEffect(() => {
@@ -30,7 +34,13 @@ const Products = () => {
           product.category.includes(cat)
         );
         setCategory(results);
-      } else {
+      } else if (keyword.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.keywords.includes(keyword)
+        );
+        setCategory(results);
+      } 
+      else {
         setCategory(allProducts);
       }
     };
