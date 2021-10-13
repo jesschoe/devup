@@ -1,7 +1,8 @@
 import { useState } from "react"
-import Layout from "../../components/Layout/Layout"
 import { useHistory } from "react-router-dom"
 import { createProduct } from "../../services/products"
+import Layout from "../../components/Layout/Layout"
+import Footer from "../../components/Footer/Footer"
 
 let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
@@ -71,11 +72,13 @@ export default function ProductCreate() {
   return (
 
     <Layout>
-      
-        <div className="self-start ml-20 mt-10 mb-2 text-2xl font-black text-white overflow-auto">
+      <div className="container">
+        <div className="section">
+        <div className="flex flex-col items-center">
+        <div className="mt-20 text-2xl font-black text-white overflow-y-scroll">
               Add Product
         </div>
-        <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
+        <form className="flex-col items-center bg-black mx-20 p-8 max-w-5xl" onSubmit={handleSubmit}>
           <div className="flex">
             <div className="flex-col m-8 w-40">
               <div className="border-orange m-2">
@@ -158,31 +161,33 @@ export default function ProductCreate() {
                 value={product.description}
                 placeholder=""
                 required
-                rows={3}
+                rows={2}
                 onChange={handleChange}
               />
               <label className="text-xs">Details (enter new line for each bullet point):</label>
               <textarea
                 className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
                 name="details"
-                rows={7}
+                rows={5}
                 value={product.details}
                 placeholder=""
                 required
                 onChange={handleChange}
               />
-              
-              
             </div>
-          
           </div>
           <div className="flex justify-center m-10">
-            <button className="py-2 px-4 bg-orange text-white w-1/3 transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
+            <button className="py-2 px-4 bg-orange text-white w-1/3 rounded-md" type="submit">
               Upload
             </button>
           </div>
         </form>
-      
+        <div className="mt-10">
+          <Footer />
+        </div>
+        </div>
+        </div>
+      </div>
     </Layout>
 
   )
