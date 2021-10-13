@@ -82,23 +82,6 @@ const Products = () => {
             <div>
               <Sort handleSort={handleSort} />
             </div>
-            <div className="flex flex-wrap justify-center mb-24">
-              {category.map((product) => {
-                return (
-                  <div key={product._id}>
-                    <Product
-                      _id={product._id}
-                      name={product.name}
-                      imgURL={product.imgURL}
-                      price={product.price}
-                      keywords={product.keywords.map((k, i) => {
-                        return <div key={i}>#{k}</div>;
-                      })}
-                    />{" "}
-                  </div>
-                );
-              })}
-            </div>
           </div>
           <div className="flex flex-wrap justify-center mb-24">
             {category.map((product) => {
