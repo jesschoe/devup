@@ -7,7 +7,7 @@ const Blog = () => {
       <div className="container">
         <div className="section" >
           <div className="bg-black py-20">
-            <div className=" bg-tester bg-cover bg-center h-96 flex items-center justify-start">
+            <div className=" bg-blog bg-cover bg-center h-96 flex items-center justify-start">
               <div className="pl-40">
                 <h1 className="text-orange text-7xl text-left font-serif mb-2">Blog</h1>
                 <h2 className="text-white text-xl">
@@ -43,12 +43,12 @@ const Blog = () => {
                 <br />
                 Happy hacking!
               </p>
-              <h5 className="font-bold text-white mb-5"><Link to={{ pathname: "/products", state: { cat: "gear" } }}>#monitors</Link>, <Link to={{ pathname: "/products", state: { cat: "furniture" } }}>#chair</Link></h5>
+              <h5 className="font-bold text-purple mb-5"><Link to={{ pathname: "/products", state: { cat: "gear" } }}>#monitors</Link>, <Link to={{ pathname: "/products", state: { cat: "furniture" } }}>#chair</Link></h5>
             </div>
           </div>
           <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center my-24 w-full border-red">
             <div className="m-10 w-full">
-              <h1 className="text-5xl font-bold text-white mb-5 text-blue">Why dev up</h1>
+              <h1 className="text-5xl font-bold text-orange mb-5">Why dev up</h1>
               <h5 className="font-bold text-white mb-5 text-xl">Jessica Choe</h5>
               <div className="flex justify-center content-center">
               </div>
@@ -69,7 +69,7 @@ const Blog = () => {
                 <br />
                 Happy hacking!
               </p>
-              <h5 className="font-bold text-white mb-5"><Link to={{ pathname: "/products", state: { cat: "gear" } }}>#monitors</Link>, <Link to={{ pathname: "/products", state: { cat: "furniture" } }}>#chair</Link></h5>
+              <h5 className="font-bold text-purple mb-5"><Link to={{ pathname: "/products", state: { cat: "gear" } }}>#monitors</Link>, <Link to={{ pathname: "/products", state: { cat: "furniture" } }}>#chair</Link></h5>
             </div>
           </div>
         </div>
