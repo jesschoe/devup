@@ -62,7 +62,7 @@ const SignIn = (props) => {
             <div className="mt-20 mb-2 text-2xl font-black text-white">
               Sign In
             </div>
-            <div className="flex flex-col justify-center items-center max-w-sm bg-black mb-10">
+            <div className="flex flex-col justify-center items-center max-w-md bg-black mb-10">
               <form className="p-10" onSubmit={onSignIn}>
                 <label className="text-xs">Username</label>
                 <input

@@ -16,9 +16,13 @@ const Products = () => {
   const location = useLocation();
 
   let cat = "";
+  let keyword = "";
 
   if (location.state) {
     cat = location.state.cat;
+  }
+  if (location.state) {
+    keyword = location.state.keyword;
   }
 
   useEffect(() => {
@@ -30,7 +34,13 @@ const Products = () => {
           product.category.includes(cat)
         );
         setCategory(results);
-      } else {
+      } else if (keyword.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.keywords.includes(keyword)
+        );
+        setCategory(results);
+      }
+      else {
         setCategory(allProducts);
       }
     };
@@ -65,12 +75,29 @@ const Products = () => {
     <Layout>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
-          <div className="flex flex-col items-end mx-8">
+          <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
             <div>
               <Categories handleCategories={handleCategories} />
             </div>
             <div>
               <Sort handleSort={handleSort} />
+            </div>
+            <div className="flex flex-wrap justify-center mb-24">
+              {category.map((product) => {
+                return (
+                  <div key={product._id}>
+                    <Product
+                      _id={product._id}
+                      name={product.name}
+                      imgURL={product.imgURL}
+                      price={product.price}
+                      keywords={product.keywords.map((k, i) => {
+                        return <div key={i}>#{k}</div>;
+                      })}
+                    />{" "}
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="flex flex-wrap justify-center mb-24">
@@ -82,10 +109,9 @@ const Products = () => {
                     name={product.name}
                     imgURL={product.imgURL}
                     price={product.price}
-                    keywords={product.keywords.map((k, i) => {
-                      return <div key={i}>#{k}</div>;
-                    })}
-                  />{" "}
+                    keywords={product.keywords}
+                    category={product.category}
+                  />
                 </div>
               );
             })}
