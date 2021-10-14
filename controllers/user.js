@@ -77,3 +77,13 @@ export const verify = async (req, res) => {
 }
 
 // export const changePassword = async (req, res) => {}
+
+export const getUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id).populate('products')
+    res.json(user)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+}
