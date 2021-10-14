@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
-import { getProduct } from "../../services/products";
+import Modal from "../../components/Modal/Modal";
+import { getProduct, updateProduct } from "../../services/products";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
@@ -13,6 +14,7 @@ const ProductDetail = () => {
     content:"",
   })
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showModal, setShowModal] = useState(false)
   const { id } = useParams();
 
   useEffect(
@@ -25,6 +27,26 @@ const ProductDetail = () => {
       fetchProduct();
       // eslint-disable-next-line
     }, [id]);
+
+  const handleWrite = async() => {
+    setShowModal(prev => !prev)
+  }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setReview({
+      ...review,
+      [name]: value,
+    })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    product.reviews.push(review)
+    setProduct(product)
+    await updateProduct(id, product)
+    setShowModal(prev => !prev)
+  }
 
   if (!isLoaded) {
     return <h1>Loading..</h1>;
@@ -39,7 +61,7 @@ const ProductDetail = () => {
             <div className="flex justify-center items-center content-center">
               <img className="self-center max-h-64 max-w-lg m-4" src={product.imgURL} alt="" />
             </div>
-            <div className="flex flex-col flex-wrap max-w-lg md:m-10 m-4 p-8">
+            <div className="flex flex-col flex-wrap max-w-lg md:m-8 m-4 p-4">
               <div className="text-3xl font-black text-white mb-5">{product.name}</div>
               <div className="text-lg font-bold text-white mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
@@ -49,7 +71,7 @@ const ProductDetail = () => {
               </div>
               <h1 className="text-lg font-bold text-white md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
               <div className="flex flex-col sm:flex-row">
-                <a href={product.productURL} target="_blank">
+                <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 w-40">See More</button>
                 </a>
                 <Link to={`/${id}/edit`}>
@@ -63,13 +85,21 @@ const ProductDetail = () => {
             <p className="text-white px-10" >{product.description}</p>
           </div>
         </div>
-        <div>
-          <div className="mt-4 mb-2 text-2xl font-black text-white">Reviews</div>
-        
+        <div className="mb-20">
+          <div className="flex justify-between items-center">
+            <div className="mt-4 mb-2 text-2xl font-black text-white">
+              Reviews
+            </div>
+            <div>
+              <button onClick={handleWrite}>
+                Write a Review
+              </button>
+            </div>
+          </div>
         <div className="text-">
-          {product.reviews.map(review=>{
+          {product.reviews.map((review,i) => {
             return (
-              <div className="bg-black flex p-12 mb-8">
+              <div className="bg-black flex p-12 mb-8" key={i}>
                 <div className="mr-8">
                   {review.author}
                   {review.rating}
@@ -82,6 +112,13 @@ const ProductDetail = () => {
           })}
         </div>
         </div>
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          review={review}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
         <Footer />
         </div>
       </div>

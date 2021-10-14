@@ -45,7 +45,7 @@ const Products = () => {
       }
     };
     fetchProducts();
-  }, [cat]);
+  }, [cat, keyword]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
