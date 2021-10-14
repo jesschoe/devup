@@ -87,3 +87,55 @@ export const getUser = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const getWishList = async (req, res) => {
+  try {
+    const wishList = await User.findById(req.params.id).populate('products');
+    res.json(wishList.wishList);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ error: error.message });
+  } 
+};
+
+export const addToWishList = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id)
+    const product = await Product.findById(req.params.wishListItemId)
+    const wishListItem = {
+      productId: product.id,
+      quantity: req.body.quantity
+    }
+    user.wishList.push(wishListItem)
+    await user.save()
+    res.status(201).json(user.wishList)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+};
+
+export const removeFromWishList = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id)
+    const productIndex = user.wishList.indexOf(req.params.wishListItemId)
+    user.wishList.splice(productIndex, 1)
+    user.save()
+    res.status(200).send("wishlist item deleted")
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: error.message });
+  }
+}
+
+export const clearWishList = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id)
+    user.wishList = []
+    user.save()
+    res.status(200).send("wishList cleared")
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message })
+  }
+}
