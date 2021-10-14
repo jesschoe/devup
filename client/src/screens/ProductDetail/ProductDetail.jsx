@@ -28,13 +28,13 @@ const ProductDetail = () => {
   return (
     <Layout>
       <div className="container">
-      <div className="w-9/12 flex flex-col mt-10">
-        <div className="flex flex-col overflow-y-scroll bg-black justify-center items-center mb-20">
+      <div className="w-10/12 flex flex-col mt-10">
+        <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-20">
           <div className="flex flex-col flex-wrap md:flex-row">
             <div className="flex justify-center content-center">
               <img className="max-h-64 max-w-lg m-10" src={product.imgURL} alt="" />
             </div>
-            <div className="flex flex-col flex-wrap md:m-10 m-4 p-8">
+            <div className="flex flex-col flex-wrap max-w-lg md:m-10 m-4 p-8">
               <div className="text-3xl font-black text-white mb-5">{product.name}</div>
               <div className="text-lg font-bold text-white mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
