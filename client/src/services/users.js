@@ -50,7 +50,7 @@ export const verifyUser = async () => {
   return false
 }
 
-export const getUserWishList = async (userId, productId) => {
+export const getWishList = async (userId) => {
   try {
     const response = await api.get(`/users/${userId}/wishList`)
     return response.data
