@@ -10,7 +10,8 @@ const Product = new Schema(
     description: { type: String, required: true },
     details: { type: String, required: true },
     price: { type: String, required: true },
-    productURL: { type: String, required: true }
+    productURL: { type: String, required: true },
+    userId: { type: Schema.Types.ObjectId, ref: 'users' },
   },
   { timestamps: true }
 )
