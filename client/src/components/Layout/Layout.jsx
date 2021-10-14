@@ -23,7 +23,7 @@ const Layout = (props) => {
         <Nav toggle={toggle} />
         <MobileNav isOpen={isOpen} toggle={toggle} />
       </div>
-      <div className="flex-1 flex-col justify-center overflow-hidden align-center items-center bg-background">
+      <div className="flex-1 flex-col justify-center overflow-hidden align-center items-center">
         {props.children}
       </div>
     </div>

@@ -25,7 +25,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:""
+                    cat:"",
+                    keyword:""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-6 rounded text-white bg-orange ">
@@ -49,7 +50,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"furniture"
+                    cat:"furniture",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
@@ -73,7 +75,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"gear"
+                    cat:"gear",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
@@ -97,7 +100,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"accessories"
+                    cat:"accessories",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
