@@ -7,6 +7,11 @@ import { getProduct } from "../../services/products";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
+  const [review, setReview] = useState({
+    author:"",
+    rating:"",
+    content:"",
+  })
   const [isLoaded, setIsLoaded] = useState(false);
   const { id } = useParams();
 
@@ -29,7 +34,7 @@ const ProductDetail = () => {
     <Layout>
       <div className="container">
       <div className="mx-36 flex flex-col mt-10">
-        <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-20">
+        <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-10">
           <div className="flex flex-col md:flex-row">
             <div className="flex justify-center items-center content-center">
               <img className="self-center max-h-64 max-w-lg m-4" src={product.imgURL} alt="" />
@@ -53,10 +58,29 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col flex-wrap mb-16 p-8">
+          <div className="flex flex-col flex-wrap mb-8 p-8">
             <div className="text-lg font-bold text-white pl-10">Description</div>
             <p className="text-white px-10" >{product.description}</p>
           </div>
+        </div>
+        <div>
+          <div className="mt-4 mb-2 text-2xl font-black text-white">Reviews</div>
+        
+        <div className="text-">
+          {product.reviews.map(review=>{
+            return (
+              <div className="bg-black flex p-12 mb-8">
+                <div className="mr-8">
+                  {review.author}
+                  {review.rating}
+                </div>
+                <div className="ml-6 lg:ml-20">
+                  {review.content}
+                </div>
+              </div>
+            )
+          })}
+        </div>
         </div>
         <Footer />
         </div>

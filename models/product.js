@@ -14,6 +14,7 @@ const Product = new Schema(
     userId: { type: Schema.Types.ObjectId, ref: 'users' },
     reviews: [
       {
+        userId: { type: Schema.Types.ObjectId, ref: 'users' },
         author: { type: String, required: true },
         rating: { type: Number, required: true },
         content: { type: String, required: true },
