@@ -17,8 +17,8 @@ const insertData = async () => {
   await user1.save()
 
   const user2 = new User({
-    username: 'test',
-    email: 'test@gmail.com',
+    username: 'test2',
+    email: 'test2@gmail.com',
     password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11),
     products: [],
     wishlist: [],
