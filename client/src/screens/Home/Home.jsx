@@ -8,9 +8,9 @@ const Home = () => {
     <Layout>
       <div className="container-home" >
         <div className="section">
-          <div className="bg-black py-20 my-24">
-            <div className=" bg-hero bg-cover bg-center h-96 flex items-center bg-opacity-50 justify-end lg:bg-contain lg:bg-no-repeat">
-              <div className="pr-20">
+          <div className="bg-black py-40 mt-12">
+            <div className=" bg-hero bg-cover bg-center h-96 flex items-center bg-opacity-50 justify-end lg:bg-contai lg:bg-no-repeat">
+              <div className="pr-24">
                 <h1 className="text-orange text-5xl text-left font-serif">
                   DevUp
                 </h1>
@@ -37,9 +37,9 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-20 my-24">
-            <div className=" bg-setup bg-cover bg-center h-80 flex items-center justify-start">
-              <div className="pl-20">
+          <div className="bg-black py-40 my-12">
+            <div className=" bg-setup bg-cover bg-center h-96 flex items-center justify-start">
+              <div className="pl-24">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Set Up</h1>
                 <h2 className="text-white text-lg mt-4">
                   Customize your space
@@ -61,8 +61,8 @@ const Home = () => {
           </div>
         </div>
         <div className="section">
-          <div className="bg-black py-20  my-24">
-            <div className=" bg-gearup bg-cover bg-center h-80 flex items-center justify-end">
+          <div className="bg-black py-40  my-12">
+            <div className=" bg-gearup bg-cover bg-center h-96 flex items-center justify-end">
               <div className="pr-20">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Gear Up</h1>
                 <h2 className="text-white text-lg mt-4">
@@ -85,8 +85,8 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-20  my-24">
-            <div className=" bg-levelup bg-cover bg-center h-80 flex items-center justify-start">
+          <div className="bg-black py-40  my-12">
+            <div className=" bg-levelup bg-cover bg-center h-96 flex items-center justify-start">
               <div className="pl-20">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Level Up</h1>
                 <h2 className="text-white text-lg mt-4">
