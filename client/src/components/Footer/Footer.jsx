@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
 
-      <footer className="pt-2 bottom-0 text-2 flex flex-col justify-center items-center ">
+      <footer className="pt-2 mb-20 bottom-0 text-2 flex flex-col justify-center items-center ">
         <img className="self-center h-10" src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="DevUp Logo" />
         <p className="text-xs tracking-wider mb-8">copyright 2021</p>
         <div className="flex items-center justify-center mb-8">
