@@ -13,8 +13,8 @@ router.get('/users', controllers.getUsers)
 router.get('/users/:id/products', controllers.getUserProducts)
 router.get('/users/:id/products/:productId', controllers.getUserProduct)
 
-router.get("/users/:id/wishList", controllers.getWishList)
-router.put("/users/:userId/wishList/:productId", controllers.addToWishList)
-router.delete("/users/:id/wishList/:productId", controllers.removeFromWishList)
-router.delete("/users/:id/wishList", controllers.clearWishList)
+router.get("/users/:userId/wishlist", controllers.getWishList)
+router.put("/users/:userId/wishlist/:productId", controllers.addToWishList)
+router.delete("/users/:userId/wishlist/:productId", controllers.removeFromWishList)
+router.delete("/users/:userId/wishlist", controllers.clearWishList)
 export default router

@@ -141,8 +141,12 @@ export const getUserProduct = async (req, res) => {
 //wishlist
 export const getWishList = async (req, res) => {
   try {
-    const wishList = await User.findById(req.params.id).populate("products");
-    res.json(wishList.wishList);
+    const user = await User.findById(req.params.userId)
+    // user.wishlist.forEach(async(item, i) => {
+    //   user.wishlist[i] = await Product.findById(item)
+    // })
+    // console.log('2', user.wishlist)
+    res.json(user.wishlist);
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: error.message });
@@ -153,9 +157,9 @@ export const addToWishList = async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
     const product = await Product.findById(req.params.productId);
-    user.wishList.push(product);
+    user.wishlist.push(product);
     await user.save();
-    res.status(201).json(user.wishList);
+    res.status(201).json(user.wishlist);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });
@@ -165,8 +169,8 @@ export const addToWishList = async (req, res) => {
 export const removeFromWishList = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-    const productIndex = user.wishList.indexOf(req.params.productId);
-    user.wishList.splice(productIndex, 1);
+    const productIndex = user.wishlist.indexOf(req.params.productId);
+    user.wishlist.splice(productIndex, 1);
     user.save();
     res.status(200).send("wishlist item deleted");
   } catch (error) {
@@ -178,9 +182,9 @@ export const removeFromWishList = async (req, res) => {
 export const clearWishList = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-    user.wishList = [];
+    user.wishlist = [];
     user.save();
-    res.status(200).send("wishList cleared");
+    res.status(200).send("wishlist cleared");
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: error.message });
