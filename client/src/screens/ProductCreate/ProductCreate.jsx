@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer"
 
 let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
-export default function ProductCreate() {
+export default function ProductCreate(props) {
 
   const [loading, setLoading] = useState(false);
 
@@ -71,7 +71,7 @@ export default function ProductCreate() {
 
   return (
 
-    <Layout>
+    <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="mt-10 text-2xl font-black text-white overflow-y-scroll">

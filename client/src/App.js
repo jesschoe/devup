@@ -12,6 +12,7 @@ import AboutUs from "./screens/AboutUs/AboutUs";
 import Products from "./screens/Products/Products";
 import Blog from "./screens/Blog/Blog";
 import WishList from "./screens/WishList/WishList";
+import SignOut from "./screens/SignOut/SignOut"
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <Home user={user} admin={admin} />
+        <Home user={user} setUser={setUser} admin={admin} />
       </Route>
       <Route exact path="/products">
         <Products user={user} />
@@ -43,16 +44,19 @@ function App() {
         <ProductDetail user={user} setUser={setUser} admin={admin}  />
       </Route>
       <Route path="/products/:id/edit">
-        {admin ? <ProductEdit user={user} /> : <Redirect to="/products/:id" />}
+        {admin ? <ProductEdit user={user} admin={admin} /> : <Redirect to="/products/:id" />}
       </Route>
       <Route path="/add-product">
-        {admin ? <ProductCreate user={user} /> : <Redirect to="/add-product" />}
+        {admin ? <ProductCreate user={user} admin={admin} /> : <Redirect to="/products" />}
       </Route>
       <Route path="/signup">
         <SignUp setUser={setUser} />
       </Route>
       <Route path="/signin">
         <SignIn setUser={setUser} />
+      </Route>
+      <Route path="/signout">
+        <SignOut setUser={setUser} />
       </Route>
       <Route exact path="/aboutus">
         <AboutUs />
@@ -61,7 +65,7 @@ function App() {
         <Blog />
       </Route>
       <Route exact path="/:id/wishList">
-        <WishList />
+        <WishList user={user} />
       </Route>
     </div>
   );

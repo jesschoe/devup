@@ -5,7 +5,7 @@ const Nav = ({ toggle, user, admin }) => {
   const authenticatedOptionsBasic = (
     <>
       <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/:id/wishList">Wishlist</NavLink>
-      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/sign-out">Sign Out</NavLink>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/signout">Sign Out</NavLink>
     </>
   )
   const authenticatedOptionsAdmin = (

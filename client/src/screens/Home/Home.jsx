@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer"
 
 const Home = (props) => {
   return (
-    <Layout user={props.user} admin={props.admin} >
+    <Layout user={props.user} setUser={props.setUser} admin={props.admin} >
       <div className="container-home" >
         <div className="section">
           <div className="bg-black py-20 lg:my-36 my-20">
