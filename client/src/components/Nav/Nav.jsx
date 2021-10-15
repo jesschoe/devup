@@ -1,13 +1,39 @@
 import { NavLink } from "react-router-dom";
 
-const Nav = ({ toggle }) => {
+
+const Nav = ({ toggle, user, admin }) => {
+  const authenticatedOptionsBasic = (
+    <>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/:id/wishList">Wishlist</NavLink>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/sign-out">Sign Out</NavLink>
+    </>
+  )
+  const authenticatedOptionsAdmin = (
+    <>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/add-product">Add Product</NavLink>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/signout">Sign Out</NavLink>
+    </>
+  )
+
+  const unauthenticatedOptions = (
+    <>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/signup">Sign Up</NavLink>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/signin">Sign In</NavLink>
+    </>
+  )
+
+  const alwaysOptions = (
+    <>
+      <NavLink className="text-purple hover:text-white px-3 py-2 text-md font-medium" to="/products">Products</NavLink>
+    </>
+  )
   return (
     <nav className="flex justify-between items-center h-20 bg-black shadow-lg z-10 w-screen">
       <NavLink className="h-20 p-2 mt-4" to="/">
         <img
           className="h-12 mx-8"
           src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png"
-          alt="Devup Logo"/>
+          alt="Devup Logo" />
       </NavLink>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -23,21 +49,9 @@ const Nav = ({ toggle }) => {
       </div>
 
       <div className="px-8 md:block hidden">
-        <NavLink
-          className="text-purple hover:text-white px-3 py-2 text-md font-medium"
-          to="/signup">
-          Sign Up
-        </NavLink>
-        <NavLink
-          className="text-purple hover:text-white px-3 py-2 text-md font-medium"
-          to="/signin">
-          Sign In
-        </NavLink>
-        <NavLink
-          className="text-purple hover:text-white px-3 py-2 text-md font-medium"
-          to="/products">
-          Products
-        </NavLink>
+        {user && <div>Welcome, {user.username}</div>}
+        {alwaysOptions}
+        {user ? (admin ? authenticatedOptionsAdmin : authenticatedOptionsBasic) : unauthenticatedOptions}
       </div>
     </nav>
   );

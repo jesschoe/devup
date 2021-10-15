@@ -20,7 +20,7 @@ const Layout = (props) => {
   return (
     <div className="flex-auto flex flex-col w-screen min-h-screen">
       <div className="">
-        <Nav toggle={toggle} />
+        <Nav user={props.user} admin={props.admin} toggle={toggle} />
         <MobileNav isOpen={isOpen} toggle={toggle} />
       </div>
       <div className="flex-1 flex-col justify-center overflow-hidden align-center items-center">

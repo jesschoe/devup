@@ -22,10 +22,10 @@ function App() {
       const user = await verifyUser();
       if (user) {
         setUser(user)
-          if (user.roles[0]==='admin'){
-            setAdmin(prev=>!prev)
-          }
-      } 
+        if (user.roles[0] === 'admin') {
+          setAdmin(prev => !prev)
+        }
+      }
 
     };
     fetchUser();
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <Home user={user} />
+        <Home user={user} admin={admin} />
       </Route>
       <Route exact path="/products">
         <Products user={user} />

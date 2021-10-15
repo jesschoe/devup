@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <Layout>
+    <Layout user={props.user} admin={props.admin} >
       <div className="container-home" >
         <div className="section">
           <div className="bg-black py-20 lg:my-36 my-20">
@@ -23,11 +23,11 @@ const Home = () => {
                   leads to better code
                 </h2>
                 <Link to={{
-                  pathname:"/products",
-                  state:{
-                    cat:"",
-                    keyword:""
-                    }
+                  pathname: "/products",
+                  state: {
+                    cat: "",
+                    keyword: ""
+                  }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-6 rounded text-white bg-orange ">
                     Browse All
@@ -48,11 +48,11 @@ const Home = () => {
                   for comfort and style
                 </h2>
                 <Link to={{
-                  pathname:"/products",
-                  state:{
-                    cat:"furniture",
+                  pathname: "/products",
+                  state: {
+                    cat: "furniture",
                     keyword: ""
-                    }
+                  }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Furniture
@@ -73,11 +73,11 @@ const Home = () => {
                   with the latest tech gear
                 </h2>
                 <Link to={{
-                  pathname:"/products",
-                  state:{
-                    cat:"gear",
+                  pathname: "/products",
+                  state: {
+                    cat: "gear",
                     keyword: ""
-                    }
+                  }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Gear
@@ -98,11 +98,11 @@ const Home = () => {
                   for efficiency and convienience
                 </h2>
                 <Link to={{
-                  pathname:"/products",
-                  state:{
-                    cat:"accessories",
+                  pathname: "/products",
+                  state: {
+                    cat: "accessories",
                     keyword: ""
-                    }
+                  }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
                     Browse Accessories
@@ -113,10 +113,10 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-        <Footer />
+          <Footer />
+        </div>
       </div>
-      </div>
-      
+
     </Layout>
   );
 };
