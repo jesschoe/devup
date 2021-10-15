@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import * as controllers from '../controllers/products.js'
 import restrict from '../helpers/restrict.js'
+import admin from '../helpers/admin.js'
 
 const router = Router()
 
