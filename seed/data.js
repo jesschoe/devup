@@ -24,7 +24,7 @@ const insertData = async () => {
     password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11),
     products: [],
     wishlist: [],
-    roles: 'basic',
+    roles: 'admin',
   })
   await user2.save()
 
