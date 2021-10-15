@@ -6,11 +6,11 @@ export default function Modal(props) {
   return (
     <div>
       {props.showModal ? (
-        <ReviewForm 
-          review={props.review} 
+        <ReviewForm
+          review={props.review}
           handleWrite={props.handleWrite}
           handleChange={props.handleChange}
-          handleSubmit={props.handleSubmit} 
+          handleSubmit={props.handleSubmit}
         />) : ''
       }
     </div>
