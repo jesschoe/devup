@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
 import { getProduct, addReview } from "../../services/products";
 import "./ProductDetail.css"
+import { addToWishList } from "../../services/users";
 
 const ProductDetail = ({user, admin}) => {
   const [product, setProduct] = useState(null);
@@ -68,7 +69,11 @@ const ProductDetail = ({user, admin}) => {
   }
 
   const handleRating = () => {
-
+    
+  }
+  const wishListSubmit = async (event) => {
+    await addToWishList(id, user)
+    console.log(user)
   }
 
   if (!isLoaded) {
@@ -127,7 +132,8 @@ const ProductDetail = ({user, admin}) => {
             <div>
               <button onClick={handleWrite}>
                 Write a Review
-              </button>
+                </button>
+                <button className="bg-orange"onClick={wishListSubmit}> add to wishlist</button>
             </div>
           </div>
         <div className="text-">

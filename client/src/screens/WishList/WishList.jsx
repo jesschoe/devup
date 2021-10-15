@@ -6,6 +6,7 @@ import { getWishList } from "../../services/users";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
+import Product from "../../components/Product/Product";
 
 const WishList = () => {
   const [products, setProducts] = useState([]);
@@ -72,7 +73,35 @@ const WishList = () => {
 
   return (
     <Layout>
-      <Footer />
+      <div className="container">
+        <div className="w-9/12 flex flex-col mt-10">
+          <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
+            <div>
+              <Categories handleCategories={handleCategories} />
+            </div>
+            <div>
+              <Sort handleSort={handleSort} />
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center mb-24">
+            {category.map((product) => {
+              return (
+                <div key={product._id}>
+                  <Product
+                    _id={product._id}
+                    name={product.name}
+                    imgURL={product.imgURL}
+                    price={product.price}
+                    keywords={product.keywords}
+                    category={product.category}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <Footer />
+        </div>
+      </div>
     </Layout>
   );
 };
