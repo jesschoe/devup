@@ -11,7 +11,6 @@ const Product = new Schema(
     details: { type: String, required: true },
     price: { type: String, required: true },
     productURL: { type: String, required: true },
-    userId: { type: Schema.Types.ObjectId, ref: 'users' },
     reviews: [
       {
         userId: { type: Schema.Types.ObjectId, ref: 'users' },

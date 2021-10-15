@@ -42,13 +42,14 @@ export const signIn = async (req, res) => {
   try {
     const { username, password } = req.body
     const user = await User.findOne({ username: username }).select(
-      'username email password_digest'
+      'username email roles password_digest'
     )
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         id: user._id,
         username: user.username,
         email: user.email,
+        roles: user.roles,
         exp: parseInt(exp.getTime() / 1000),
       }
 
@@ -134,7 +135,7 @@ export const getWishList = async (req, res) => {
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: error.message });
-  } 
+  }
 };
 
 export const addToWishList = async (req, res) => {
