@@ -12,8 +12,24 @@ const Product = new Schema(
     price: { type: String, required: true },
     productURL: { type: String, required: true },
     userId: { type: Schema.Types.ObjectId, ref: 'users' },
+    reviews: [
+      {
+        userId: { type: Schema.Types.ObjectId, ref: 'users' },
+        author: { type: String, required: true },
+        rating: { type: Number, required: true },
+        content: { type: String, required: true },
+      },
+    ],
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true } }
 )
+
+// Product.virtual('rating').get(function () {
+//   let totalRating = 0
+//   this.reviews.forEach(review => {
+//     totalRating = review.rating + totalRating
+//   })
+//   return totalRating / this.reviews.length
+// })
 
 export default mongoose.model('products', Product)

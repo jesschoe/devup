@@ -26,6 +26,15 @@ const insertData = async () => {
   })
   await user2.save()
 
+  const user3 = new User({
+    username: 'test3',
+    email: 'test2@gmail.com',
+    password_digest: await bcrypt.hash('test3', 11),
+    products: [],
+    wishlist: [],
+  })
+  await user2.save()
+
   const products = [
     {
       name: "Steel Series Apex Pro Keyboard",
@@ -38,7 +47,23 @@ const insertData = async () => {
         "First-of-its kind adjustable mechanical switches for customizable per-key sensitivity/nFaster response, 5x faster actuation, and 2x durability/nOLED Smart Display delivers information straight from games and apps/nSeries 5000 Aircraft grade aluminum frame/Detachable soft touch magnetic wrist rest",
       price: "199.99",
       productURL: "https://steelseries.com/gaming-keyboards/apex-pro",
-      userId: user1
+      userId: user1,
+      reviews: [
+        {
+          userId: user1,
+          author: 'tester',
+          rating: 5,
+          content:
+            'Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit.',
+        },
+        {
+          userId: user2,
+          author: 'test',
+          rating: 1,
+          content:
+            'Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit.',
+        },
+      ],
     },
     {
       name: "Mount-It! Single Monitor Arm Desk Mount ",

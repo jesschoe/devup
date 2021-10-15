@@ -8,9 +8,9 @@ const Home = () => {
     <Layout>
       <div className="container-home" >
         <div className="section">
-          <div className="bg-black py-40 mt-12">
-            <div className=" bg-hero bg-cover bg-center h-96 flex items-center bg-opacity-50 justify-end lg:bg-contai lg:bg-no-repeat">
-              <div className="pr-24">
+          <div className="bg-black py-20 lg:my-36 my-20">
+            <div className="bg-hero bg-cover bg-right h-72 flex items-center justify-end md:h-96 md:bg-cover lg:bg-contain lg:bg-no-repeat md:bg-center">
+              <div className="pr-12 md:pr-24">
                 <h1 className="text-orange text-5xl text-left font-serif">
                   DevUp
                 </h1>
@@ -25,7 +25,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:""
+                    cat:"",
+                    keyword:""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-6 rounded text-white bg-orange ">
@@ -37,7 +38,7 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-40 my-12">
+          <div className="bg-black py-20 lg:my-36 my-20">
             <div className=" bg-setup bg-cover bg-center h-96 flex items-center justify-start">
               <div className="pl-24">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Set Up</h1>
@@ -49,7 +50,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"furniture"
+                    cat:"furniture",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
@@ -61,7 +63,7 @@ const Home = () => {
           </div>
         </div>
         <div className="section">
-          <div className="bg-black py-40  my-12">
+          <div className="bg-black py-20 lg:my-36 my-20">
             <div className=" bg-gearup bg-cover bg-center h-96 flex items-center justify-end">
               <div className="pr-20">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Gear Up</h1>
@@ -73,7 +75,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"gear"
+                    cat:"gear",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
@@ -85,7 +88,7 @@ const Home = () => {
           </div>
         </div>
         <div className="section" >
-          <div className="bg-black py-40  my-12">
+          <div className="bg-black py-20 lg:my-36 my-20">
             <div className=" bg-levelup bg-cover bg-center h-96 flex items-center justify-start">
               <div className="pl-20">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Level Up</h1>
@@ -97,7 +100,8 @@ const Home = () => {
                 <Link to={{
                   pathname:"/products",
                   state:{
-                    cat:"accessories"
+                    cat:"accessories",
+                    keyword: ""
                     }
                 }}>
                   <button className="flex items-center px-6 py-2 text-xl my-4 rounded text-white bg-orange">
