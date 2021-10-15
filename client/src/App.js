@@ -15,11 +15,18 @@ import WishList from "./screens/WishList/WishList";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
-      user ? setUser(user) : setUser(null);
+      if (user) {
+        setUser(user)
+          if (user.roles[0]==='admin'){
+            setAdmin(prev=>!prev)
+          }
+      } 
+
     };
     fetchUser();
   }, []);
@@ -33,13 +40,13 @@ function App() {
         <Products user={user} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail user={user} setUser={setUser} />
+        <ProductDetail user={user} setUser={setUser} admin={admin}  />
       </Route>
       <Route path="/products/:id/edit">
-        {user ? <ProductEdit user={user} /> : <Redirect to="/products/:id" />}
+        {admin ? <ProductEdit user={user} /> : <Redirect to="/products/:id" />}
       </Route>
       <Route path="/add-product">
-        {user ? <ProductCreate user={user} /> : <Redirect to="/add-product" />}
+        {admin ? <ProductCreate user={user} /> : <Redirect to="/add-product" />}
       </Route>
       <Route path="/signup">
         <SignUp setUser={setUser} />

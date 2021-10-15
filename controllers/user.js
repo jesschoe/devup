@@ -4,12 +4,8 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.js";
 import Product from "../models/product.js";
 
-const SALT_ROUNDS =
-  process.env.NODE_ENV === "production" ? process.env.SALT_ROUNDS : 11;
-const TOKEN_KEY =
-  process.env.NODE_ENV === "production"
-    ? process.env.TOKEN_KEY
-    : "areallylonggoodkey";
+const SALT_ROUNDS = process.env.NODE_ENV === 'production' ? process.env.SALT_ROUNDS : 11
+const TOKEN_KEY = process.env.NODE_ENV === 'production' ? process.env.TOKEN_KEY : 'osSidfjosWI23o1'
 
 // for JWT expiration
 const today = new Date();
@@ -18,13 +14,17 @@ exp.setDate(today.getDate() + 30);
 
 export const signUp = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
-    const password_digest = await bcrypt.hash(password, SALT_ROUNDS);
+
+    const { username, email, password, roles } = req.body
+    const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
+
     const user = new User({
       username,
       email,
       password_digest,
-    });
+
+      roles
+    })
 
     await user.save();
 
@@ -32,6 +32,7 @@ export const signUp = async (req, res) => {
       id: user._id,
       username: user.username,
       email: user.email,
+      roles: user.roles,
       exp: parseInt(exp.getTime() / 1000),
     };
 
@@ -47,18 +48,23 @@ export const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username: username }).select(
-      "username email password_digest"
-    );
+
+      'username email roles password_digest'
+    )
+
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         id: user._id,
         username: user.username,
         email: user.email,
+        roles: user.roles,
         exp: parseInt(exp.getTime() / 1000),
       };
 
-      const token = jwt.sign(payload, TOKEN_KEY);
-      res.status(201).json({ token });
+      const token = jwt.sign(payload, TOKEN_KEY)
+      console.log(token)
+      res.status(201).json({ token })
+
     } else {
       res.status(401).send("Invalid Credentials");
     }
@@ -73,7 +79,8 @@ export const verify = async (req, res) => {
     const token = req.headers.authorization.split(" ")[1];
     const payload = jwt.verify(token, TOKEN_KEY);
     if (payload) {
-      res.json(payload);
+      res.json(payload)
+
     }
   } catch (error) {
     console.log(error.message);

@@ -10,11 +10,11 @@ const User = new Schema(
       match: [/^[a-zA-Z0-9]+$/, "is invalid"],
     },
     email: { type: String, required: true, match: /.+\@.+\..+/, unique: true },
-    // roles: {
-    //   type: [String],
-    //   enum: ['basic', 'manager', 'admin'],
-    //   default: ['basic'],
-    // },
+    roles: {
+      type: [String],
+      enum: ['basic', 'admin'],
+      default: ['basic'],
+    },
     password_digest: { type: String, required: true, select: false },
     products: [{ type: Schema.Types.ObjectId, ref: "products" }],
     wishList: [{ type: Schema.Types.ObjectId, ref: "products" }],
