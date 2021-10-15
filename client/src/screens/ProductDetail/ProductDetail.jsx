@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
 import { getProduct, updateProduct } from "../../services/products";
+import "./ProductDetail.css"
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
@@ -48,6 +49,10 @@ const ProductDetail = () => {
     setShowModal(prev => !prev)
   }
 
+  const handleRating = () => {
+
+  }
+
   if (!isLoaded) {
     return <h1>Loading..</h1>;
   }
@@ -55,27 +60,38 @@ const ProductDetail = () => {
   return (
     <Layout>
       <div className="container">
-      <div className="mx-36 flex flex-col mt-10">
+      <div className={(showModal) ? "mx-36 flex flex-col mt-10 opacity-40" : "mx-36 flex flex-col mt-10"}>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-10">
           <div className="flex flex-col md:flex-row">
             <div className="flex justify-center items-center content-center">
               <img className="self-center max-h-64 max-w-lg m-4" src={product.imgURL} alt="" />
             </div>
             <div className="flex flex-col flex-wrap max-w-lg md:m-8 m-4 p-4">
-              <div className="text-3xl font-black text-white mb-5">{product.name}</div>
-              <div className="text-lg font-bold text-white mb-1.5">Features</div>
+              <div className="text-3xl text-right font-black text-white mb-2">{product.name}</div>
+              <div className="rating">
+                <span onClick={handleRating}>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+              </div>
+              <div className="text-lg font-bold text-white mt-4 mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
                   return <li className="p-1" key={i}>- {detail}</li>
                 })}</ul>
               </div>
-              <h1 className="text-lg font-bold text-white md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
-              <div className="flex flex-col sm:flex-row">
+              <h1 className="text-lg font-bold text-white text-right md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
+              <div className="flex flex-row justify-around">
                 <a href={product.productURL} rel="noreferrer" target="_blank">
-                  <button className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 w-40">See More</button>
+                  <button 
+                    className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                  >See More</button>
                 </a>
                 <Link to={`/${id}/edit`}>
-                  <button className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 w-40">Edit Product</button>
+                  <button 
+                    className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                  >Edit Product</button>
                 </Link>
               </div>
             </div>
@@ -112,15 +128,16 @@ const ProductDetail = () => {
           })}
         </div>
         </div>
+        
+        <Footer />
+        </div>
         <Modal
           showModal={showModal}
-          setShowModal={setShowModal}
+          handleWrite={handleWrite}
           review={review}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        <Footer />
-        </div>
       </div>
     </Layout>
   );

@@ -1,8 +1,8 @@
 
 
-const ReviewForm = ({ author, rating, content, handleChange, handleSubmit }) => {
+const ReviewForm = ({ author, rating, content, handleWrite, handleChange, handleSubmit }) => {
     return (
-      <div className="bg-background bg-opacity-60">
+      <div className="opacity-100">
         <form 
           className="flex flex-col justify-center items-center bg-black absolute p-8 w-7/12 top-1/4 left-1/4" 
           onSubmit={(e) => handleSubmit(e)}
@@ -33,7 +33,10 @@ const ReviewForm = ({ author, rating, content, handleChange, handleSubmit }) => 
                 required
                 onChange={(e) => handleChange(e)}
             />
-            <button type='submit' className="py-2 px-6 bg-orange text-white w-36 rounded-md">Submit</button>
+            <div className="flex">
+              <button type='submit' className="mx-4 py-2 px-6 bg-orange text-white w-36 rounded-md">Submit</button>
+              <button onClick={handleWrite} className="mx-4 py-2 px-6 bg-orange text-white w-36 rounded-md">Cancel</button>
+            </div>
         </form>
       </div>
     )
