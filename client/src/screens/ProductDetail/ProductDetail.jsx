@@ -6,8 +6,9 @@ import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
 import { getProduct, updateProduct } from "../../services/products";
 import "./ProductDetail.css"
+import { addToWishList } from "../../services/users";
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
   const [product, setProduct] = useState(null);
   const [review, setReview] = useState({
     author:"",
@@ -50,7 +51,11 @@ const ProductDetail = () => {
   }
 
   const handleRating = () => {
-
+    
+  }
+  const wishListSubmit = async (event) => {
+    await addToWishList(id, props.user)
+    console.log(props.user)
   }
 
   if (!isLoaded) {
@@ -109,7 +114,8 @@ const ProductDetail = () => {
             <div>
               <button onClick={handleWrite}>
                 Write a Review
-              </button>
+                </button>
+                <button className="bg-orange"onClick={wishListSubmit}> add to wishlist</button>
             </div>
           </div>
         <div className="text-">

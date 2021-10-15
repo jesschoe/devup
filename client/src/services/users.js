@@ -52,7 +52,16 @@ export const verifyUser = async () => {
 
 export const getWishList = async (userId) => {
   try {
-    const response = await api.get(`/users/${userId}/wishList`)
+    const response = await api.get(`/users/${userId}/wishlist`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const addToWishList = async (productId, userId) => {
+  try {
+    const response = await api.put(`/users/${userId}/wishlist/${productId}`)
     return response.data
   } catch (error) {
     throw error

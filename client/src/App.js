@@ -33,7 +33,7 @@ function App() {
         <Products user={user} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail user={user} />
+        <ProductDetail user={user} setUser={setUser} />
       </Route>
       <Route path="/products/:id/edit">
         {user ? <ProductEdit user={user} /> : <Redirect to="/products/:id" />}
