@@ -9,6 +9,7 @@ import "./ProductDetail.css"
 const ProductDetail = ({user, admin}) => {
   const [product, setProduct] = useState(null);
   const [review, setReview] = useState({
+    userId:"",
     author:"",
     rating:"",
     content:"",
@@ -52,6 +53,7 @@ const ProductDetail = ({user, admin}) => {
     setReview({
       ...review,
       [name]: value,
+      userId: user.id
     })
   }
 
