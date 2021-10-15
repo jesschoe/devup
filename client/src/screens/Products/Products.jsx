@@ -8,7 +8,7 @@ import Categories from "../../components/Categories/Categories";
 import Footer from "../../components/Footer/Footer"
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
 
-const Products = () => {
+const Products = (props) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [applySort, setApplySort] = useState(false);
@@ -72,7 +72,7 @@ const Products = () => {
   };
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
           <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">

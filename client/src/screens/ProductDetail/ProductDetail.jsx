@@ -81,7 +81,7 @@ const ProductDetail = ({user, admin}) => {
   }
 
   return (
-    <Layout>
+    <Layout user={user} admin={admin}>
       <div className="container">
       <div className={(showModal) ? "mx-36 flex flex-col mt-10 opacity-40" : "mx-36 flex flex-col mt-10"}>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-10">

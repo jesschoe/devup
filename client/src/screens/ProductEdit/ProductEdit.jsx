@@ -72,7 +72,7 @@ const ProductEdit = (props) => {
 
   return (
 
-    <Layout>
+    <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="section">
         <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white">
