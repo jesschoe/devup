@@ -1,7 +1,62 @@
 import Layout from "../../components/Layout/Layout"
 import { Link } from "react-router-dom";
+import Post from "../../components/Post/Post"
+import { useState, useEffect } from "react";
+import { getPosts, createPost } from "../../services/posts"
+import PostModal from "../../components/Modal/PostModal"
+import { useHistory } from "react-router-dom"
+
 
 const Blog = () => {
+
+  const [posts, setPosts] = useState([]);
+  const history = useHistory();
+  const [showPostModal, setShowPostModal] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [post, setPost] = useState({
+    title: "",
+    name: "",
+    description: "",
+    hashtags: "",
+  })
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setPost({
+      ...post,
+      [name]: value
+    })
+  }
+
+  const handleWrite = async () => {
+    setShowPostModal(prev => !prev)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    addPost();
+    setShowPostModal(prev => !prev)
+    history.push("/blog");
+  }
+
+  const addPost = async () => {
+    await createPost(post)
+  }
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await getPosts();
+      setPosts(res);
+      setIsLoaded(true);
+    };
+    fetchPosts();
+  }, [])
+
+  if (!isLoaded) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <Layout>
       <div className="container">
@@ -18,6 +73,9 @@ const Blog = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="p-10">
+          <button onClick={handleWrite}>Create Post</button>
         </div>
         <div className="flex justify-center flex-col items-center w-full">
           <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center my-24 w-full border-red">
@@ -72,8 +130,29 @@ const Blog = () => {
               <h5 className="font-bold text-purple mb-5"><Link to={{ pathname: "/products", state: { cat: "gear" } }}>#monitors</Link>, <Link to={{ pathname: "/products", state: { cat: "furniture" } }}>#chair</Link></h5>
             </div>
           </div>
+          <div>
+            {posts.map((post) => {
+              return (
+                <div key={post._id}>
+                  <Post
+                    _id={post._id}
+                    title={post.title}
+                    name={post.name}
+                    description={post.description}
+                    hastags={post.hastags}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-        {/* <Link to={{ pathname: "/products", state: { cat: "gear" } }}>#</Link> */}
+        <PostModal
+          showPostModal={showPostModal}
+          handleWrite={handleWrite}
+          post={post}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
       </div>
     </Layout>
   );
