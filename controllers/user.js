@@ -4,8 +4,12 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.js";
 import Product from "../models/product.js";
 
-const SALT_ROUNDS = process.env.NODE_ENV === 'production' ? process.env.SALT_ROUNDS : 11
-const TOKEN_KEY = process.env.NODE_ENV === 'production' ? process.env.TOKEN_KEY : 'osSidfjosWI23o1'
+const SALT_ROUNDS =
+  process.env.NODE_ENV === "production" ? process.env.SALT_ROUNDS : 11;
+const TOKEN_KEY =
+  process.env.NODE_ENV === "production"
+    ? process.env.TOKEN_KEY
+    : "osSidfjosWI23o1";
 
 // for JWT expiration
 const today = new Date();
@@ -14,17 +18,16 @@ exp.setDate(today.getDate() + 30);
 
 export const signUp = async (req, res) => {
   try {
-
-    const { username, email, password, roles } = req.body
-    const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
+    const { username, email, password, roles } = req.body;
+    const password_digest = await bcrypt.hash(password, SALT_ROUNDS);
 
     const user = new User({
       username,
       email,
       password_digest,
 
-      roles
-    })
+      roles,
+    });
 
     await user.save();
 
@@ -48,9 +51,8 @@ export const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username: username }).select(
-
-      'username email roles password_digest'
-    )
+      "username email roles password_digest"
+    );
 
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
@@ -61,10 +63,9 @@ export const signIn = async (req, res) => {
         exp: parseInt(exp.getTime() / 1000),
       };
 
-      const token = jwt.sign(payload, TOKEN_KEY)
-      console.log(token)
-      res.status(201).json({ token })
-
+      const token = jwt.sign(payload, TOKEN_KEY);
+      console.log(token);
+      res.status(201).json({ token });
     } else {
       res.status(401).send("Invalid Credentials");
     }
@@ -79,8 +80,7 @@ export const verify = async (req, res) => {
     const token = req.headers.authorization.split(" ")[1];
     const payload = jwt.verify(token, TOKEN_KEY);
     if (payload) {
-      res.json(payload)
-
+      res.json(payload);
     }
   } catch (error) {
     console.log(error.message);
@@ -141,12 +141,11 @@ export const getUserProduct = async (req, res) => {
 //wishlist
 export const getWishList = async (req, res) => {
   try {
-    const user = await User.findById(req.params.userId)
-    // user.wishlist.forEach(async(item, i) => {
-    //   user.wishlist[i] = await Product.findById(item)
-    // })
-    // console.log('2', user.wishlist)
-    res.json(user.wishlist);
+    const user = await User.findById(req.params.userId);
+    const list = await Promise.all(user.wishlist.map(async (item) => {
+        return await Product.findById(item)
+    }))
+    res.json(list);
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: error.message });
@@ -168,7 +167,7 @@ export const addToWishList = async (req, res) => {
 
 export const removeFromWishList = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.findById(req.params.userId);
     const productIndex = user.wishlist.indexOf(req.params.productId);
     user.wishlist.splice(productIndex, 1);
     user.save();
@@ -181,7 +180,7 @@ export const removeFromWishList = async (req, res) => {
 
 export const clearWishList = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.findById(req.params.userId);
     user.wishlist = [];
     user.save();
     res.status(200).send("wishlist cleared");
