@@ -1,6 +1,6 @@
+import "./ReviewForm.css"
 
-
-const ReviewForm = ({ author, rating, content, handleWrite, handleChange, handleSubmit }) => {
+const ReviewForm = ({ author, content, handleWrite, handleChange, handleSubmit, handleRating }) => {
     return (
       <div className="opacity-100">
         <form 
@@ -16,14 +16,13 @@ const ReviewForm = ({ author, rating, content, handleWrite, handleChange, handle
                 autoFocus
                 onChange={(e) => handleChange(e)}
             />
-            <input
-                className="flex-1 m-4 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                placeholder="Rating (1-5)"
-                value={rating}
-                name="rating"
-                required
-                onChange={(e) => handleChange(e)}
-            />
+            <div className="rating">
+              <span name="rating" value="1" onClick={() => handleRating(5)}>☆</span>
+              <span name="rating" value="2" onClick={() => handleRating(4)}>☆</span>
+              <span name="rating" value="3" onClick={() => handleRating(3)}>☆</span>
+              <span name="rating" value="4" onClick={() => handleRating(2)}>☆</span>
+              <span name="rating" value="5" onClick={() => handleRating(1)}>☆</span>
+            </div>
             <textarea
                 className="flex-1 m-4 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
                 rows={10}
