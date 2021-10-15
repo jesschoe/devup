@@ -49,3 +49,12 @@ export const verifyUser = async () => {
   }
   return false
 }
+
+export const getWishList = async (userId) => {
+  try {
+    const response = await api.get(`/users/${userId}/wishList`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
