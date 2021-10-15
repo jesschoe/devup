@@ -7,7 +7,7 @@ const admin = (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1]
     if (jwt.verify(token, TOKEN_KEY)) {
       const payload = jwt.verify(token, TOKEN_KEY)
-      if (payload.roles === 'admin') {
+      if (payload.roles[0] === 'admin') {
         next()
       }
     }
