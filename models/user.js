@@ -17,7 +17,7 @@ const User = new Schema(
     },
     password_digest: { type: String, required: true, select: false },
     products: [{ type: Schema.Types.ObjectId, ref: "products" }],
-    wishList: [{ type: Schema.Types.ObjectId, ref: "products" }],
+    wishlist: [{ type: Schema.Types.ObjectId, ref: "products" }],
   },
   { timestamps: true }
 );
