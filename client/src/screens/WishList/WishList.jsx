@@ -29,20 +29,19 @@ const WishList = (props) => {
     const fetchUserWishList = async () => {
       const allProducts = await getWishList(id);
       setProducts(allProducts);
-      console.log(allProducts)
-      if (cat.length > 0) {
-        const results = allProducts.filter((product) =>
-          product.category.includes(cat)
-        );
-        setCategory(results);
-      } else if (keyword.length > 0) {
-        const results = allProducts.filter((product) =>
-          product.keywords.includes(keyword)
-        );
-        setCategory(results);
-      } else {
-        setCategory(allProducts);
-      }
+      // if (cat.length > 0) {
+      //   const results = allProducts.filter((product) =>
+      //     product.category.includes(cat)
+      //   );
+      //   setCategory(results);
+      // } else if (keyword.length > 0) {
+      //   const results = allProducts.filter((product) =>
+      //     product.keywords.includes(keyword)
+      //   );
+      //   setCategory(results);
+      // } else {
+      //   setCategory(allProducts);
+      // }
     };
     fetchUserWishList();
   }, [id]);
