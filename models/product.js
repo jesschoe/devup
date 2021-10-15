@@ -18,18 +18,17 @@ const Product = new Schema(
         rating: { type: Number, required: true },
         content: { type: String, required: true },
       },
-      { timestamps: true }
     ],
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )
 
-// Product.virtual('rating').get(function () {
-//   let totalRating = 0
-//   this.reviews.forEach(review => {
-//     totalRating = review.rating + totalRating
-//   })
-//   return totalRating / this.reviews.length
-// })
+Product.virtual('avgRating').get(function () {
+  let totalRating = 0
+  this.reviews.forEach(review => {
+    totalRating = review.rating + totalRating
+  })
+  return totalRating / this.reviews.length
+})
 
 export default mongoose.model('products', Product)

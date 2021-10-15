@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
-import { getProduct, addReview } from "../../services/products";
+import { getProduct, addReview, deleteReview } from "../../services/products";
 import "./ProductDetail.css"
 import { addToWishList } from "../../services/users";
 
@@ -18,6 +18,7 @@ const ProductDetail = ({user, admin}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showModal, setShowModal] = useState(false)
   const { id } = useParams();
+  const history = useHistory()
 
   useEffect(
     () => {
@@ -58,19 +59,34 @@ const ProductDetail = ({user, admin}) => {
     })
   }
 
+  const handleRating = (val) => {
+    setReview({
+      ...review,
+      rating: val
+    })
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     product.reviews.push(review)
     setProduct(product)
-    console.log(product)
     await addReview(id, product)
     
     setShowModal(prev => !prev)
   }
 
-  const handleRating = () => {
-    
+  const handleDelete = async (id, reviewId) => {
+    product.reviews.forEach((review, i)=> {
+      if (review._id === reviewId) {
+        product.reviews.splice(i, 1)
+      }
+    })
+    setProduct(product)
+    await deleteReview(id, product)
+    history.push(`/products/${id}`)
   }
+
+
   const wishListSubmit = async (event) => {
     await addToWishList(id, user)
     console.log(user)
@@ -91,12 +107,12 @@ const ProductDetail = ({user, admin}) => {
             </div>
             <div className="flex flex-col flex-wrap max-w-lg md:m-8 m-4 p-4">
               <div className="text-3xl text-right font-black text-white mb-2">{product.name}</div>
-              <div className="rating">
-                <span onClick={handleRating}>☆</span>
-                <span>☆</span>
-                <span>☆</span>
-                <span>☆</span>
-                <span>☆</span>
+              <div className="text-orange text-right">
+                {product.avgRating >= 1 ? <span>★</span> : <span>☆</span>}
+                {product.avgRating >= 2 ? <span>★</span> : <span>☆</span>}
+                {product.avgRating >= 3 ? <span>★</span> : <span>☆</span>}
+                {product.avgRating >= 4 ? <span>★</span> : <span>☆</span>}
+                {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
               <div className="text-lg font-bold text-white mt-4 mb-1.5">Features</div>
               <div className="text-xs mb-8 text-white">
@@ -109,13 +125,20 @@ const ProductDetail = ({user, admin}) => {
                 <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button 
                     className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                  >See More</button>
+                  >See Retailer</button>
                 </a>
-                <Link to={`/${id}/edit`}>
+                {/* <Link to={`/${id}/edit`}>
                   <button 
                     className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                  >Edit Product</button>
-                </Link>
+                  >Edit Product</button> 
+                </Link>*/}
+                  <button 
+                    className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                    onClick={wishListSubmit}
+                  >
+                    Add to Wishlist
+                  </button>
+                
               </div>
             </div>
           </div>
@@ -130,10 +153,9 @@ const ProductDetail = ({user, admin}) => {
               Reviews
             </div>
             <div>
-              <button onClick={handleWrite}>
+              <button onClick={user ? handleWrite : ''}>
                 Write a Review
                 </button>
-                <button className="bg-orange"onClick={wishListSubmit}> add to wishlist</button>
             </div>
           </div>
         <div className="text-">
@@ -141,23 +163,25 @@ const ProductDetail = ({user, admin}) => {
             return (
               <div className="bg-black flex p-12 mb-8" key={i}>
                 <div className="w-5/12">
-                  {review.author}
-                  {getTimestamp(product.updatedAt)}
-                  <div>
-                    <span onClick={handleRating}>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    {review.rating}
+                  <div className="text-xl">{review.author}</div>
+                  <div className="text-xs">{getTimestamp(product.updatedAt)}</div>
+                  <div className="text-orange mt-4">
+                    {review.rating >= 1 ? <span>★</span> : <span>☆</span>}
+                    {review.rating >= 2 ? <span>★</span> : <span>☆</span>}
+                    {review.rating >= 3 ? <span>★</span> : <span>☆</span>}
+                    {review.rating >= 4 ? <span>★</span> : <span>☆</span>}
+                    {review.rating >= 5 ? <span>★</span> : <span>☆</span>}
                   </div>
                 </div>
                 <div className="flex flex-col w-7/12">
-                  <div className="">
+                  <div className="text-sm">
                     {review.content}
                   </div>
                   {user ? user.id === review.userId ? 
-                  <button className="self-end py-2 px-6 bg-orange text-white rounded-md">Delete</button> : "" : ""} 
+                  <button 
+                    className="self-end py-2 px-6 bg-orange text-white rounded-md"
+                    onClick={()=>handleDelete(id, review._id)}
+                  >Delete</button> : "" : ""} 
                 </div>
               </div>
             )
@@ -173,6 +197,7 @@ const ProductDetail = ({user, admin}) => {
           review={review}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          handleRating={handleRating}
         />
       </div>
     </Layout>

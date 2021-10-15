@@ -11,6 +11,7 @@ export default function Modal(props) {
           handleWrite={props.handleWrite}
           handleChange={props.handleChange}
           handleSubmit={props.handleSubmit}
+          handleRating={props.handleRating}
         />) : ''
       }
     </div>
