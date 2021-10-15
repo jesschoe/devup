@@ -21,15 +21,27 @@ const ProductDetail = ({user, admin}) => {
     () => {
       const fetchProduct = async () => {
         const res = await getProduct(id);
-
         setProduct(res);
         setIsLoaded(true);
-
-
       };
       fetchProduct();
       // eslint-disable-next-line
     }, [id]);
+
+  const getTimestamp = (time) => {
+    let displayDate = time.split('')
+
+    for (let i = 0; i < displayDate.length; i++) {
+        if (displayDate[i] === 'T') {
+            displayDate[i] = ' '
+        } else if (displayDate[i] === '.') {
+            displayDate.splice([i], 5)
+        }
+    }
+
+    return displayDate.join('')
+
+  }
 
   const handleWrite = async() => {
     setShowModal(prev => !prev)
@@ -120,13 +132,20 @@ const ProductDetail = ({user, admin}) => {
           {product.reviews.map((review,i) => {
             return (
               <div className="bg-black flex p-12 mb-8" key={i}>
-                <div className="mr-8">
+                <div className="w-5/12">
                   {review.author}
-                  {product.updatedAt}
-                  {review.rating}
+                  {getTimestamp(product.updatedAt)}
+                  <div>
+                    <span onClick={handleRating}>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    {review.rating}
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <div className="ml-6 lg:ml-20">
+                <div className="flex flex-col w-7/12">
+                  <div className="">
                     {review.content}
                   </div>
                   {user ? user.id === review.userId ? 

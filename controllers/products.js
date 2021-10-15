@@ -33,7 +33,6 @@ export const createProduct = async (req, res) => {
 }
 
 export const updateProduct = async (req, res) => {
-  console.log('backend', req)
   const { id } = req.params
   const product = await Product.findByIdAndUpdate(id, req.body, { new: true })
   res.status(200).json(product)
@@ -54,6 +53,7 @@ export const deleteProduct = async (req, res) => {
 }
 
 export const addReview = async (req, res) => {
+  console.log('backend', req)
   const review = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
   res.status(200).json(review)
 }
