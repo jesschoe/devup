@@ -1,15 +1,15 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
-import { getProduct, updateProduct } from "../../services/products";
+import { getProduct, addReview } from "../../services/products";
 import "./ProductDetail.css"
 
-const ProductDetail = () => {
+const ProductDetail = ({user, admin}) => {
   const [product, setProduct] = useState(null);
   const [review, setReview] = useState({
+    userId:"",
     author:"",
     rating:"",
     content:"",
@@ -29,6 +29,21 @@ const ProductDetail = () => {
       // eslint-disable-next-line
     }, [id]);
 
+  const getTimestamp = (time) => {
+    let displayDate = time.split('')
+
+    for (let i = 0; i < displayDate.length; i++) {
+        if (displayDate[i] === 'T') {
+            displayDate[i] = ' '
+        } else if (displayDate[i] === '.') {
+            displayDate.splice([i], 5)
+        }
+    }
+
+    return displayDate.join('')
+
+  }
+
   const handleWrite = async() => {
     setShowModal(prev => !prev)
   }
@@ -38,6 +53,7 @@ const ProductDetail = () => {
     setReview({
       ...review,
       [name]: value,
+      userId: user.id
     })
   }
 
@@ -45,7 +61,9 @@ const ProductDetail = () => {
     event.preventDefault()
     product.reviews.push(review)
     setProduct(product)
-    await updateProduct(id, product)
+    console.log(product)
+    await addReview(id, product)
+    
     setShowModal(prev => !prev)
   }
 
@@ -116,12 +134,24 @@ const ProductDetail = () => {
           {product.reviews.map((review,i) => {
             return (
               <div className="bg-black flex p-12 mb-8" key={i}>
-                <div className="mr-8">
+                <div className="w-5/12">
                   {review.author}
-                  {review.rating}
+                  {getTimestamp(product.updatedAt)}
+                  <div>
+                    <span onClick={handleRating}>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    {review.rating}
+                  </div>
                 </div>
-                <div className="ml-6 lg:ml-20">
-                  {review.content}
+                <div className="flex flex-col w-7/12">
+                  <div className="">
+                    {review.content}
+                  </div>
+                  {user ? user.id === review.userId ? 
+                  <button className="self-end py-2 px-6 bg-orange text-white rounded-md">Delete</button> : "" : ""} 
                 </div>
               </div>
             )

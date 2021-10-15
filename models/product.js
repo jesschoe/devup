@@ -18,6 +18,7 @@ const Product = new Schema(
         rating: { type: Number, required: true },
         content: { type: String, required: true },
       },
+      { timestamps: true }
     ],
   },
   { timestamps: true, toJSON: { virtuals: true } }

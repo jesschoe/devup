@@ -40,7 +40,7 @@ function App() {
         <Products user={user} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail user={user} />
+        <ProductDetail user={user} admin={admin} />
       </Route>
       <Route path="/products/:id/edit">
         {admin ? <ProductEdit user={user} /> : <Redirect to="/products/:id" />}
