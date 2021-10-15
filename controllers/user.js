@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import User from '../models/user.js'
 
 const SALT_ROUNDS = process.env.NODE_ENV === 'production' ? process.env.SALT_ROUNDS : 11
-const TOKEN_KEY = process.env.NODE_ENV === 'production' ? process.env.TOKEN_KEY : 'areallylonggoodkey'
+const TOKEN_KEY = process.env.NODE_ENV === 'production' ? process.env.TOKEN_KEY : 'osSidfjosWI23o1'
 
 // for JWT expiration
 const today = new Date()

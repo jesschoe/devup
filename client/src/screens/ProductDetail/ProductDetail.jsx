@@ -1,13 +1,12 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
-import { getProduct, updateProduct } from "../../services/products";
+import { getProduct, addReview } from "../../services/products";
 import "./ProductDetail.css"
 
-const ProductDetail = () => {
+const ProductDetail = ({user, admin}) => {
   const [product, setProduct] = useState(null);
   const [review, setReview] = useState({
     author:"",
@@ -22,8 +21,11 @@ const ProductDetail = () => {
     () => {
       const fetchProduct = async () => {
         const res = await getProduct(id);
+
         setProduct(res);
         setIsLoaded(true);
+
+
       };
       fetchProduct();
       // eslint-disable-next-line
@@ -45,7 +47,9 @@ const ProductDetail = () => {
     event.preventDefault()
     product.reviews.push(review)
     setProduct(product)
-    await updateProduct(id, product)
+    console.log(product)
+    await addReview(id, product)
+    
     setShowModal(prev => !prev)
   }
 
@@ -118,10 +122,15 @@ const ProductDetail = () => {
               <div className="bg-black flex p-12 mb-8" key={i}>
                 <div className="mr-8">
                   {review.author}
+                  {product.updatedAt}
                   {review.rating}
                 </div>
-                <div className="ml-6 lg:ml-20">
-                  {review.content}
+                <div className="flex flex-col">
+                  <div className="ml-6 lg:ml-20">
+                    {review.content}
+                  </div>
+                  {user ? user.id === review.userId ? 
+                  <button className="self-end py-2 px-6 bg-orange text-white rounded-md">Delete</button> : "" : ""} 
                 </div>
               </div>
             )
