@@ -10,9 +10,9 @@ const AboutUs = (props) => {
       </div>
       <div className="p-8 max-w-md md:max-w-full md:p-16 bg-black lg:px-8 lg:py-20 mx-20 mb-20">
         <div className="mb-20 flex flex-wrap text-white justify-center text-center">
-            Due to global shifts in the economy, many professionals are transitioning to remote work. And while their skills translate well into the home,
-            the quality of their workspace doesn’t. To solve this issue, a group of developers came together to create DevUp. This application provides IT
-            professionals with the latest tech gadgets, to improve the quality of their remote-office setup.
+            Many professionals are transitioning to remote work, and while their skills translate well into the home,
+            the quality of their workspace doesn’t. To solve this issue, a group of developers came together to create DevUp. This application curates
+            hand-picked furniture, tech gadgets, and accessories to improve the quality of remote-office setups.
         </div>
         <div className=" grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
           <div className="flex flex-col justify-center items-center ">
@@ -50,7 +50,7 @@ const AboutUs = (props) => {
             />
             <div className="flex flex-col items-center mt-2">
               <p className="text-lg font-bold text-white mb-1  ">Benjamin Jean</p>
-              <p className="mb-4 text-xs text-gray-800 text-white ">Debugging Director</p>
+              <p className="mb-4 text-xs text-gray-800 text-white ">Div Vader</p>
               <div className="flex flex-row ">
                 <a href="https://github.com/BenjaminLJean">
                   <img
