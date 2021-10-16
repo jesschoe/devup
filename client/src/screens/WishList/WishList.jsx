@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
-import { useLocation, useParams } from "react-router-dom";
-import { getWishList } from "../../services/users";
+import { useLocation, useParams, useHistory, Link } from "react-router-dom";
+import { getWishList, deleteWishListItem } from "../../services/users";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
@@ -17,6 +17,7 @@ const WishList = (props) => {
   const { userId, id } = useParams();
   let cat = "";
   let keyword = "";
+  const history = useHistory()
 
   if (location.state) {
     cat = location.state.cat;
@@ -66,8 +67,6 @@ const WishList = (props) => {
     const results = products.filter((product) =>
     product.category.includes(option)
     );
-    console.log(products[0])
-    console.log(results)
     setCategory(results);
     setApplySort(true);
   };
@@ -76,13 +75,17 @@ const WishList = (props) => {
     <Layout user={props.user}>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
-          <div className="text-3xl text-purple"> My WishList </div>
-          <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
-            <div>
-              <Categories handleCategories={handleCategories} />
+        <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
+            <div className="mb-2 text-5xl text-orange">
+              My WishList
             </div>
-            <div>
-              <Sort handleSort={handleSort} />
+            <div className="flex sm: mx-auto lg:mr-32">
+              <div>
+                <Categories handleCategories={handleCategories} />
+              </div>
+              <div>
+                <Sort handleSort={handleSort} />
+              </div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center mb-24">
@@ -97,7 +100,10 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
-                  <button>remove</button>
+                  <Link>
+                  <button className=" justify-center px-2 mx-auto py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                    onClick={() => deleteWishListItem(userId,id)}>remove</button>
+                    </Link>
                 </div>
               );
             })}
