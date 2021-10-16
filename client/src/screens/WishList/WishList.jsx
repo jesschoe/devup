@@ -14,7 +14,7 @@ const WishList = (props) => {
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
   const location = useLocation();
-  const { id } = useParams();
+  const { userId, id } = useParams();
   let cat = "";
   let keyword = "";
 
@@ -27,24 +27,24 @@ const WishList = (props) => {
 
   useEffect(() => {
     const fetchUserWishList = async () => {
-      const allProducts = await getWishList(id);
+      const allProducts = await getWishList(userId);
       setProducts(allProducts);
-      // if (cat.length > 0) {
-      //   const results = allProducts.filter((product) =>
-      //     product.category.includes(cat)
-      //   );
-      //   setCategory(results);
-      // } else if (keyword.length > 0) {
-      //   const results = allProducts.filter((product) =>
-      //     product.keywords.includes(keyword)
-      //   );
-      //   setCategory(results);
-      // } else {
-      //   setCategory(allProducts);
-      // }
+      if (cat.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.category.includes(cat)
+        );
+        setCategory(results);
+      } else if (keyword.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.keywords.includes(keyword)
+        );
+        setCategory(results);
+      } else {
+        setCategory(allProducts);
+      }
     };
     fetchUserWishList();
-  }, [id]);
+  }, [userId]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
@@ -64,8 +64,10 @@ const WishList = (props) => {
 
   const handleCategories = (option) => {
     const results = products.filter((product) =>
-      product.category.includes(option)
+    product.category.includes(option)
     );
+    console.log(products[0])
+    console.log(results)
     setCategory(results);
     setApplySort(true);
   };
@@ -74,6 +76,7 @@ const WishList = (props) => {
     <Layout user={props.user}>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
+          <div className="text-3xl text-purple"> My WishList </div>
           <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
             <div>
               <Categories handleCategories={handleCategories} />
@@ -94,6 +97,7 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
+                  <button>remove</button>
                 </div>
               );
             })}

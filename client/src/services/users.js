@@ -59,7 +59,7 @@ export const getWishList = async (userId) => {
   }
 }
 
-export const addToWishList = async (productId, userId) => {
+export const addToWishList = async (userId, productId) => {
   try {
     const response = await api.put(`/users/${userId}/wishlist/${productId}`)
     return response.data

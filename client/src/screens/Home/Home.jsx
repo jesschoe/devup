@@ -8,7 +8,7 @@ const Home = (props) => {
     <Layout user={props.user} setUser={props.setUser} admin={props.admin} >
       <div className="container-home" >
         <div className="section">
-          <div className="bg-black py-20 lg:my-36 my-20">
+          <div className="bg-black py-20 md:my-24 my-20">
             <div className="bg-hero bg-cover bg-right h-72 flex items-center justify-end md:h-96 md:bg-cover lg:bg-contain lg:bg-no-repeat md:bg-center">
               <div className="pr-12 md:pr-24">
                 <h1 className="text-orange text-5xl text-left font-serif">
@@ -39,7 +39,7 @@ const Home = (props) => {
         </div>
         <div className="section" >
           <div className="bg-black py-20 lg:my-36 my-20">
-            <div className=" bg-setup bg-cover bg-center h-96 flex items-center justify-start">
+            <div className="bg-setup bg-cover md:bg-center h-96 flex items-center justify-start">
               <div className="pl-24">
                 <h1 className="text-orange text-5xl text-left font-serif mb-2">Set Up</h1>
                 <h2 className="text-white text-lg mt-4">

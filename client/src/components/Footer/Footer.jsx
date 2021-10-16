@@ -6,11 +6,11 @@ const Footer = () => {
 
     <footer className="pt-2 mb-20 bottom-0 text-2 flex flex-col justify-center items-center ">
       <img className="self-center h-10" src="https://res.cloudinary.com/devupapp/image/upload/v1633852463/devup/logo_byllgp.png" alt="DevUp Logo" />
-      <p className="text-xs tracking-wider mb-8">copyright 2021</p>
+      <p className="text-xs text-white tracking-wider mb-8">copyright 2021</p>
       <div className="flex items-center justify-center mb-8">
-        <Link to="/aboutus" className="hover:text-white px-4 text-xs">Team</Link>
-        <Link to="/" className="hover:text-white text-xs">Resources</Link>
-        <Link to="/blog" className="hover:text-white px-4 text-xs">Blog</Link>
+        <Link to="/aboutus" className="text-purple hover:text-white px-4 text-sm">Team</Link>
+        <Link to="/resources" className="text-purple hover:text-white text-sm">Resources</Link>
+        <Link to="/blog" className="text-purple hover:text-white px-4 text-sm">Blog</Link>
       </div>
       <a href="https://github.com/jesschoe/devup">
         <img

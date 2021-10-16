@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const MobileNav = ({ isOpen, toggle, user, admin }) => {
   const authenticatedOptionsBasic = (
     <>
-      <NavLink className="text-purple hover:text-white pr-6 py-2 text-sm font-medium" to="/:id/wishList">Wishlist</NavLink>
+      <NavLink className="text-purple hover:text-white pr-6 py-2 text-sm font-medium" to={user ? `/${user.id}/wishlist` : "/"}>Wishlist</NavLink>
       <NavLink className="text-purple hover:text-white pr-6 py-2 text-sm font-medium" to="/signout">Sign Out</NavLink>
     </>
   )

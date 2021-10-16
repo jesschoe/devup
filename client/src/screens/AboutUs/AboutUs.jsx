@@ -5,7 +5,7 @@ const AboutUs = (props) => {
   return (
     <Layout user={props.user}>
       <div className="container">
-      <div className="mt-20 mb-2 text-3xl font-black text-white self-start ml-20">
+      <div className="mt-20 mb-2 text-3xl font-black text-orange self-start ml-20">
         About Us
       </div>
       <div className="p-8 max-w-md md:max-w-full md:p-16 bg-black lg:px-8 lg:py-20 mx-20 mb-20">
