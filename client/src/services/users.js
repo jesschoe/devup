@@ -67,3 +67,12 @@ export const addToWishList = async (userId, productId) => {
     throw error
   }
 }
+
+export const deleteWishListItem = async (userId, productId) => {
+  try {
+    const response = await api.delete(`/users/${userId}/wishlist/${productId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
