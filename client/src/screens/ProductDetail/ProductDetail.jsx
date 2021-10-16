@@ -197,6 +197,7 @@ const ProductDetail = ({user, admin}) => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           handleRating={handleRating}
+          product={product.name}
         />
       </div>
     </Layout>

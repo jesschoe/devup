@@ -75,7 +75,7 @@ const ProductEdit = (props) => {
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="self-start ml-20 mt-10 mb-2 text-3xl font-extrabold text-white">
-          Add Product
+          Edit Product
         </div>
         <form className="flex-col items-center bg-black mx-20 mb-20 p-8 max-w-5xl" onSubmit={handleSubmit}>
           <div className="flex">

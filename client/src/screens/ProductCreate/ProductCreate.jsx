@@ -177,7 +177,7 @@ export default function ProductCreate(props) {
             </div>
             <div className="flex justify-center m-10">
               <button className="py-2 px-4 bg-orange text-white w-1/3 rounded-md" type="submit">
-                Upload
+                Add Product
               </button>
             </div>
           </form>
