@@ -63,17 +63,17 @@ const insertData = async () => {
       reviews: [
         {
           userId: user1,
-          author: 'tester',
-          rating: 5,
+          author: 'SH',
+          rating: 4,
           content:
-            'Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit.',
+            'The SteelSeries Apex Pro is a beautifully RGBed keyboard with an amazing level of customization, including per-key actuation that will change how you game. But tactile typing fans will want more from the linear switches.',
         },
         {
-          userId: user2,
-          author: 'test',
-          rating: 1,
+          userId: user1,
+          author: 'theTechie',
+          rating: 5,
           content:
-            'Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit.',
+            'The switches feel nice, and there are a few features you won’t find on a some other TKL keyboards like the OLED display (mostly a gimmick but cool nonetheless), usb passthrough, cable routing, and dial. The magnetic wrist rest isn’t plush, more like a flat rubber surface to prop up your hand. That isn’t to say it’s not comfortable or soft, but it is a pain to clean as it is a dust magnet. They keycaps feel cheap and are my main gripe for a premium keyboard, however I Luckily had higher quality shine-through keycaps from previously. Overall I am satisfied with the keyboard and would recommend to anyone thinking of purchasing.',
         },
       ],
     },
@@ -107,7 +107,15 @@ const insertData = async () => {
       details: "Active Noise Cancellation blocks outside noise, so you can immerse yourself in music./nTransparency mode for hearing and interacting with the world around you./nTwenty hours of listening, movie watching, or talk time with Active Noise Cancellation and spatial audio enabled./nMagical experience with effortless setup, on-head detection, and seamless switching between devices.",
       price: "499.95",
       productURL: "https://www.apple.com/airpods-max/",
-
+      reviews: [
+        {
+          userId: user1,
+          author: 'Gary',
+          rating: 5,
+          content:
+            'Using these headphones with Apple devices is pretty much as expected, seamless. I will say that you will need to ensure that you devices are updated to the latest operating system in order to fully enjoy all of the features. Battery life so far is very good! The smart case helps maintain battery life when not in use. From regular use I can go about three days before I need to charge them again. Now that is not travel days. If you travel a lot you may have to charge them more often. Everyones use case is different.',
+        },
+      ]
     },
     {
       name: "MacBook Air 13' M1",
