@@ -101,13 +101,16 @@ const ProductDetail = ({user, admin}) => {
     <Layout user={user} admin={admin}>
       <div className="container">
       <div className={(showModal) ? "mx-36 flex flex-col mt-10 opacity-40" : "mx-36 flex flex-col mt-10"}>
+      <div className="self-start mb-2 text-3xl font-black text-orange">
+        Product Details
+      </div>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mb-10">
           <div className="flex flex-col md:flex-row">
             <div className="flex justify-center items-center content-center">
               <img className="self-center max-h-64 max-w-lg m-4" src={product.imgURL} alt="" />
             </div>
             <div className="flex flex-col flex-wrap max-w-lg md:m-8 m-4 p-4">
-              <div className="text-3xl text-right font-black text-white mb-2">{product.name}</div>
+              <div className="text-3xl text-right font-black text-orange mb-2">{product.name}</div>
               <div className="text-orange text-right">
                 {product.avgRating >= 1 ? <span>★</span> : <span>☆</span>}
                 {product.avgRating >= 2 ? <span>★</span> : <span>☆</span>}
@@ -115,8 +118,8 @@ const ProductDetail = ({user, admin}) => {
                 {product.avgRating >= 4 ? <span>★</span> : <span>☆</span>}
                 {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
-              <div className="text-lg font-bold text-white mt-4 mb-1.5">Features</div>
-              <div className="text-xs mb-8">
+              <div className="text-lg font-black text-orange mt-4 mb-1.5">Features</div>
+              <div className="text-sm mb-8">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
                   return <li className="p-1" key={i}>- {detail}</li>
                 })}</ul>
@@ -138,7 +141,7 @@ const ProductDetail = ({user, admin}) => {
             </div>
           </div>
           <div className="flex flex-col flex-wrap mb-8 p-8">
-            <div className="text-lg font-bold text-white pl-10">Description</div>
+            <div className="text-lg font-black text-orange pl-10">Description</div>
             <p className="px-10" >{product.description}</p>
             {admin ? <Link 
               to={`/products/${id}/edit`} 
@@ -148,12 +151,14 @@ const ProductDetail = ({user, admin}) => {
         </div>
         <div className="mb-20">
           <div className="flex justify-between items-center">
-            <div className="mt-4 mb-2 text-2xl font-black text-white">
+            <div className="mt-4 mb-2 text-3xl font-black text-orange">
               Reviews
             </div>
             <div>
-              <button onClick={user ? handleWrite : ''}>
-                Write a Review
+              <button 
+                className="text-orange hover:text-white"
+                onClick={user ? handleWrite : ''}
+              >Write a Review
                 </button>
             </div>
           </div>

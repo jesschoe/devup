@@ -82,21 +82,21 @@ const Products = (props) => {
   return (
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
-        <div className="w-9/12 flex flex-col">
-          <div className="mt-10 mb-4 text-3xl font-black text-orange self-start ml-20">
-            <div className="mb-2">
-              {sortTitle}
-            </div>
-            <div className="flex sm: mx-auto lg:mr-32">
-              <div>
-                <Categories handleCategories={handleCategories} />
-              </div>
-              <div>
-                <Sort handleSort={handleSort} />
-              </div>
-            </div>
-          </div>
+        <div className="w-full px-20 flex flex-col">
           <div className="flex flex-wrap justify-center mb-24">
+            <div className="w-full self-start mt-16 mb-8 text-3xl font-black text-orange">
+              <div className="mb-2">
+                {sortTitle}
+              </div>
+              <div className="flex">
+                <div>
+                  <Categories handleCategories={handleCategories} />
+                </div>
+                <div>
+                  <Sort handleSort={handleSort} />
+                </div>
+              </div>
+            </div>
             {category.map((product) => {
               return (
                 <div key={product._id}>

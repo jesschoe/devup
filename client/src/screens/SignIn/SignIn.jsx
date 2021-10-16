@@ -57,13 +57,12 @@ const SignIn = (props) => {
   return (
     <Layout>
       <div className="container">
-        <div className="section">
-          <div className="flex flex-col items-center">
-            <div className="mt-20 mb-2 text-2xl font-black text-white">
+          <div className="flex flex-col w-full items-center px-20 md:px-56 lg:w-8/12">
+            <div className="self-start mt-20 mb-2 text-3xl font-black text-orange">
               Sign In
             </div>
-            <div className="flex flex-col justify-center items-center max-w-md bg-black mb-10">
-              <form className="p-10" onSubmit={onSignIn}>
+            <div className="flex flex-col justify-center items-center bg-black w-full mb-20 px-10 lg:mx-36">
+              <form className="py-10 mx-4 w-full" onSubmit={onSignIn}>
                 <label className="text-xs">Username</label>
                 <input
                   className="flex-1 border border-orange w-full mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
@@ -94,10 +93,7 @@ const SignIn = (props) => {
                 </div>
               </form>
             </div>
-          </div>
-          <div className="section">
             <Footer />
-          </div>
         </div>
       </div>
     </Layout>
