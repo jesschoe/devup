@@ -89,7 +89,7 @@ const ProductDetail = ({user, admin}) => {
 
 
   const wishListSubmit = async (event) => {
-    await addToWishList(id, user)
+    await addToWishList(user.id, id)
     console.log(user)
   }
 

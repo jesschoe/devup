@@ -64,7 +64,7 @@ function App() {
       <Route exact path="/blog">
         <Blog />
       </Route>
-      <Route exact path="/:id/wishList">
+      <Route exact path="/:userId/wishlist">
         <WishList user={user} />
       </Route>
     </div>

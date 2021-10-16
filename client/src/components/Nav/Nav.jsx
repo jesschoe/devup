@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Nav = ({ toggle, user, admin }) => {
   const authenticatedOptionsBasic = (
     <>
-      <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to="/:id/wishList">Wishlist</NavLink>
+      <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to={user ? `/${user.id}/wishlist` : "/"}>Wishlist</NavLink>
       <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to="/signout">Sign Out</NavLink>
     </>
   )
