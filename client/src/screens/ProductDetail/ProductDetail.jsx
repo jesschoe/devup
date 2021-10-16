@@ -56,7 +56,8 @@ const ProductDetail = ({user, admin}) => {
     setReview({
       ...review,
       [name]: value,
-      userId: user.id
+      userId: user.id,
+      author: user.username
     })
   }
 
@@ -100,14 +101,14 @@ const ProductDetail = ({user, admin}) => {
   return (
     <Layout user={user} admin={admin}>
       <div className="container">
-      <div className={(showModal) ? "mx-36 flex flex-col mt-10 opacity-40" : "mx-36 flex flex-col mt-10"}>
-        <div className="self-start mb-2 text-3xl font-black text-orange">
+      <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col"}>
+        <div className="self-start mx-36 mt-10 mb-2 text-3xl font-black text-orange">
           Product Details
         </div>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mx-36 mb-10">
           <div className="flex flex-col md:flex-row">
             <div className="flex justify-center items-center content-center">
-              <img className="self-center max-h-96 max-w-lg m-4" src={product.imgURL} alt="" />
+              <img className="self-center max-h-56 md:max-h-96 md:max-w-lg m-4" src={product.imgURL} alt="" />
             </div>
             <div className="flex flex-col flex-wrap max-w-lg md:m-8 m-4 p-4">
               <div className="text-3xl text-right font-black text-white mb-2">{product.name}</div>
@@ -128,11 +129,11 @@ const ProductDetail = ({user, admin}) => {
               <div className="flex flex-row justify-start">
                 <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button 
-                    className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                    className="mr-8 px-2 py-1 font-bold text-white bg-orange rounded my-4 h-8 md:w-40 w-36"
                   >See Retailer</button>
                 </a>
                 <button 
-                  className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                  className="px-2 py-1 font-bold text-white bg-orange rounded my-4 h-8 md:w-40 w-36"
                   onClick={wishListSubmit}
                 >
                   Add to Wishlist
@@ -141,8 +142,8 @@ const ProductDetail = ({user, admin}) => {
             </div>
           </div>
           <div className="flex flex-col flex-wrap mb-8 p-8">
-            <div className="text-lg font-black text-orange pl-10">Description</div>
-            <p className="px-10" >{product.description}</p>
+            <div className="text-lg font-black text-orange pl-2 md:pl-10">Description</div>
+            <p className="px-2 md:px-10" >{product.description}</p>
             {admin ? <Link 
               to={`/products/${id}/edit`} 
               className="text-purple hover:text-white self-end pr-10 mt-10"
@@ -150,23 +151,23 @@ const ProductDetail = ({user, admin}) => {
           </div>
         </div>
         <div className="mb-20">
-          <div className="flex justify-between items-center">
-            <div className="mt-4 mb-2 text-3xl font-black text-orange">
+          <div className="flex justify-between items-center mx-36">
+            <div className="mt-4 text-3xl font-black text-orange">
               Reviews
             </div>
             <div>
               <button 
-                className="text-orange hover:text-white"
+                className="self-end mb-4 py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md"
                 onClick={user ? handleWrite : ''}
               >Write a Review
                 </button>
             </div>
           </div>
-        <div className="text-">
+        <div className="flex flex-col bg-black justify-center items-center mx-36 mb-8">
           {product.reviews.map((review,i) => {
             return (
-              <div className="bg-black flex p-12 mb-8" key={i}>
-                <div className="w-5/12">
+              <div className="bg-black flex w-full justify between p-12 mb-8" key={i}>
+                <div className="self-start w-5/12 md:w-3/12">
                   <div className="text-xl">{review.author}</div>
                   <div className="text-xs">{getTimestamp(product.updatedAt)}</div>
                   <div className="text-orange mt-4">
@@ -176,16 +177,14 @@ const ProductDetail = ({user, admin}) => {
                     {review.rating >= 4 ? <span>★</span> : <span>☆</span>}
                     {review.rating >= 5 ? <span>★</span> : <span>☆</span>}
                   </div>
-                </div>
-                <div className="flex flex-col w-7/12">
-                  <div className="text-sm">
-                    {review.content}
-                  </div>
                   {user ? user.id === review.userId ? 
                   <button 
-                    className="self-end py-2 px-6 bg-orange text-white rounded-md"
+                    className="self-end py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md"
                     onClick={()=>handleDelete(id, review._id)}
                   >Delete</button> : "" : ""} 
+                </div>
+                  <div className="text-sm pl-4 w-7/12 md:w-9/12">
+                    {review.content}
                 </div>
               </div>
             )
@@ -203,6 +202,7 @@ const ProductDetail = ({user, admin}) => {
           handleSubmit={handleSubmit}
           handleRating={handleRating}
           product={product.name}
+          user={user}
         />
       </div>
     </Layout>
