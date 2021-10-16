@@ -13,6 +13,7 @@ import Products from "./screens/Products/Products";
 import Blog from "./screens/Blog/Blog";
 import WishList from "./screens/WishList/WishList";
 import SignOut from "./screens/SignOut/SignOut"
+import EditPost from "./screens/Blog/EditPost";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,10 +39,10 @@ function App() {
         <Home user={user} setUser={setUser} admin={admin} />
       </Route>
       <Route exact path="/products">
-        <Products user={user} admin={admin}/>
+        <Products user={user} admin={admin} />
       </Route>
       <Route exact path="/products/:id">
-        <ProductDetail user={user} setUser={setUser} admin={admin}  />
+        <ProductDetail user={user} setUser={setUser} admin={admin} />
       </Route>
       <Route path="/products/:id/edit">
         {admin ? <ProductEdit user={user} admin={admin} /> : <Redirect to="/products/:id" />}
@@ -63,6 +64,9 @@ function App() {
       </Route>
       <Route exact path="/blog">
         <Blog />
+      </Route>
+      <Route exact path="/blog/edit/:id">
+        <EditPost />
       </Route>
       <Route exact path="/:id/wishList">
         <WishList user={user} />
