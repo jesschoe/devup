@@ -9,22 +9,22 @@ const insertData = async () => {
   await db.dropDatabase()
 
   const user1 = new User({
-    username: 'test',
+    username: 'admin',
     email: 'test@gmail.com',
-    password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11),
+    password_digest: await bcrypt.hash('admin12345', 11),
     products: [],
     wishlist: [],
-    roles: 'basic',
+    roles: 'admin',
   })
   await user1.save()
 
   const user2 = new User({
-    username: 'test2',
-    email: 'test2@gmail.com',
-    password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11),
+    username: 'tester',
+    email: 'tester@gmail.com',
+    password_digest: await bcrypt.hash('tester1', 11),
     products: [],
     wishlist: [],
-    roles: 'admin',
+    roles: 'basic',
   })
   await user2.save()
 
@@ -39,12 +39,12 @@ const insertData = async () => {
   await user2.save()
 
   const user4 = new User({
-    username: 'admin',
-    email: 'admin@gmail.com',
-    password_digest: await bcrypt.hash('admin', 11),
+    username: 'bruno',
+    email: 'bruno@gmail.com',
+    password_digest: await bcrypt.hash('bruno', 11),
     products: [],
     wishlist: [],
-    roles: 'admin',
+    roles: 'basic',
   })
   await user2.save()
 

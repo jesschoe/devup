@@ -128,8 +128,10 @@ export default function ProductCreate(props) {
                     <option value="Monitor">Monitor</option>
                     <option value="Keyboard">Keyboard</option>
                     <option value="Mouse">Mouse</option>
-                    <option value="Mount">Mount</option>
                     <option value="Audio">Audio</option>
+                    <option value="Organization">Organization</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Lifestyle">Lifestyle</option>
                   </select>
                 </div>
               </div>

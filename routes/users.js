@@ -10,8 +10,6 @@ router.get('/verify', controllers.verify)
 
 router.get('/users/:id', controllers.getUser)
 router.get('/users', controllers.getUsers)
-router.get('/users/:id/products', controllers.getUserProducts)
-router.get('/users/:id/products/:productId', controllers.getUserProduct)
 
 router.get("/users/:userId/wishlist", controllers.getWishList)
 router.put("/users/:userId/wishlist/:productId", controllers.addToWishList)

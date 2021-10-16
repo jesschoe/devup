@@ -18,9 +18,9 @@ const Home = (props) => {
                   your space
                 </h1>
                 <h2 className="text-white text-2xl">
-                  A better setup
+                  A quality setup
                   <br />
-                  leads to better code
+                  leads to quality code
                 </h2>
                 <Link to={{
                   pathname: "/products",
