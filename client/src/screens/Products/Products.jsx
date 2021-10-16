@@ -80,7 +80,7 @@ const Products = (props) => {
   };
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="w-9/12 flex flex-col">
           <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
