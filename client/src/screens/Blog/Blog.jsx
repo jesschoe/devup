@@ -7,7 +7,7 @@ import PostModal from "../../components/Modal/PostModal"
 import { useHistory } from "react-router-dom"
 
 
-const Blog = () => {
+const Blog = ({ user, admin }) => {
 
   const [posts, setPosts] = useState([]);
   const history = useHistory();
@@ -141,6 +141,7 @@ const Blog = () => {
                     description={post.description}
                     hastags={post.hastags}
                   />
+                  {/* <button><Link to={`/blog/edit/${}`}>Edit Post</Link></button> */}
                 </div>
               );
             })}
