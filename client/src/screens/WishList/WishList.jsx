@@ -29,19 +29,19 @@ const WishList = (props) => {
     const fetchUserWishList = async () => {
       const allProducts = await getWishList(id);
       setProducts(allProducts);
-      // if (cat.length > 0) {
-      //   const results = allProducts.filter((product) =>
-      //     product.category.includes(cat)
-      //   );
-      //   setCategory(results);
-      // } else if (keyword.length > 0) {
-      //   const results = allProducts.filter((product) =>
-      //     product.keywords.includes(keyword)
-      //   );
-      //   setCategory(results);
-      // } else {
-      //   setCategory(allProducts);
-      // }
+      if (cat.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.category.includes(cat)
+        );
+        setCategory(results);
+      } else if (keyword.length > 0) {
+        const results = allProducts.filter((product) =>
+          product.keywords.includes(keyword)
+        );
+        setCategory(results);
+      } else {
+        setCategory(allProducts);
+      }
     };
     fetchUserWishList();
   }, [id]);
@@ -74,6 +74,7 @@ const WishList = (props) => {
     <Layout user={props.user}>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
+          <div className="text-3xl text-purple"> My WishList </div>
           <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
             <div>
               <Categories handleCategories={handleCategories} />
