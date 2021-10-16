@@ -9,7 +9,7 @@ const Footer = () => {
       <p className="text-xs text-white tracking-wider mb-8">copyright 2021</p>
       <div className="flex items-center justify-center mb-8">
         <Link to="/aboutus" className="text-purple hover:text-white px-4 text-sm">Team</Link>
-        <Link to="/" className="text-purple hover:text-white text-sm">Resources</Link>
+        <Link to="/resources" className="text-purple hover:text-white text-sm">Resources</Link>
         <Link to="/blog" className="text-purple hover:text-white px-4 text-sm">Blog</Link>
       </div>
       <a href="https://github.com/jesschoe/devup">
