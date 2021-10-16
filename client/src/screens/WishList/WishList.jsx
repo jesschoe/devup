@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
-import { useLocation, useParams, useHistory, Link } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { getWishList, deleteWishListItem } from "../../services/users";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
@@ -14,10 +14,9 @@ const WishList = (props) => {
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
   const location = useLocation();
-  const { userId, id } = useParams();
+  const { userId } = useParams();
   let cat = "";
   let keyword = "";
-  const history = useHistory()
 
   if (location.state) {
     cat = location.state.cat;
@@ -45,7 +44,7 @@ const WishList = (props) => {
       }
     };
     fetchUserWishList();
-  }, [userId]);
+  }, [userId, cat, keyword]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
@@ -70,6 +69,11 @@ const WishList = (props) => {
     setCategory(results);
     setApplySort(true);
   };
+
+  const handleDelete = (userId, id) => {
+    deleteWishListItem(userId,id)
+    window.location.reload()
+  }
 
   return (
     <Layout user={props.user}>
@@ -100,10 +104,8 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
-                  <Link>
-                  <button className=" justify-center px-2 mx-auto py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                    onClick={() => deleteWishListItem(userId,id)}>remove</button>
-                    </Link>
+                    <button className=" justify-center px-2 mx-auto py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                    onClick={() => handleDelete(userId, product._id)}>remove</button>
                 </div>
               );
             })}
