@@ -14,7 +14,7 @@ const WishList = (props) => {
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
   const location = useLocation();
-  const { id } = useParams();
+  const { userId, id } = useParams();
   let cat = "";
   let keyword = "";
 
@@ -27,7 +27,7 @@ const WishList = (props) => {
 
   useEffect(() => {
     const fetchUserWishList = async () => {
-      const allProducts = await getWishList(id);
+      const allProducts = await getWishList(userId);
       setProducts(allProducts);
       if (cat.length > 0) {
         const results = allProducts.filter((product) =>
@@ -44,7 +44,7 @@ const WishList = (props) => {
       }
     };
     fetchUserWishList();
-  }, [id]);
+  }, [userId]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
@@ -64,8 +64,10 @@ const WishList = (props) => {
 
   const handleCategories = (option) => {
     const results = products.filter((product) =>
-      product.category.includes(option)
+    product.category.includes(option)
     );
+    console.log(products[0])
+    console.log(results)
     setCategory(results);
     setApplySort(true);
   };
@@ -95,6 +97,7 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
+                  <button>remove</button>
                 </div>
               );
             })}
