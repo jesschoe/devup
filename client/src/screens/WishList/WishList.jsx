@@ -1,23 +1,23 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { getProducts } from "../../services/products";
+import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
-import Product from "../../components/Product/Product";
+import { useLocation, useParams, useHistory, Link } from "react-router-dom";
+import { getWishList, deleteWishListItem } from "../../services/users";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
-import Footer from "../../components/Footer/Footer"
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
+import Product from "../../components/Product/Product";
 
-const Products = (props) => {
+const WishList = (props) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
-  const [sortTitle, setSortTitle] = useState("All Products")
   const location = useLocation();
-
+  const { userId, id } = useParams();
   let cat = "";
   let keyword = "";
+  const history = useHistory()
 
   if (location.state) {
     cat = location.state.cat;
@@ -27,28 +27,25 @@ const Products = (props) => {
   }
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const allProducts = await getProducts();
+    const fetchUserWishList = async () => {
+      const allProducts = await getWishList(userId);
       setProducts(allProducts);
       if (cat.length > 0) {
         const results = allProducts.filter((product) =>
           product.category.includes(cat)
         );
         setCategory(results);
-        setSortTitle(cat)
       } else if (keyword.length > 0) {
         const results = allProducts.filter((product) =>
           product.keywords.includes(keyword)
         );
         setCategory(results);
-        setSortTitle(keyword)
-      }
-      else {
+      } else {
         setCategory(allProducts);
       }
     };
-    fetchProducts();
-  }, [cat, keyword]);
+    fetchUserWishList();
+  }, [userId]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
@@ -68,35 +65,30 @@ const Products = (props) => {
 
   const handleCategories = (option) => {
     const results = products.filter((product) =>
-      product.category.includes(option)
+    product.category.includes(option)
     );
     setCategory(results);
-    if (option === "") {
-      setSortTitle("All Products")
-    } else {
-      setSortTitle(option)
-    }
     setApplySort(true);
   };
 
   return (
-    <Layout user={props.user} admin={props.admin}>
+    <Layout user={props.user}>
       <div className="container">
-        <div className="w-full px-20 flex flex-col">
-          <div className="flex flex-wrap justify-center mb-24">
-            <div className="w-full self-start mt-16 mb-8 text-3xl font-black text-orange">
-              <div className="mb-2">
-                {sortTitle}
+        <div className="w-9/12 flex flex-col mt-10">
+        <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
+            <div className="mb-2 text-5xl text-orange">
+              My WishList
+            </div>
+            <div className="flex sm: mx-auto lg:mr-32">
+              <div>
+                <Categories handleCategories={handleCategories} />
               </div>
-              <div className="flex">
-                <div>
-                  <Categories handleCategories={handleCategories} />
-                </div>
-                <div>
-                  <Sort handleSort={handleSort} />
-                </div>
+              <div>
+                <Sort handleSort={handleSort} />
               </div>
             </div>
+          </div>
+          <div className="flex flex-wrap justify-center mb-24">
             {category.map((product) => {
               return (
                 <div key={product._id}>
@@ -108,6 +100,10 @@ const Products = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
+                  <Link>
+                  <button className=" justify-center px-2 mx-auto py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                    onClick={() => deleteWishListItem(userId,id)}>remove</button>
+                    </Link>
                 </div>
               );
             })}
@@ -119,4 +115,4 @@ const Products = (props) => {
   );
 };
 
-export default Products;
+export default WishList;

@@ -49,3 +49,30 @@ export const verifyUser = async () => {
   }
   return false
 }
+
+export const getWishList = async (userId) => {
+  try {
+    const response = await api.get(`/users/${userId}/wishlist`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const addToWishList = async (userId, productId) => {
+  try {
+    const response = await api.put(`/users/${userId}/wishlist/${productId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const deleteWishListItem = async (userId, productId) => {
+  try {
+    const response = await api.delete(`/users/${userId}/wishlist/${productId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}

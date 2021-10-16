@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer"
 
 let cloudinaryUrl = "https://api.cloudinary.com/v1_1/devupapp";
 
-export default function ProductCreate() {
+export default function ProductCreate(props) {
 
   const [loading, setLoading] = useState(false);
 
@@ -71,13 +71,13 @@ export default function ProductCreate() {
 
   return (
 
-    <Layout>
+    <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="flex flex-col items-center">
-          <div className="mt-10 text-2xl font-black text-white overflow-y-scroll">
-                Add Product
+          <div className="self-start ml-20 mt-10 mb-2 text-3xl font-black text-white overflow-y-scroll">
+            Add Product
           </div>
-          <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
+          <form className="flex-col items-center bg-black mx-20 mb-20 p-8 max-w-5xl" onSubmit={handleSubmit}>
             <div className="flex">
               <div className="flex-col m-8 w-40">
                 <div className="border-orange m-2">
@@ -112,9 +112,9 @@ export default function ProductCreate() {
                     name="category"
                     onChange={handleChange}
                   >
-                    <option value="furniture">furniture</option>
-                    <option value="gear">gear</option>
-                    <option value="accessories">accessories</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Gear">Gear</option>
+                    <option value="Accessories">Accessories</option>
                   </select>
                   <label className="text-xs">Keyword:</label>
                   <select
@@ -122,14 +122,16 @@ export default function ProductCreate() {
                     name="keyword"
                     onChange={handleChange}
                   >
-                    <option value="desk">desk</option>
-                    <option value="chair">chair</option>
-                    <option value="laptop">laptop</option>
-                    <option value="monitor">monitor</option>
-                    <option value="keyboard">keyboard</option>
-                    <option value="mouse">mouse</option>
-                    <option value="mount">mount</option>
-                    <option value="audio">audio</option>
+                    <option value="Desk">Desk</option>
+                    <option value="Chair">Chair</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Keyboard">Keyboard</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="Audio">Audio</option>
+                    <option value="Organization">Organization</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Lifestyle">Lifestyle</option>
                   </select>
                 </div>
               </div>
@@ -177,7 +179,7 @@ export default function ProductCreate() {
             </div>
             <div className="flex justify-center m-10">
               <button className="py-2 px-4 bg-orange text-white w-1/3 rounded-md" type="submit">
-                Upload
+                Add Product
               </button>
             </div>
           </form>

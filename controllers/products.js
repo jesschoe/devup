@@ -1,3 +1,4 @@
+
 import Product from '../models/product.js'
 
 export const getProducts = async (req, res) => {
@@ -50,4 +51,14 @@ export const deleteProduct = async (req, res) => {
     console.log(error.message)
     res.status(500).json({ error: error.message })
   }
+}
+
+export const addReview = async (req, res) => {
+  const review = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  res.status(200).json(review)
+}
+
+export const deleteReview = async (req, res) => {
+  const review = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  res.status(200).json(review)
 }

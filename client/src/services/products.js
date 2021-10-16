@@ -29,7 +29,27 @@ export const createProduct = async product => {
 
 export const updateProduct = async (id, product) => {
   try {
+    console.log('service', product)
       const response = await api.put(`/products/${id}`, product)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
+
+export const addReview = async (id, product) => {
+  try {
+    console.log('service', product)
+      const response = await api.put(`/products/${id}/reviews`, product)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
+
+export const deleteReview = async (id, product) => {
+  try {
+      const response = await api.put(`/products/${id}/reviews`, product)
       return response.data
   } catch (error) {
       throw error
