@@ -24,7 +24,7 @@ function App() {
       if (user) {
         setUser(user)
         if (user.roles[0] === 'admin') {
-          setAdmin(prev => !prev)
+          setAdmin(true)
         }
       }
 

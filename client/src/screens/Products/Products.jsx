@@ -13,6 +13,7 @@ const Products = (props) => {
   const [category, setCategory] = useState([]);
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
+  const [sortTitle, setSortTitle] = useState("All Products")
   const location = useLocation();
 
   let cat = "";
@@ -34,11 +35,13 @@ const Products = (props) => {
           product.category.includes(cat)
         );
         setCategory(results);
+        setSortTitle(cat)
       } else if (keyword.length > 0) {
         const results = allProducts.filter((product) =>
           product.keywords.includes(keyword)
         );
         setCategory(results);
+        setSortTitle(keyword)
       }
       else {
         setCategory(allProducts);
@@ -68,19 +71,29 @@ const Products = (props) => {
       product.category.includes(option)
     );
     setCategory(results);
+    if (option === "") {
+      setSortTitle("All Products")
+    } else {
+      setSortTitle(option)
+    }
     setApplySort(true);
   };
 
   return (
     <Layout user={props.user}>
       <div className="container">
-        <div className="w-9/12 flex flex-col mt-10">
-          <div className="flex flex-row-reverse items-end sm: mx-auto lg:mr-32">
-            <div>
-              <Categories handleCategories={handleCategories} />
+        <div className="w-9/12 flex flex-col">
+          <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
+            <div className="mb-2">
+              {sortTitle}
             </div>
-            <div>
-              <Sort handleSort={handleSort} />
+            <div className="flex sm: mx-auto lg:mr-32">
+              <div>
+                <Categories handleCategories={handleCategories} />
+              </div>
+              <div>
+                <Sort handleSort={handleSort} />
+              </div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center mb-24">

@@ -1,17 +1,18 @@
-import React from 'react'
 import Layout from "../../components/Layout/Layout"
+import Footer from "../../components/Footer/Footer"
 
-const AboutUs = () => {
+const AboutUs = (props) => {
   return (
-    <Layout>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 bg-black lg:px-8 lg:py-20 my-32 mb-10">
-        <div className="mb-20 flex flex-wrap  text-white  justify-center text-center">
-          <h1 className="mb-10 text-6xl font-bold ">About Us</h1>
-          <p>
+    <Layout user={props.user}>
+      <div className="container">
+      <div className="mt-20 mb-2 text-3xl font-black text-white self-start ml-20">
+        About Us
+      </div>
+      <div className="p-8 max-w-md md:max-w-full md:p-16 bg-black lg:px-8 lg:py-20 mx-20 mb-20">
+        <div className="mb-20 flex flex-wrap text-white justify-center text-center">
             Due to global shifts in the economy, many professionals are transitioning to remote work. And while their skills translate well into the home,
             the quality of their workspace doesn’t. To solve this issue, a group of developers came together to create DevUp. This application provides IT
             professionals with the latest tech gadgets, to improve the quality of their remote-office setup.
-          </p>
         </div>
         <div className=" grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
           <div className="flex flex-col justify-center items-center ">
@@ -123,6 +124,8 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+      </div>
+      <Footer />
       </div>
     </Layout>
   );
