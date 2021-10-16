@@ -38,7 +38,7 @@ function App() {
         <Home user={user} setUser={setUser} admin={admin} />
       </Route>
       <Route exact path="/products">
-        <Products user={user} />
+        <Products user={user} admin={admin}/>
       </Route>
       <Route exact path="/products/:id">
         <ProductDetail user={user} setUser={setUser} admin={admin}  />
