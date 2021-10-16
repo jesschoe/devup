@@ -50,7 +50,7 @@ const Home = (props) => {
                 <Link to={{
                   pathname: "/products",
                   state: {
-                    cat: "furniture",
+                    cat: "Furniture",
                     keyword: ""
                   }
                 }}>
@@ -75,7 +75,7 @@ const Home = (props) => {
                 <Link to={{
                   pathname: "/products",
                   state: {
-                    cat: "gear",
+                    cat: "Gear",
                     keyword: ""
                   }
                 }}>
@@ -100,7 +100,7 @@ const Home = (props) => {
                 <Link to={{
                   pathname: "/products",
                   state: {
-                    cat: "accessories",
+                    cat: "Accessories",
                     keyword: ""
                   }
                 }}>

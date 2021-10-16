@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
@@ -20,6 +20,7 @@ const ProductDetail = ({user, admin}) => {
   const { id } = useParams();
   const history = useHistory()
 
+  console.log(admin)
   useEffect(
     () => {
       const fetchProduct = async () => {
@@ -115,7 +116,7 @@ const ProductDetail = ({user, admin}) => {
                 {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
               <div className="text-lg font-bold text-white mt-4 mb-1.5">Features</div>
-              <div className="text-xs mb-8 text-white">
+              <div className="text-xs mb-8">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
                   return <li className="p-1" key={i}>- {detail}</li>
                 })}</ul>
@@ -127,24 +128,22 @@ const ProductDetail = ({user, admin}) => {
                     className="mr-8 px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
                   >See Retailer</button>
                 </a>
-                {/* <Link to={`/${id}/edit`}>
-                  <button 
-                    className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                  >Edit Product</button> 
-                </Link>*/}
-                  <button 
-                    className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                    onClick={wishListSubmit}
-                  >
-                    Add to Wishlist
-                  </button>
-                
+                <button 
+                  className="px-2 py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
+                  onClick={wishListSubmit}
+                >
+                  Add to Wishlist
+                </button>
               </div>
             </div>
           </div>
           <div className="flex flex-col flex-wrap mb-8 p-8">
             <div className="text-lg font-bold text-white pl-10">Description</div>
-            <p className="text-white px-10" >{product.description}</p>
+            <p className="px-10" >{product.description}</p>
+            {admin ? <Link 
+              to={`/products/${id}/edit`} 
+              className="text-purple hover:text-white self-end pr-10 mt-10"
+            >Edit Product</Link> : ''}
           </div>
         </div>
         <div className="mb-20">

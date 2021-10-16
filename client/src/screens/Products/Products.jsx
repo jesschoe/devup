@@ -71,7 +71,11 @@ const Products = (props) => {
       product.category.includes(option)
     );
     setCategory(results);
-    setSortTitle(option)
+    if (option === "") {
+      setSortTitle("All Products")
+    } else {
+      setSortTitle(option)
+    }
     setApplySort(true);
   };
 

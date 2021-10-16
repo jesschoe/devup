@@ -74,11 +74,10 @@ const ProductEdit = (props) => {
 
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
-        <div className="section">
-        <div className="self-start ml-20 mt-10 mb-2 text-xl font-extrabold text-white">
-              Add Product
+        <div className="self-start ml-20 mt-10 mb-2 text-3xl font-extrabold text-white">
+          Add Product
         </div>
-        <form className="flex-col items-center bg-black mx-20 mb-10 p-8 max-w-5xl" onSubmit={handleSubmit}>
+        <form className="flex-col items-center bg-black mx-20 mb-20 p-8 max-w-5xl" onSubmit={handleSubmit}>
           <div className="flex">
             <div className="flex-col m-8 max-w-xs">
               <div className="border-orange m-2">
@@ -113,9 +112,9 @@ const ProductEdit = (props) => {
                   name="category"
                   onChange={handleChange}
                 >
-                  <option value="furniture">furniture</option>
-                  <option value="gear">gear</option>
-                  <option value="accessories">accessories</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Gear">Gear</option>
+                  <option value="Accessories">Accessories</option>
                 </select>
                 <label className="text-xs">Keyword:</label>
                 <select
@@ -123,14 +122,14 @@ const ProductEdit = (props) => {
                   name="keyword"
                   onChange={handleChange}
                 >
-                  <option value="desk">desk</option>
-                  <option value="chair">chair</option>
-                  <option value="laptop">laptop</option>
-                  <option value="monitor">monitor</option>
-                  <option value="keyboard">keyboard</option>
-                  <option value="mouse">mouse</option>
-                  <option value="mount">mount</option>
-                  <option value="audio">audio</option>
+                  <option value="Desk">Desk</option>
+                  <option value="Chair">Chair</option>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Monitor">Monitor</option>
+                  <option value="Keyboard">Keyboard</option>
+                  <option value="Mouse">Mouse</option>
+                  <option value="Mount">Mount</option>
+                  <option value="Audio">Audio</option>
                 </select>
               </div>
             </div>
@@ -181,13 +180,12 @@ const ProductEdit = (props) => {
           </div>
           <div className="flex justify-center m-10">
             <button className="py-2 px-4 bg-orange text-white w-1/3 transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
-              Upload
+              Update Product
             </button>
           </div>
         </form>
         <div className="section">
           <Footer />
-        </div>
         </div>
       </div>
     </Layout>
