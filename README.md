@@ -107,13 +107,13 @@ MongoDB is returning the data for this base as follows:
 | Sign In/Sign Up screen    |    H     |      3hrs      |     3hrs      |     3hrs    |
 | Basic styling             |    H     |      6hrs      |     6hrs      |     6hrs    |
 | Categories/sorting        |    M     |      3hrs      |     3hrs      |     3hrs    |
-| Advanced CSS              |    H     |      6hrs      |     6hrs      |     6hrs    |
+| Advanced CSS              |    H     |      6hrs      |     10hrs     |     10hrs    |
 | Reviews and Ratings       |    L     |      3hrs      |     3hrs      |     3hrs    |
 | Wishlist                  |    L     |      3hrs      |     5hrs      |     5hrs    |
 | Blog full CRUD            |    L     |      3hrs      |     5hrs      |     5hrs    |
 | Team/Resources            |    L     |      3hrs      |     3hrs      |     3hrs    |
-| Debug/clean up code       |    H     |      3hrs      |     3hrs      |     3hrs    |
-| Total                     |          |to MVP 53hrs    |     73 hrs      |         |
+| Debug/clean up code       |    H     |      3hrs      |     5hrs      |     5hrs    |
+| Total                     |          |to MVP 53hrs    |     82 hrs      |         |
 
 
 
