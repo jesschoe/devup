@@ -126,8 +126,8 @@ const ProductDetail = ({user, admin}) => {
                 {product.avgRating >= 4 ? <span>★</span> : <span>☆</span>}
                 {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
-              <div className="text-lg font-black text-orange mt-4 mb-1.5">Features</div>
-              <div className=" mb-8">
+              <div className="text-xl font-black text-orange mt-4 mb-1.5">Features</div>
+              <div className="mb-8">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
                   return <li className="p-1 font-bold" key={i}>- {detail}</li>
                 })}</ul>
@@ -136,11 +136,11 @@ const ProductDetail = ({user, admin}) => {
               <div className="flex flex-row justify-start">
                 <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button 
-                    className="mr-8 px-2 py-1 font-bold text-white bg-orange rounded my-4 h-8 md:w-40 w-36"
+                    className="w-36 text-sm mr-8 px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                   >See Retailer</button>
                 </a>
                 <button 
-                  className="px-2 py-1 font-bold text-white bg-orange rounded my-4 h-8 md:w-40 w-36"
+                  className="w-36 text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                   onClick={wishListSubmit}
                 >
                   Add to Wishlist
@@ -149,11 +149,11 @@ const ProductDetail = ({user, admin}) => {
             </div>
           </div>
           <div className="flex flex-col flex-wrap mb-8 p-8">
-            <div className="text-lg font-black text-orange pl-2 md:pl-10">Description</div>
-            <p className="px-2 md:px-10" >{product.description}</p>
+            <div className="text-xl font-black text-orange pl-2 mb-1.5 md:pl-10">Description</div>
+            <div className="px-2 md:px-10" >{product.description}</div>
             {admin ? <Link 
               to={`/products/${id}/edit`} 
-              className="text-purple hover:text-white self-end pr-10 mt-10"
+              className="text-purple text-sm border border-color-purple self-end py-2 px-6 mt-10"
             >Edit Product</Link> : ''}
           </div>
         </div>
@@ -164,7 +164,7 @@ const ProductDetail = ({user, admin}) => {
             </div>
             <div>
               <button 
-                className="self-end mb-4 py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md"
+                className="w-36 text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                 onClick={user ? handleWrite : ''}
               >Write a Review
                 </button>
@@ -186,7 +186,7 @@ const ProductDetail = ({user, admin}) => {
                   </div>
                   {user ? user.id === review.userId ? 
                   <button 
-                    className="self-end py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md"
+                    className="text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                     onClick={()=>handleDelete(id, review._id)}
                   >Delete</button> : "" : ""} 
                 </div>

@@ -5,8 +5,11 @@ import Layout from "../../components/Layout/Layout";
 import Product from "../../components/Product/Product";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
+import Keywords from "../../components/Keywords/Keywords";
 import Footer from "../../components/Footer/Footer"
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Products = (props) => {
   const [products, setProducts] = useState([]);
@@ -15,7 +18,7 @@ const Products = (props) => {
   const [sortType, setSortType] = useState("price-low-high");
   const [sortTitle, setSortTitle] = useState("All Products")
   const location = useLocation();
-
+  
   let cat = "";
   let keyword = "";
 
@@ -25,6 +28,8 @@ const Products = (props) => {
   if (location.state) {
     keyword = location.state.keyword;
   }
+
+  const notify = () => toast("Loading Products...")
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -79,6 +84,18 @@ const Products = (props) => {
     setApplySort(true);
   };
 
+  const handleKeywords = (option) => {
+    if (option === "Furniture" || option === "Gear" || option === "Accessories") {
+      handleCategories(option)
+    } else {
+      const results = products.filter((product) =>
+        product.keywords.includes(option)
+      );
+      setCategory(results);
+      setApplySort(true);
+    }
+  };
+
   return (
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
@@ -90,7 +107,14 @@ const Products = (props) => {
               </div>
               <div className="flex">
                 <div>
-                  <Categories handleCategories={handleCategories} />
+                  {location.state.home ? 
+                    <Keywords 
+                      handleKeywords={handleKeywords}
+                      category={cat}
+                    /> :
+                    <Categories 
+                      handleCategories={handleCategories}
+                      sortTItle={sortTitle} />}
                 </div>
                 <div>
                   <Sort handleSort={handleSort} />
