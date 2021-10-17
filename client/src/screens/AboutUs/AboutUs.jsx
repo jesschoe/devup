@@ -4,11 +4,11 @@ import Footer from "../../components/Footer/Footer"
 const AboutUs = (props) => {
   return (
     <Layout user={props.user}>
-      <div className="container">
-      <div className="mt-20 mb-2 text-3xl font-black text-orange self-start ml-20">
+      <div className="container px-8 md:px-20 lg:px-72">
+      <div className="mt-20 mb-2 text-3xl font-black text-orange self-start">
         About Us
       </div>
-      <div className="p-8 max-w-md md:max-w-full md:p-16 bg-black lg:px-8 lg:py-20 mx-20 mb-20">
+      <div className="p-6 w-full md:p-16 bg-black lg:px-8 lg:py-20 mb-20">
         <div className="mb-20 flex flex-wrap text-white justify-center text-center">
             Many professionals are transitioning to remote work, and while their skills translate well into the home,
             the quality of their workspace doesn’t. To solve this issue, a group of developers came together to create DevUp. This application curates

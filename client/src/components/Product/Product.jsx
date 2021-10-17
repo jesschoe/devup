@@ -9,25 +9,29 @@ const Product = (props) => {
           <div className="text-orange font-bold p-2">{props.name}</div>
           <div className="px-2">{`$${props.price}`}</div>
         </Link> 
-          <div className="px-2 text-xs">
-            <Link to={{
-              pathname:"/products",
-              state:{
-                cat: `${props.category}`,
-                keyword: ""
-              }
-            }}>
+          <div className="px-2 text-xs text-orange">
+            <Link 
+              className="hover:text-white"
+              to={{
+                pathname:"/products",
+                state:{
+                  cat: `${props.category}`,
+                  keyword: "",
+                }
+              }}>
               {`#${props.category} `}
             </Link>
-            <Link to={{
-              pathname:"/products",
-              state:{
-                cat: "",
-                keyword: `${props.keywords}`
-              }
-            }}
+            <Link 
+              className="hover:text-white"
+              to={{
+                pathname:"/products",
+                state:{
+                  cat: "",
+                  keyword: `${props.keywords}`,
+                }
+              }}
             >
-            {`#${props.keywords}`}
+              {`#${props.keywords}`}
             </Link>
           </div>
       </div>
