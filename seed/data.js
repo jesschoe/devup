@@ -211,8 +211,58 @@ const insertData = async () => {
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634127184/devup/lg-gram-17-2021-hero_kjygi9.jpg",
       description: "Meet an ultra-lightweight laptop with a 16:10 professional display, a new design, and Intel® Evo™ platform.",
       details: "16GB LPDDR4X 4266mhz RAM delivers a high level of performance for memory-intensive content creation, designing, editing, and multitasking/nImprove productivity with 2TB PCIe M.2 NVMe SSD for dependable storage accessible in a flash/nConnect with Confidence: Two USB-C ports with Thunderbolt 4 support, two USB-A 3.2 ports, a full-size HDMI port, a microSD card reader, and a 3.5mm audio jack/nGet more done on the go with up to 19.5 hours battery life with a single charge (Disclaimer: battery life will vary from specifications depending on model",
-      price: "1,695.00",
+      price: "1695.00",
       productURL: "https://www.lg.com/us/laptops?gclid=Cj0KCQjwnoqLBhD4ARIsAL5JedJDHWljCS0tnhoRr63DExowHaZeVK_CkJM8WuoYu-785xl2gTH_B88aAijeEALw_wcB&gclsrc=aw.ds"
+    },
+    {
+      name: "5-in-1 USB C media Hub",
+      category: "Accessories",
+      keywords: "organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634500637/devup/devup-usbHub_adobespark_xxbrtt.png",
+      description: "USB C Adapter, with 100W Power Delivery, 4K 60Hz HDMI Port, 10Gbps USB C and 2 USB A Data Ports, Ethernet Port, microSD and SD Card Reader, for MacBook Pro and More",
+      details: "Instant Expansion: Add 2 USB-A ports, 1 HDMI port, a micro SD card slot, and an SD card slot to your MacBook — all from a single USB-C port/nTransfer Data in Seconds: Transfer and backup your files at speeds up to 5Gbps via 2 USB 3. 0 ports./nVivid Video: Mirror or extend your screen in a variety of resolutions including 4K@30Hz and 2K@60Hz via the HDMI port./nSD Ready: The micro SD and SD card slots support nearly all SD card formats for quick and easy access to photos and other media — perfect for photographers and designers/nWhat You Get: Anker Premium 5-in-1 USB-C Hub, travel pouch, welcome guide, worry-free 18-month , and friendly customer service",
+      price: "34.99",
+      productURL: "https://us.anker.com/collections/hubs-docks/products/a8334"
+    },
+    {
+      name: "Rocketbook Smart Notebook",
+      category: "Accessories",
+      keywords: "lifestyle",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634501479/devup/devup-notebook_adobespark_ky7uz2.png",
+      description: "The Rocketbook Core notebook provides a classic pen and paper experience, yet is built for the digital age. Although it feels like a traditional notebook, the Core is endlessly reusable and connected to all of your favorite cloud services",
+      details: "No more wasting paper - this environmentally-friendly 32 page dotted grid notebook can be used endlessly by wiping clean with a damp cloth/nBlast your notes to the cloud with Google Drive, Dropbox, Icloud, Slack or email/nAllow 15 seconds for ink from any Pilot Frixion pen, marker, or highlighter to dry in order for it to bond to our specialized pages/nSophisticated AI technology allows you to use Rocketbook’s smart titles, smart search, and email transcription for easier naming and searching of your notes",
+      price: "34.00",
+      productURL: "https://getrocketbook.com/products/rocketbook-core?variant=31416131534"
+    },
+    {
+      name: "IRON Flask 180z",
+      category: "Accessories",
+      keywords: "lifestyle",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634503320/devup/devupWaterbottle_adobespark_xzonwz.png",
+      description: "The Iron Flask is a great addition to the home office, stop spilling liquids everywhere and get to work!",
+      details: "Insulated Sports Water Bottle/n3 Lids included/n18/8 Premium steel/nMultiple colors available/n100% satisfaction guaranteed",
+      price: "21.95",
+      productURL: "https://www.ironflask.com/"
+    },
+    {
+      name: "Apple Magic TrackPad 2",
+      category: "Gear",
+      keywords: "mouse",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634504341/devup/devupTrackPad_adobespark_njmokf.png",
+      description: "Bring the best features of your laptop to your desktop, use all the same swiping gestures with a larger wireless trackpad.",
+      details: "Rechargable with up to 10 hours of battery life/nForce touch sensors allow you to touch anywhere on the pad/n30 percent larger than the previous trackpad/nBluetooth/nType-C charging",
+      price: "129.00",
+      productURL: "https://www.apple.com/shop/product/MK2D3AM/A/magic-trackpad?fnode=2e46668e16147a1fc8f678651d21e8049a7da920a6a650197851e39f8f733ce02d4cc4975443686342cf4b477b4547576c0f9f503cc2c0d6e7eaa8927c3a1c7b67af5c864b57c394fa8d0f9f38135196f7b2b01f229f8b33ee39c56121964695"
+    },
+    {
+      name: "RAZER Basilisk V3 Gaming Mouse",
+      category: "Gear",
+      keywords: "mouse",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634505176/devup/devUpMouse_agqua8.png",
+      description: "Add more functionality and flair to your gaming setup with the Razer Base Station V2 Chroma, which features additional USB 3.1 SuperSpeed ports and a 3.5mm combo port",
+      details: "Chroma RGB Lighting/n26k DPI Optical Sensor/n11 Progammable Buttons/nHyperscroll tilt Wheel/nErgonomic Design",
+      price: "69.99",
+      productURL: "https://www.razer.com/gaming-mice/razer-basilisk-v3?gclid=CjwKCAjwk6-LBhBZEiwAOUUDp45Onc8pqnf26c7kJmm1fYXPxmSbwPwgvJohQcpc9vClpppT29sqARoCA2QQAvD_BwE"
     },
   ]
 
