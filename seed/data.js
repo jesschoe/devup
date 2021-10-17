@@ -27,9 +27,9 @@ const insertData = async () => {
   await user2.save()
 
   const user3 = new User({
-    username: 'test3',
+    username: 'therealone',
     email: 'test2@gmail.com',
-    password_digest: await bcrypt.hash('test3', 11),
+    password_digest: await bcrypt.hash('therealone', 11),
     wishlist: [],
     roles: 'basic',
   })
@@ -65,7 +65,7 @@ const insertData = async () => {
             'The SteelSeries Apex Pro is a beautifully RGBed keyboard with an amazing level of customization, including per-key actuation that will change how you game. But tactile typing fans will want more from the linear switches.',
         },
         {
-          userId: user1,
+          userId: user2,
           author: 'theTechie',
           rating: 5,
           content:
@@ -93,6 +93,15 @@ const insertData = async () => {
       details: "80cm x 45cm /nUsed by employees from Apple, Amazon, GoPro and many more./nDesigned to be super minimal and clean, our desk mats can add some much needed texture and organisation to your desk./nMade from vegan leather which is specially designed to be durable and long-lasting./nIt will also protect your desk from any spills, scratches or scrapes.",
       price: "79.00",
       productURL: "https://ulxstore.com/products/black-leather-desk-mat",
+      reviews:[
+        {
+          userId: user2,
+          author: 'therealone',
+          rating: 5,
+          content:
+            'Pricey but high so far seems like the quality is worth is. Holding up well even with everything going on on top of it on a daily basis. Glad my magic mouse works well on it.',
+        }
+      ]
     },
     {
       name: "Airpod Max",
@@ -217,7 +226,7 @@ const insertData = async () => {
     {
       name: "5-in-1 USB C media Hub",
       category: "Accessories",
-      keywords: "organization",
+      keywords: "Organization",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634500637/devup/devup-usbHub_adobespark_xxbrtt.png",
       description: "USB C Adapter, with 100W Power Delivery, 4K 60Hz HDMI Port, 10Gbps USB C and 2 USB A Data Ports, Ethernet Port, microSD and SD Card Reader, for MacBook Pro and More",
       details: "Instant Expansion: Add 2 USB-A ports, 1 HDMI port, a micro SD card slot, and an SD card slot to your MacBook — all from a single USB-C port/nTransfer Data in Seconds: Transfer and backup your files at speeds up to 5Gbps via 2 USB 3. 0 ports./nVivid Video: Mirror or extend your screen in a variety of resolutions including 4K@30Hz and 2K@60Hz via the HDMI port./nSD Ready: The micro SD and SD card slots support nearly all SD card formats for quick and easy access to photos and other media — perfect for photographers and designers/nWhat You Get: Anker Premium 5-in-1 USB-C Hub, travel pouch, welcome guide, worry-free 18-month , and friendly customer service",
@@ -227,7 +236,7 @@ const insertData = async () => {
     {
       name: "Rocketbook Smart Notebook",
       category: "Accessories",
-      keywords: "lifestyle",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634501479/devup/devup-notebook_adobespark_ky7uz2.png",
       description: "The Rocketbook Core notebook provides a classic pen and paper experience, yet is built for the digital age. Although it feels like a traditional notebook, the Core is endlessly reusable and connected to all of your favorite cloud services",
       details: "No more wasting paper - this environmentally-friendly 32 page dotted grid notebook can be used endlessly by wiping clean with a damp cloth/nBlast your notes to the cloud with Google Drive, Dropbox, Icloud, Slack or email/nAllow 15 seconds for ink from any Pilot Frixion pen, marker, or highlighter to dry in order for it to bond to our specialized pages/nSophisticated AI technology allows you to use Rocketbook’s smart titles, smart search, and email transcription for easier naming and searching of your notes",
@@ -237,7 +246,7 @@ const insertData = async () => {
     {
       name: "IRON Flask 180z",
       category: "Accessories",
-      keywords: "lifestyle",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634503320/devup/devupWaterbottle_adobespark_xzonwz.png",
       description: "The Iron Flask is a great addition to the home office, stop spilling liquids everywhere and get to work!",
       details: "Insulated Sports Water Bottle/n3 Lids included/n18/8 Premium steel/nMultiple colors available/n100% satisfaction guaranteed",
@@ -247,7 +256,7 @@ const insertData = async () => {
     {
       name: "Apple Magic TrackPad 2",
       category: "Gear",
-      keywords: "mouse",
+      keywords: "Mouse",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634504341/devup/devupTrackPad_adobespark_njmokf.png",
       description: "Bring the best features of your laptop to your desktop, use all the same swiping gestures with a larger wireless trackpad.",
       details: "Rechargable with up to 10 hours of battery life/nForce touch sensors allow you to touch anywhere on the pad/n30 percent larger than the previous trackpad/nBluetooth/nType-C charging",
@@ -257,7 +266,7 @@ const insertData = async () => {
     {
       name: "RAZER Basilisk V3 Gaming Mouse",
       category: "Gear",
-      keywords: "mouse",
+      keywords: "Mouse",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634505176/devup/devUpMouse_agqua8.png",
       description: "Add more functionality and flair to your gaming setup with the Razer Base Station V2 Chroma, which features additional USB 3.1 SuperSpeed ports and a 3.5mm combo port",
       details: "Chroma RGB Lighting/n26k DPI Optical Sensor/n11 Progammable Buttons/nHyperscroll tilt Wheel/nErgonomic Design",
