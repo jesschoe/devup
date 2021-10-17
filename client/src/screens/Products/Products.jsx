@@ -55,6 +55,7 @@ const Products = (props) => {
       }
       else {
         setCategory(allProducts);
+        setSortTitle("All Products")
       }
     };
     fetchProducts();
