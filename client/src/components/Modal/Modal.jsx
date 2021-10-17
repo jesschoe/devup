@@ -13,6 +13,7 @@ export default function Modal(props) {
           handleSubmit={props.handleSubmit}
           handleRating={props.handleRating}
           product={props.product}
+          user={props.user}
         />) : ''
       }
     </div>

@@ -5,13 +5,13 @@ import Footer from "../../components/Footer/Footer"
 const Resources = (props) => {
   return (
     <Layout user={props.user}>
-      <div className=" flex flex-col justify-center container">
-        <div className="flex flex-col mt-20">
-          <div className="mt-20 mb-2 text-3xl font-black text-orange self-start ml-20">
+      <div className="container">
+        <div className="flex flex-col">
+          <div className="mt-10 mb-2 text-3xl font-black text-orange self-start ml-20">
             Resources
           </div>
-          <div className="p-4 max-w-md md:max-w-full md:p-16 bg-black lg:px-8 lg:py-20 mx-20 mb-20">
-            <h2 className="text-orange mb-3 pt-0">Design</h2>
+          <div className="p-4 max-w-md md:max-w-full md:p-8 bg-black mx-20 mb-20">
+            <h2 className="text-orange mb-3">Design</h2>
             <div className="mb-1 underline">
               <a href=" https://mui.com/">https://mui.com/</a>
             </div>
