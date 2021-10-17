@@ -91,7 +91,7 @@ const insertData = async () => {
     {
       name: "UXL Desk Mat",
       category: "Accessories",
-      keywords: "Desk",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1633727267/devup/deskmat_q7tovg.jpg",
       description: "We were tired of the low quality desk mats out there so we designed and made our own. Made from vegan leather, it's been designed to be clean and minimal. It will protect your desk whilst also making it easier to use your mouse.",
       details: "80cm x 45cm /nUsed by employees from Apple, Amazon, GoPro and many more./nDesigned to be super minimal and clean, our desk mats can add some much needed texture and organisation to your desk./nMade from vegan leather which is specially designed to be durable and long-lasting./nIt will also protect your desk from any spills, scratches or scrapes.",
@@ -161,7 +161,7 @@ const insertData = async () => {
     {
       name: "minder Laptop Tower Stand",
       category: "Accessories",
-      keywords: "Stand",
+      keywords: "Organization",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634152232/devup/laptopstand_adobespark_wwwuhc.png",
       description: "A laptop stand will enable you to transform your desk to an effective workspace so you can work comfortably, whether you’re sitting, standing or changing positions frequently.",
       details: "This vertical laptop stand positions your laptop at eye level while sitting or standing, which improves your posture and saves you from back and neck pains./nWork in your most comfortable position for a boost of productivity and comfort. You can modify and set the height of this adjustable laptop stand according to your preferences and needs./nIt’s built for stability so height adjustments do not compromise durability. This stand is built with strong materials and a sturdy structure so your laptop and other devices remain safe while you’re working or studying./nSetting up a workstation is now easier than ever, even when you’re on the go! This laptop holder is detachable, collapses and easily fits into a backpack or messenger bag, so you can bring it anywhere and everywhere with ease.",
@@ -171,7 +171,7 @@ const insertData = async () => {
     {
       name: "Taotronics LED Desk Lap",
       category: "Accessories",
-      keywords: "Lighting",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634152631/devup/taotronicslamp_tq2zzu_adobespark_goar5v.png",
       description: "13 Eye-caring table lamp with USB Charging port.",
       details: "Wonderfully Gentle on the Eyes: Shines a flicker-free light that brightens your space without harming your eyes; ideal for reading, working and studying./nEndless Lighting Possibilities: Create the perfect ambience with our LED desk lamp’s unique combination of 5 color modes & 7 brightness levels./nFunctional USB charging port: Don’t sacrifice charging for lighting - built-in USB port keeps your phone at a full charge & within reach./nAdjustable Design: Freedom to cast the perfect spotlight, tilt the head up 135 degrees & swivel 90 degrees; the base tilts down to 150 degrees & swivels 45 degrees./nEnergy Efficient LED: Featuring outstanding environmental performance, switch your traditional desk lamp to ours to help reduce the electricity bill by up to 75%.",
