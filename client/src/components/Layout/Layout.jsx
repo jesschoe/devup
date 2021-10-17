@@ -1,7 +1,6 @@
-
-import Nav from "../Nav/Nav";
 import { useState, useEffect } from "react";
 import MobileNav from "../MobileNav/MobileNav";
+import Nav from "../Nav/Nav";
 
 const Layout = (props) => {
   const [isOpen, setIsOpen] = useState(false);

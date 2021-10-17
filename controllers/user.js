@@ -63,7 +63,6 @@ export const signIn = async (req, res) => {
       };
 
       const token = jwt.sign(payload, TOKEN_KEY);
-      console.log(token);
       res.status(201).json({ token });
     } else {
       res.status(401).send("Invalid Credentials");

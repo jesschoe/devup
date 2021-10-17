@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import { getProduct, addReview, deleteReview } from "../../services/products";
+import { addToWishList } from "../../services/users";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
-import { getProduct, addReview, deleteReview } from "../../services/products";
 import "./ProductDetail.css"
-import { addToWishList } from "../../services/users";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = ({user, admin}) => {
@@ -24,7 +24,6 @@ const ProductDetail = ({user, admin}) => {
 
   const notify = () => toast("Added to Wishlist!")
 
-  console.log(admin)
   useEffect(
     () => {
       const fetchProduct = async () => {
