@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getPosts, createPost } from "../../services/posts"
 import PostModal from "../../components/Modal/PostModal"
 import { useHistory } from "react-router-dom"
+import Footer from "../../components/Footer/Footer";
 
 
 const Blog = ({ user, admin }) => {
@@ -58,7 +59,7 @@ const Blog = ({ user, admin }) => {
   }
 
   return (
-    <Layout>
+    <Layout user={user} admin={admin}>
       <div className="container">
         <div className="section" >
           <div className="bg-black py-20">
@@ -75,6 +76,12 @@ const Blog = ({ user, admin }) => {
           </div>
         </div>
         <div className="p-10">
+
+          {admin ? <button
+            onClick={handleWrite}
+            className="text-white text-sm border border-color-purple self-end py-2 px-6 mt-10"
+          >Create Post</button> : ''}
+
           <button className="self-end mb-4 py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md" onClick={handleWrite}>Create Post</button>
         </div>
         <div className="flex justify-center flex-col items-center w-full">
@@ -141,11 +148,15 @@ const Blog = ({ user, admin }) => {
                     description={post.description}
                     hastags={post.hastags}
                   />
-                  {/* <button><Link to={`/blog/edit/${}`}>Edit Post</Link></button> */}
+                  {admin ? <Link
+                    to={`/blog/edit/${post._id}`}
+                    className="text-purple text-sm border border-color-purple self-end py-2 px-6 mt-10"
+                  >Edit Product</Link> : ''}
                 </div>
               );
             })}
           </div>
+          <Footer />
         </div>
         <PostModal
           showPostModal={showPostModal}

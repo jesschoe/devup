@@ -11,6 +11,7 @@ export default function PostModal(props) {
           handleWrite={props.handleWrite}
           handleChange={props.handleChange}
           handleSubmit={props.handleSubmit}
+          user={props.user}
         />) : ''
       }
     </div>

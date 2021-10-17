@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 const Post = (props) => {
   return (
@@ -11,6 +11,7 @@ const Post = (props) => {
           </div>
           <p className="text-lg mb-8 text-white">{props.description}</p>
           <h5 className="font-bold text-purple mb-5">{props.hashtags}</h5>
+
         </div>
       </div>
     </div>
