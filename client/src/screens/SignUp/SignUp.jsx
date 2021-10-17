@@ -64,7 +64,7 @@ const SignUp = (props) => {
   return (
     <Layout>
       <div className="container">
-          <div className="flex flex-col w-full items-center px-20 md:px-56 lg:w-8/12">
+          <div className="flex flex-col w-9/12 items-center px-2 md:px-20 lg:w-7/12 xl:w-5/12">
             <div className="self-start mt-20 mb-2 text-3xl font-black text-orange">
               Sign Up
             </div>
