@@ -21,12 +21,16 @@ const Products = (props) => {
   
   let cat = "";
   let keyword = "";
+  let home = false
 
   if (location.state) {
     cat = location.state.cat;
   }
   if (location.state) {
     keyword = location.state.keyword;
+  }
+  if (location.state) {
+    home = location.state.home
   }
 
   const notify = () => toast("Loading Products...")
@@ -99,6 +103,9 @@ const Products = (props) => {
   return (
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
+      <div>
+          <ToastContainer autoClose={5000} toastStyle={{ color: "#FFA800", border: "1px, solid, #FFA800", backgroundColor: "#000000" }}/>
+        </div>
         <div className="w-full px-20 flex flex-col">
           <div className="flex flex-wrap justify-center mb-24">
             <div className="w-full self-start mt-16 mb-8 text-3xl font-black text-orange">
@@ -107,7 +114,7 @@ const Products = (props) => {
               </div>
               <div className="flex">
                 <div>
-                  {location.state.home ? 
+                  {home ? 
                     <Keywords 
                       handleKeywords={handleKeywords}
                       category={cat}
