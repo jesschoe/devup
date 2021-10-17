@@ -6,7 +6,7 @@
 
 ## Project Description
 
-DevUp is an inventory application that allows developers to improve the quality of their work space by providing them with a selection of the latest tech gadgets. On the home screen users are given different categories to explore including furniture, accessories, and additional gear. After choosing a category, users get access to its full library of items, where they can compare gadgets based on price and other characteristics. Once a user finds an item that they like, they can get detailed information, read reviews (and leave their own) and add it to their wishlist. Check out our full story on our blog!
+DevUp is an inventory application that recommends quality furniture, gadgets, and accessories for developers to improve the quality of their work space. On the home screen, users are given different categories to explore, and once on a category page, users can sort further by keywords. Users can also choose to view all categories to get access to the full library of products. Upon clicking on a specific product, users can get detailed information, read reviews (and leave their own), and add the item to their wishlist. For more information, check out our Team, Blog, and Resources links!
 
 
 ## Wireframes

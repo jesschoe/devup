@@ -25,7 +25,6 @@ export const signUp = async (req, res) => {
       username,
       email,
       password_digest,
-
       roles,
     });
 
@@ -101,7 +100,7 @@ export const getUser = async (req, res) => {
 
 export const getUsers = async (req, res) => {
   try {
-    const users = await User.find().populate("products");
+    const users = await User.find()
     res.json(users);
   } catch (error) {
     console.log(error);
