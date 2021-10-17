@@ -12,7 +12,6 @@ const insertData = async () => {
     username: 'admin',
     email: 'test@gmail.com',
     password_digest: await bcrypt.hash('admin12345', 11),
-    products: [],
     wishlist: [],
     roles: 'admin',
   })
@@ -22,7 +21,6 @@ const insertData = async () => {
     username: 'tester',
     email: 'tester@gmail.com',
     password_digest: await bcrypt.hash('tester1', 11),
-    products: [],
     wishlist: [],
     roles: 'basic',
   })
@@ -32,7 +30,6 @@ const insertData = async () => {
     username: 'test3',
     email: 'test2@gmail.com',
     password_digest: await bcrypt.hash('test3', 11),
-    products: [],
     wishlist: [],
     roles: 'basic',
   })
@@ -42,7 +39,6 @@ const insertData = async () => {
     username: 'bruno',
     email: 'bruno@gmail.com',
     password_digest: await bcrypt.hash('bruno', 11),
-    products: [],
     wishlist: [],
     roles: 'basic',
   })

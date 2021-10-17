@@ -13,6 +13,7 @@ const SignUp = (props) => {
     email: "",
     password: "",
     confirmPassword: "",
+    roles:[],
     isError: false,
     errorMsg: "",
   })
@@ -38,6 +39,7 @@ const SignUp = (props) => {
             email: "",
             password: "",
             confirmPassword: "",
+            roles:[],
             isError: true,
             errorMsg: 'Sign Up Details Invalid',
           })

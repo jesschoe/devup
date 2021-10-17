@@ -105,7 +105,7 @@ const WishList = (props) => {
                     category={product.category}
                   />
                     <button 
-                      className="self-center px-4 py-1 text-xs font-bold text-white bg-orange rounded mb-8"
+                      className="self-center w-24 text-xs px-6 py-1 font-black mb-8 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                       onClick={() => handleDelete(userId, product._id)}
                     >Remove</button>
                 </div>
