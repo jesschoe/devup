@@ -75,10 +75,10 @@ const Blog = ({ user, admin }) => {
           </div>
         </div>
         <div className="p-10">
-          <button onClick={handleWrite}>Create Post</button>
+          <button className="self-end mb-4 py-2 px-6 mt-10 bg-orange text-white text-xs rounded-md" onClick={handleWrite}>Create Post</button>
         </div>
         <div className="flex justify-center flex-col items-center w-full">
-          <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center my-24 w-full border-red">
+          <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center my-16 w-full border-red">
             <div className="m-10 w-full">
               <h1 className="text-5xl font-bold mb-5 text-orange">Why dev up</h1>
               <h5 className="font-bold text-white mb-5 text-xl">Jessica Choe</h5>
