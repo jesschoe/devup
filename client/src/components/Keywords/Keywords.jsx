@@ -7,7 +7,7 @@ const Categories = ({ handleKeywords, category }) => {
   const furniture = (
     <>
     <form className="text-white text-xs" onSubmit={handleKeywords}>
-      <select className="bg-background border border-orange text-center p-px " onChange={handleChange}>
+      <select className="bg-background border border-orange text-center p-1" onChange={handleChange}>
         <option className="" value="Furniture" >Furniture</option>
         <option value="Desk">Desk</option>
         <option value="Chair">Chair</option>
@@ -19,7 +19,7 @@ const Categories = ({ handleKeywords, category }) => {
   const gear = (
     <>
     <form className="text-white text-xs" onSubmit={handleKeywords}>
-      <select className="bg-background border border-orange text-center p-px " onChange={handleChange}>
+      <select className="bg-background border border-orange text-center p-1" onChange={handleChange}>
         <option className="" value="Gear" >Gear</option>
         <option value="Laptop">Laptop</option>
         <option value="Monitor">Monitor</option>
@@ -34,7 +34,7 @@ const Categories = ({ handleKeywords, category }) => {
   const accessories = (
     <>
     <form className="text-white text-xs" onSubmit={handleKeywords}>
-      <select className="bg-background border border-orange text-center p-px " onChange={handleChange}>
+      <select className="bg-background border border-orange text-center p-1" onChange={handleChange}>
         <option className="" value="Accessories" >Accessories</option>
         <option value="Organization">Organization</option>
         <option value="Hardware">Hardware</option>
