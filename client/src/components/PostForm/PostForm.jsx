@@ -1,4 +1,4 @@
-const PostForm = ({ title, name, description, hashtags, handleWrite, handleChange, handleSubmit }) => {
+const PostForm = ({ user, title, name, description, hashtags, handleWrite, handleChange, handleSubmit }) => {
   return (
     <div className="opacity-100">
       <form
@@ -16,7 +16,7 @@ const PostForm = ({ title, name, description, hashtags, handleWrite, handleChang
         />
         <input
           className="flex-1 m-4 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-          placeholder="Name"
+          placeholder="Nickname"
           value={name}
           name="name"
           required

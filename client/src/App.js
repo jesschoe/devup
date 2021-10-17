@@ -68,10 +68,10 @@ function App() {
         <Resources />
       </Route>
       <Route exact path="/blog">
-        <Blog />
+        <Blog user={user} admin={admin} />
       </Route>
       <Route exact path="/blog/edit/:id">
-        <EditPost />
+        <EditPost user={user} admin={admin} />
       </Route>
       <Route exact path="/:userId/wishlist">
         <WishList user={user} />
