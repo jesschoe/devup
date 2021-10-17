@@ -26,7 +26,8 @@ const Home = (props) => {
                   pathname: "/products",
                   state: {
                     cat: "",
-                    keyword: ""
+                    keyword: "",
+                    home: false
                   }
                 }}>
                   <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
@@ -51,7 +52,8 @@ const Home = (props) => {
                   pathname: "/products",
                   state: {
                     cat: "Furniture",
-                    keyword: ""
+                    keyword: "",
+                    home: true
                   }
                 }}>
                   <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
@@ -76,7 +78,8 @@ const Home = (props) => {
                   pathname: "/products",
                   state: {
                     cat: "Gear",
-                    keyword: ""
+                    keyword: "",
+                    home: true
                   }
                 }}>
                   <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
@@ -101,7 +104,8 @@ const Home = (props) => {
                   pathname: "/products",
                   state: {
                     cat: "Accessories",
-                    keyword: ""
+                    keyword: "",
+                    home: true
                   }
                 }}>
                   <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
