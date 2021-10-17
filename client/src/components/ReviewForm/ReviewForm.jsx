@@ -1,7 +1,7 @@
 import "./ReviewForm.css"
 import { useState } from "react"
 
-const ReviewForm = ({ author, content, handleWrite, handleChange, handleSubmit, handleRating, product }) => {
+const ReviewForm = ({ user, content, handleWrite, handleChange, handleSubmit, handleRating, product }) => {
   const [rating, setRating] = useState(0)
 
   const handleClick = (val) => {
@@ -28,15 +28,9 @@ const ReviewForm = ({ author, content, handleWrite, handleChange, handleSubmit, 
             {rating >= 2 ? <span onClick={() => handleClick(2)}>★</span> : <span onClick={() => handleClick(2)}>☆</span>}
             {rating >= 1 ? <span onClick={() => handleClick(1)}>★</span> : <span onClick={() => handleClick(1)}>☆</span>}
           </div>
-          <input
-              className="flex-1 mb-4 mt-8 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-              placeholder="Your Name"
-              value={author}
-              name='author'
-              required
-              autoFocus
-              onChange={(e) => handleChange(e)}
-          />
+          <label>
+            {user.username}
+          </label>
           <textarea
               className="flex-1 my-4 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
               rows={10}
@@ -47,8 +41,8 @@ const ReviewForm = ({ author, content, handleWrite, handleChange, handleSubmit, 
               onChange={(e) => handleChange(e)}
           />
           <div className="flex self-center">
-            <button type='submit' className="mx-4 py-2 px-6 bg-orange text-white w-36 rounded-md">Submit</button>
-            <button onClick={handleWrite} className="mx-4 py-2 px-6 bg-orange text-white w-36 rounded-md">Cancel</button>
+            <button type='submit' className="mx-4 py-2 px-6 bg-orange text-white w-24 rounded-md">Submit</button>
+            <button onClick={handleWrite} className="mx-4 py-2 px-6 bg-orange text-white w-24 rounded-md">Cancel</button>
           </div>
         </form>
       </div>

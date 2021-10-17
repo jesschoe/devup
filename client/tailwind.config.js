@@ -31,7 +31,7 @@ module.exports = {
     },
     colors: {
       background: "#262626",
-      primary: "#BABABA",
+      primary: "#FFFFFF",
       orange: "#FFA800",
       purple: "#B371DB",
       white: "#ffffff",
