@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getProducts } from "../../services/products";
+import { priceLowHigh, priceHighLow } from "../../utils/sort";
 import Layout from "../../components/Layout/Layout";
 import Product from "../../components/Product/Product";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
 import Keywords from "../../components/Keywords/Keywords";
 import Footer from "../../components/Footer/Footer"
-import { priceLowHigh, priceHighLow } from "../../utils/sort";
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 

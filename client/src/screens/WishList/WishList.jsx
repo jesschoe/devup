@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Footer from "../../components/Footer/Footer";
-import Layout from "../../components/Layout/Layout";
 import { useLocation, useParams } from "react-router-dom";
 import { getWishList, deleteWishListItem } from "../../services/users";
+import { priceLowHigh, priceHighLow } from "../../utils/sort";
+import Footer from "../../components/Footer/Footer";
+import Layout from "../../components/Layout/Layout";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
-import { priceLowHigh, priceHighLow } from "../../utils/sort";
 import Product from "../../components/Product/Product";
 
 const WishList = (props) => {
