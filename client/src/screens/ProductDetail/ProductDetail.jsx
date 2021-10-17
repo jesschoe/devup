@@ -74,7 +74,7 @@ const ProductDetail = ({user, admin}) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    product.reviews.push(review)
+    product.reviews.unshift(review)
     setProduct(product)
     await addReview(id, product)
     
@@ -127,9 +127,9 @@ const ProductDetail = ({user, admin}) => {
                 {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
               <div className="text-lg font-black text-orange mt-4 mb-1.5">Features</div>
-              <div className="text-sm mb-8">
+              <div className=" mb-8">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
-                  return <li className="p-1" key={i}>- {detail}</li>
+                  return <li className="p-1 font-bold" key={i}>- {detail}</li>
                 })}</ul>
               </div>
               <h1 className="text-lg font-bold text-white text-right md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
