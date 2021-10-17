@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { signUp } from "../../services/users"
 import { useHistory } from "react-router-dom"
+import { signUp } from "../../services/users"
 import Layout from "../../components/Layout/Layout"
 import Footer from "../../components/Footer/Footer"
 
@@ -13,7 +13,6 @@ const SignUp = (props) => {
     email: "",
     password: "",
     confirmPassword: "",
-    roles:[],
     isError: false,
     errorMsg: "",
   })
@@ -39,7 +38,6 @@ const SignUp = (props) => {
             email: "",
             password: "",
             confirmPassword: "",
-            roles:[],
             isError: true,
             errorMsg: 'Sign Up Details Invalid',
           })

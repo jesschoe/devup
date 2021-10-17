@@ -38,8 +38,6 @@ export default function ProductCreate(props) {
       ...product,
       details: array
     })
-    console.log(array)
-    console.log(product)
     addProduct()
   }
 

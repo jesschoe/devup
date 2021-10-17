@@ -63,7 +63,6 @@ const ProductEdit = (props) => {
       imgURL: file.secure_url
     });
     setLoading(false);
-    console.log(file);
   }
 
   if (isUpdated) {
