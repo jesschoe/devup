@@ -80,8 +80,8 @@ const WishList = (props) => {
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
         <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
-            <div className="mb-2 text-5xl text-orange">
-              My WishList
+            <div className="mb-2 text-3xl text-orange">
+              My Wishlist
             </div>
             <div className="flex sm: mx-auto lg:mr-32">
               <div>
@@ -92,10 +92,10 @@ const WishList = (props) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center mb-24">
+          <div className="flex flex-wrap items-center justify-center mb-24">
             {category.map((product) => {
               return (
-                <div key={product._id}>
+                <div className="flex flex-col"key={product._id}>
                   <Product
                     _id={product._id}
                     name={product.name}
@@ -104,8 +104,10 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
-                    <button className=" justify-center px-2 mx-auto py-1 text-xs font-bold text-white bg-orange uppercase rounded my-4 h-8 md:w-40 w-28"
-                    onClick={() => handleDelete(userId, product._id)}>remove</button>
+                    <button 
+                      className="self-center px-4 py-1 text-xs font-bold text-white bg-orange rounded mb-8"
+                      onClick={() => handleDelete(userId, product._id)}
+                    >Remove</button>
                 </div>
               );
             })}
