@@ -6,6 +6,8 @@ import Modal from "../../components/Modal/Modal";
 import { getProduct, addReview, deleteReview } from "../../services/products";
 import "./ProductDetail.css"
 import { addToWishList } from "../../services/users";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = ({user, admin}) => {
   const [product, setProduct] = useState(null);
@@ -19,6 +21,8 @@ const ProductDetail = ({user, admin}) => {
   const [showModal, setShowModal] = useState(false)
   const { id } = useParams();
   const history = useHistory()
+
+  const notify = () => toast("Added to Wishlist!")
 
   console.log(admin)
   useEffect(
@@ -91,7 +95,7 @@ const ProductDetail = ({user, admin}) => {
 
   const wishListSubmit = async (event) => {
     await addToWishList(user.id, id)
-    console.log(user)
+    notify()
   }
 
   if (!isLoaded) {
@@ -101,6 +105,9 @@ const ProductDetail = ({user, admin}) => {
   return (
     <Layout user={user} admin={admin}>
       <div className="container">
+        <div>
+          <ToastContainer hideProgressBar={true} autoClose={2000} toastStyle={{ color: "#FFFFFF", backgroundColor: "#FFA800" }}/>
+        </div>
       <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col"}>
         <div className="self-start mx-36 mt-10 mb-2 text-3xl font-black text-orange">
           Product Details
@@ -163,10 +170,10 @@ const ProductDetail = ({user, admin}) => {
                 </button>
             </div>
           </div>
-        <div className="flex flex-col bg-black justify-center items-center mx-36 mb-8">
+        <div className="flex flex-col justify-center items-center mx-36 mb-8">
           {product.reviews.map((review,i) => {
             return (
-              <div className="bg-black flex w-full justify between p-12 mb-8" key={i}>
+              <div className="bg-black flex w-full justify-between p-12 mb-4" key={i}>
                 <div className="self-start w-5/12 md:w-3/12">
                   <div className="text-xl">{review.author}</div>
                   <div className="text-xs">{getTimestamp(product.updatedAt)}</div>

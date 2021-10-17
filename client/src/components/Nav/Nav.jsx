@@ -10,6 +10,7 @@ const Nav = ({ toggle, user, admin }) => {
   )
   const authenticatedOptionsAdmin = (
     <>
+      <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to={user ? `/${user.id}/wishlist` : "/"}>Wishlist</NavLink>
       <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to="/add-product">Add Product</NavLink>
       <NavLink className="text-purple hover:text-white pr-6 py-2 text-md font-medium" to="/signout">Sign Out</NavLink>
     </>
