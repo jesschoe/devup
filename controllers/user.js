@@ -25,7 +25,6 @@ export const signUp = async (req, res) => {
       username,
       email,
       password_digest,
-
       roles,
     });
 
@@ -64,7 +63,6 @@ export const signIn = async (req, res) => {
       };
 
       const token = jwt.sign(payload, TOKEN_KEY);
-      console.log(token);
       res.status(201).json({ token });
     } else {
       res.status(401).send("Invalid Credentials");
@@ -91,7 +89,7 @@ export const verify = async (req, res) => {
 //users
 export const getUser = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id).populate("products");
+    const user = await User.findById(req.params.id)
     res.json(user);
   } catch (error) {
     console.log(error);
@@ -101,7 +99,7 @@ export const getUser = async (req, res) => {
 
 export const getUsers = async (req, res) => {
   try {
-    const users = await User.find().populate("products");
+    const users = await User.find()
     res.json(users);
   } catch (error) {
     console.log(error);
@@ -109,34 +107,6 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const getUserProducts = async (req, res) => {
-  try {
-    const user = await User.findById(req.params.id);
-    const userProducts = await Product.find({ userId: user._id });
-    res.json(userProducts);
-  } catch (error) {
-    console.log(error.message);
-    res.status(500).json({ error: error.message });
-  }
-};
-
-export const getUserProduct = async (req, res) => {
-  try {
-    const user = await User.findById(req.params.id);
-    const userProduct = await Product.findById(req.params.productId).populate(
-      "userId"
-    );
-    if (userProduct.userId.equals(user._id)) {
-      return res.json(userProduct);
-    }
-    throw new Error(
-      `Product ${userProduct._id} does not belong to user ${user._id}`
-    );
-  } catch (error) {
-    console.log(error.message);
-    res.status(500).json({ error: error.message });
-  }
-};
 
 //wishlist
 export const getWishList = async (req, res) => {

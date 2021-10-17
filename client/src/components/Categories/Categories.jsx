@@ -7,7 +7,7 @@ const Categories = ({ handleCategories }) => {
 
   return (
     <form className="text-white text-xs" onSubmit={handleCategories}>
-      <select className="bg-background border border-orange text-center p-px " onChange={handleChange}>
+      <select className="bg-background border border-orange text-center p-1" onChange={handleChange}>
         <option className="" value="" >All Categories</option>
         <option value="Furniture">Furniture</option>
         <option value="Gear">Gear</option>

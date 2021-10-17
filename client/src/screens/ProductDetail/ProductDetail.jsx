@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import { getProduct, addReview, deleteReview } from "../../services/products";
+import { addToWishList } from "../../services/users";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 import Modal from "../../components/Modal/Modal";
-import { getProduct, addReview, deleteReview } from "../../services/products";
 import "./ProductDetail.css"
-import { addToWishList } from "../../services/users";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = ({user, admin}) => {
@@ -24,7 +24,6 @@ const ProductDetail = ({user, admin}) => {
 
   const notify = () => toast("Added to Wishlist!")
 
-  console.log(admin)
   useEffect(
     () => {
       const fetchProduct = async () => {
@@ -106,7 +105,7 @@ const ProductDetail = ({user, admin}) => {
     <Layout user={user} admin={admin}>
       <div className="container">
         <div>
-          <ToastContainer hideProgressBar={true} autoClose={2000} toastStyle={{ color: "#FFFFFF", backgroundColor: "#FFA800" }}/>
+          <ToastContainer hideProgressBar={true} autoClose={2000} toastStyle={{ color: "#FFA800", border: "1px, solid, #FFA800", backgroundColor: "#262626" }} />
         </div>
       <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col"}>
         <div className="self-start mx-36 mt-10 mb-2 text-3xl font-black text-orange">

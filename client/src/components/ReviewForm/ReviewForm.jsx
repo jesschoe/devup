@@ -21,7 +21,6 @@ const ReviewForm = ({ user, content, handleWrite, handleChange, handleSubmit, ha
             {product}
           </label>
           <div className="rating">
-            {console.log(rating)}
             {rating >= 5 ? <span onClick={() => handleClick(5)}>★</span> : <span onClick={() => handleClick(5)}>☆</span>}
             {rating >= 4 ? <span onClick={() => handleClick(4)}>★</span> : <span onClick={() => handleClick(4)}>☆</span>}
             {rating >= 3 ? <span onClick={() => handleClick(3)}>★</span> : <span onClick={() => handleClick(3)}>☆</span>}
