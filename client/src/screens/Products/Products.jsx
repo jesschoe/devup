@@ -8,8 +8,8 @@ import Categories from "../../components/Categories/Categories";
 import Keywords from "../../components/Keywords/Keywords";
 import Footer from "../../components/Footer/Footer"
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Products = (props) => {
   const [products, setProducts] = useState([]);
@@ -33,12 +33,12 @@ const Products = (props) => {
     home = location.state.home
   }
 
-  const notify = () => toast("Loading Products...")
+  // const notify = () => toast("Loading Products...")
 
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts();
-      notify()
+      // notify()
       setProducts(allProducts);
       if (cat.length > 0) {
         const results = allProducts.filter((product) =>
@@ -104,9 +104,9 @@ const Products = (props) => {
   return (
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
-      <div>
+        {/* <div>
           <ToastContainer autoClose={5000} toastStyle={{ color: "#FFA800", border: "1px, solid, #FFA800", backgroundColor: "#000000" }}/>
-        </div>
+        </div> */}
         <div className="w-full px-20 flex flex-col">
           <div className="flex flex-wrap justify-center mb-24">
             <div className="w-full self-start mt-16 mb-8 text-3xl font-black text-orange">
