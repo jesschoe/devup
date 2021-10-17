@@ -38,6 +38,7 @@ const Products = (props) => {
   useEffect(() => {
     const fetchProducts = async () => {
       const allProducts = await getProducts();
+      notify()
       setProducts(allProducts);
       if (cat.length > 0) {
         const results = allProducts.filter((product) =>
