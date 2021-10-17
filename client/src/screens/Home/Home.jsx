@@ -29,7 +29,7 @@ const Home = (props) => {
                     keyword: ""
                   }
                 }}>
-                  <button className="flex items-center px-6 py-2 text-base md:text-xl my-6 rounded text-white bg-orange ">
+                  <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
                     Browse All
                   </button>
                 </Link>
@@ -54,7 +54,7 @@ const Home = (props) => {
                     keyword: ""
                   }
                 }}>
-                  <button className="flex items-center px-6 py-2 text-base md:text-xl my-6 rounded text-white bg-orange">
+                  <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
                     Browse Furniture
                   </button>
                 </Link>
@@ -79,7 +79,7 @@ const Home = (props) => {
                     keyword: ""
                   }
                 }}>
-                  <button className="flex items-center px-6 py-2 text-base md:text-xl my-6 rounded text-white bg-orange">
+                  <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
                     Browse Gear
                   </button>
                 </Link>
@@ -104,7 +104,7 @@ const Home = (props) => {
                     keyword: ""
                   }
                 }}>
-                  <button className="flex items-center px-6 py-2 text-base md:text-xl my-6 rounded text-white bg-orange">
+                  <button className="flex items-center px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">
                     Browse Accessories
                   </button>
                 </Link>
