@@ -61,7 +61,7 @@ const SignIn = (props) => {
             <div className="self-start mt-20 mb-2 text-3xl font-black text-orange">
               Sign In
             </div>
-            <div className="flex flex-col justify-center items-center bg-black w-full mb-20 px-10 lg:mx-36">
+            <div className="flex flex-col justify-center items-center bg-black w-full mb-10 px-10 lg:mx-36">
               <form className="py-10 mx-4 w-full" onSubmit={onSignIn}>
                 <label className="text-xs">Username</label>
                 <input
@@ -85,15 +85,17 @@ const SignIn = (props) => {
                 />
                 <div className="flex mt-8 w-full my-4 justify-center">
                   <div
-                    className="py-2 px-6 bg-orange text-white rounded-md"
+                    className="text-sm px-6 py-2 font-black text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                     type="submit"
                   >
                     {renderError()}
                   </div>
                 </div>
               </form>
-            </div>
-            <Footer />
+              </div>
+            <div className="text-orange">New to DevUp?</div>
+            <button className="mb-20 text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange">Create Your DevUp Account</button>
+          <Footer />
         </div>
       </div>
     </Layout>
