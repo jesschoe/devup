@@ -5,7 +5,8 @@ import User from "../models/user.js";
 import Product from "../models/product.js";
 
 const SALT_ROUNDS =
-  process.env.NODE_ENV === "production" ? process.env.SALT_ROUNDS : 11;
+  process.env.NODE_ENV === "production" 
+  ? process.env.SALT_ROUNDS : 11;
 const TOKEN_KEY =
   process.env.NODE_ENV === "production"
     ? process.env.TOKEN_KEY

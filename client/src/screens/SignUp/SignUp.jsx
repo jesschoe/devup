@@ -26,6 +26,7 @@ const SignUp = (props) => {
     
     const onSignUp = async (e) => {
         e.preventDefault()
+        console.log(form)
         const { setUser } = props
         try {
           const user = await signUp(form)
@@ -131,7 +132,7 @@ const SignUp = (props) => {
                   </div>
                   <div className="flex mt-8 w-full my-4 justify-center">
                     <div
-                      className="py-2 px-6 bg-orange text-white rounded-md"
+                      className="text-sm px-6 py-2 font-black text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                       type="submit"
                     >
                       {renderError()}
