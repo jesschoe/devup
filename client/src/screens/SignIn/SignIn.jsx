@@ -23,10 +23,15 @@ const SignIn = (props) => {
 
   const onSignIn = async (e) => {
     e.preventDefault()
-    const { setUser } = props
+    const { setUser, setAdmin } = props
     try {
       const user = await signIn(form)
-      setUser(user)
+      if (user) {
+        setUser(user)
+        if (user.roles[0] === 'admin') {
+          setAdmin(true)
+        }
+      }
       history.push("/")
     } catch (error) {
       console.error(error)
