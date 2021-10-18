@@ -14,7 +14,7 @@ import Products from "./screens/Products/Products";
 import Blog from "./screens/Blog/Blog";
 import WishList from "./screens/WishList/WishList";
 import SignOut from "./screens/SignOut/SignOut"
-import EditPost from "./screens/Blog/EditPost";
+import EditPost from "./components/PostForm/EditPost";
 
 
 function App() {
@@ -69,9 +69,6 @@ function App() {
       </Route>
       <Route exact path="/blog">
         <Blog user={user} admin={admin} />
-      </Route>
-      <Route exact path="/blog/edit/:id">
-        <EditPost user={user} admin={admin} />
       </Route>
       <Route exact path="/:userId/wishlist">
         <WishList user={user} />
