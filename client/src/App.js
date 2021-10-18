@@ -69,7 +69,7 @@ function App() {
         <Blog user={user} admin={admin} />
       </Route>
       <Route exact path="/:userId/wishlist">
-        <WishList user={user} />
+        <WishList user={user} admin={admin}/>
       </Route>
     </div>
   );
