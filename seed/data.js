@@ -376,7 +376,7 @@ const insertData = async () => {
       keywords: "Hardware",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634556900/itemImages/xs0zzvbrjoqrqqc7gduc.png",
       description: "Introducing the unlocked 9th Gen Intel® Core™ i5-9600K desktop processor, part of the most powerful family of Intel® Core™ desktop processors ever. Get in the game with this 6 core processor featuring Intel® Turbo Boost Technology 2.0, giving you a maximum processor frequency of 4.6 GHz1 when you need it most.",
-      details: "9th Gen Intel Processor/Processor Base Frequency 3.7 GHz/Unlocked processor/DDR4 Support/Intel Optane Memory and SSD Supported",
+      details: "9th Gen Intel Processor/nProcessor Base Frequency 3.7 GHz/nUnlocked processor/nDDR4 Support/nIntel Optane Memory and SSD Supported",
       price: "208.00",
       productURL: "https://www.newegg.com/core-i5-9th-gen-intel-core-i5-9600k/p/N82E16819117959?quicklink=true"
     },
@@ -386,7 +386,7 @@ const insertData = async () => {
       keywords: "Hardware",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634557764/itemImages/Ryzen-5-5600G-8_prsmfg.png",
       description: "Be unstoppable with the unprecedented speed of the AMD Ryzen™ 5000 G-Series desktop processors, whether you’re playing the latest games, designing the next skyscraper, or crunching scientific data. With AMD Ryzen™ desktop processors, you’re in the lead.",
-      details: "7nm Cezanne (Zen 3) 65W/16MB L3 Cache/3MB L2 Cache/AMD Radeon Graphics/Windows 11 Supported",
+      details: "7nm Cezanne (Zen 3) 65W/n16MB L3 Cache/n3MB L2 Cache/nAMD Radeon Graphics/nWindows 11 Supported",
       price: "258.96",
       productURL: "https://www.newegg.com/amd-ryzen-5-5600g-ryzen-5-5000-g-series/p/N82E16819113683?Description=ryzen%205&cm_re=ryzen_5-_-19-113-683-_-Product"
     },
@@ -396,7 +396,7 @@ const insertData = async () => {
       keywords: "Audio",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634558209/itemImages/beats_studio_buds_adobespark_pkw0bn.png",
       description: "Experience immersive listening wherever you go with Beats Studio Buds—true wireless noise cancelling earphones.",
-      details: "Custom Accoustic platform delivers powerful balanced sound/Up to 8 hours of listening time/Industry-leading Class 1 Bluetooth for extended range and fewer dropouts/IPX4-Rated sweat and water resistant wireless earbuds",
+      details: "Custom Accoustic platform delivers powerful balanced sound/nUp to 8 hours of listening time/nIndustry-leading Class 1 Bluetooth for extended range and fewer dropouts/nPX4-Rated sweat and water resistant wireless earbuds",
       price: "129.95",
       productURL: "hhttps://www.amazon.com/Beats-Studio-Cancelling-Earbuds-Built-Bluetooth-Headphones/dp/B096SV8SJG/ref=asc_df_B096SV8SJG/?tag=hyprod-20&linkCode=df0&hvadid=507647815824&hvpos=&hvnetw=g&hvrand=13187525101072497580&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9011941&hvtargid=pla-1375859818764&th=1"
     },
@@ -406,7 +406,7 @@ const insertData = async () => {
       keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634559088/itemImages/sticky_notes_ydvfxm.jpg",
       description: "Post-it Super Sticky Notes have 2X the sticking power to ensure your message gets through. They can stick and restick to move reminders with you throughout the day. Pack includes 1 7/8 in x 1 7/8 in, 3 in x 3 in, 4 in x 6 in Post-it Super Sticky Notes, Rio de Janeiro Collection.",
-      details: "2X The Sticking Power/Post-It Super Sticky Notes Stick and re-stick so your thoughts get noticed/Post-It Super Sticky Notes are recyclable",
+      details: "2X The Sticking Power/nPost-It Super Sticky Notes Stick and re-stick so your thoughts get noticed/nPost-It Super Sticky Notes are recyclable",
       price: "13.99",
       productURL: "https://www.amazon.com/Janeiro-Collection-Sticky-Assorted-Colors/dp/B076V5P9HS/ref=sr_1_1_sspa?dchild=1&keywords=sticky+notes&qid=1634558989&s=office-products&sr=1-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzNEhZUlIzVVRWVkMzJmVuY3J5cHRlZElkPUEwNTQ4NDMwNk5WOVlDVksyVVNWJmVuY3J5cHRlZEFkSWQ9QTA1NTE0MzkxQ1BSRzZZT1k2UFg2JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
     },
@@ -416,7 +416,7 @@ const insertData = async () => {
       keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634559915/itemImages/candle_adobespark_uxnrea.png",
       description: "Our delicately scented lavender & vanilla candles are designed to elevate your space, not overpower it. With a calming, therapeutic blend that promotes wellness and relaxation, our candles are hand-poured in small batches and finished with notes of vanilla, fir needles and tonka bean. We've packaged our lavender & vanilla candle in a minimally designed, resealable glass jar so it's easy to keep debris and dust out and ideal for travel.",
-      details: "Natural Hand-Poured soy wax/Cotton wick and premium fragrance oil/Vanilla/Eucalyptus/Coconut",
+      details: "Natural Hand-Poured soy wax/nCotton wick and premium fragrance oil/nVanilla/nEucalyptus/nCoconut",
       price: "5.95",
       productURL: "https://www.publicgoods.com/products/lavender-vanilla-scented-candle?variant=34054578339978&utm_source=google&utm_medium=cpc&utm_campaign=PG_Shopping_Prospecting-Household&utm_term=&matchtype=&utm_content=13052089160_125774217258_531858553873&gclid=Cj0KCQjwtrSLBhCLARIsACh6RmheccWMmAM8t9BpiuiqMbH1hyZ6PK_tcPl0B0XWT7vq98_1yTv3ISAaAm7PEALw_wcB"
     },
@@ -426,7 +426,7 @@ const insertData = async () => {
       keywords: "Organization",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560351/itemImages/officejet_adobespark_jrcdam.png",
       description: "Main functions of this HP color inkjet photo printer: copy, scan, fax, wireless printing, two-sided duplex printing and scanning, color touchscreen, automatic document feeder, Instant Ink ready so you'll never run out of ink, and more",
-      details: "2-Sided auto document feerder/Scan to email/Color touchscreen/Optional high-yield catridges/Ethernet networking/HP Instant Ink eligible",
+      details: "2-Sided auto document feerder/nScan to email/nColor touchscreen/nOptional high-yield catridges/nEthernet networking/nHP Instant Ink eligible",
       price: "119.99",
       productURL: "https://www.amazon.com/HP-OfficeJet-6978-Wireless-Replenishment/dp/B01FS2W6I8/ref=sr_1_3?dchild=1&keywords=officejet&qid=1634560049&s=office-products&sr=1-3&th=1"
     },
@@ -436,7 +436,7 @@ const insertData = async () => {
       keywords: "Chair",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560797/itemImages/bean_bag_adobespark_ockfgm.png",
       description: "PREMIUM BEANBAGS COVER: Bean bag chair covers(NO BEANS) will turn the stuffed animal chaos into functional storage that works.Extra Large Posh beanbags cover are durable, ultra soft, We've upgraded the fabric to a thicker, more luxurious material built to stand the test of time.",
-      details: "QUALITY CONTRUCT/SOFT, WASHABLE COVER/FUN FOR EVERYONE/GENEROUS SIZE",
+      details: "QUALITY CONTRUCT/nSOFT, WASHABLE COVER/nFUN FOR EVERYONE/nGENEROUS SIZE",
       price: "35.99",
       productURL: "https://www.amazon.com/SANMADROLA-Adults-Soft-Corduroy-Stuffable-Organizing/dp/B086MVWRMX?th=1"
     },
