@@ -71,6 +71,18 @@ const insertData = async () => {
           content:
             'The switches feel nice, and there are a few features you won’t find on a some other TKL keyboards like the OLED display (mostly a gimmick but cool nonetheless), usb passthrough, cable routing, and dial. The magnetic wrist rest isn’t plush, more like a flat rubber surface to prop up your hand. That isn’t to say it’s not comfortable or soft, but it is a pain to clean as it is a dust magnet. They keycaps feel cheap and are my main gripe for a premium keyboard, however I Luckily had higher quality shine-through keycaps from previously. Overall I am satisfied with the keyboard and would recommend to anyone thinking of purchasing.',
         },
+        {
+          userId: user1,
+          author: "Bruno",
+          rating: 5,
+          content: "I love this keyboard! Thank you so much for suggesting this on this beautiful website. Can I rate the website 5 stars as well?"
+        },
+        {
+          userId: user2,
+          author: "Corey",
+          rating: 4,
+          content: "I really thought this was going to be the key to impove my typing skills. Oh well, at least the lights are cool."
+        }
       ],
     },
     {
@@ -162,6 +174,24 @@ const insertData = async () => {
       productURL: "https://eurekaergonomic.com/l60l-b/"
     },
     {
+      name: "Cup Hoslster",
+      category: "Accessories",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634524682/devup/devUpCupHolder_adobespark_bewfty.png",
+      description: "Not everyone can have a Fancy thermus or bottle. Maybe you like your tumblers or solos cups you already have at home. Heres a great remedy for not spilling all that precious liquid.",
+      details: "Strong Grip/nScratch Free/nPerfect for hot or cold drinks/nMade to Last/nQuality Materials",
+      price: "9.97",
+      productURL: "https://cup-holster.com/products/cup-holster",
+      reviews: [
+        {
+          userId: user1,
+          author: "Sammy",
+          rating: 4,
+          content: "Well I haven't spilled anything yet. Wish it had some spare parts in it."
+        }
+      ]
+    },
+    {
       name: "Nouhaus Ergo3D Ergonomic Office Chair",
       category: "Furniture",
       keywords: "Chair",
@@ -247,6 +277,16 @@ const insertData = async () => {
       productURL: "http://www.samsontech.com/samson/products/microphones/usb-microphones/gtrackpro/"
     },
     {
+      name: "Sciatica Chair Cushion",
+      category: "Furniture",
+      keywords: "Chair",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634525642/devup/devupChairPillow_b1b0uk.jpg",
+      description: "This is a luxury back pillow for all sizes. It is sure to help with all sorts of back pain or comfort issues. It corrects your position and eliminates all the discomfort of hard and painful chairs",
+      details: "Relieves sciatica and back pain/nProtects your column/nImproves productivity/nFor all types of seats/nVery easy to install",
+      price: "58.80",
+      productURL: "https://usamerica.shop/product/sciatica-cushion-fight-and-prevent-back-lumbar-and-cervical-pain/?attribute_color=Blue&utm_source=Google%20Shopping&utm_campaign=US%20AMERICA%20FEED&utm_medium=cpc&utm_term=61473"
+    },
+    {
       name: 'Sceptre Curved 30" LED Monitor',
       category: "Gear",
       keywords: "Monitor",
@@ -330,6 +370,16 @@ const insertData = async () => {
       price: "69.99",
       productURL: "https://www.razer.com/gaming-mice/razer-basilisk-v3?gclid=CjwKCAjwk6-LBhBZEiwAOUUDp45Onc8pqnf26c7kJmm1fYXPxmSbwPwgvJohQcpc9vClpppT29sqARoCA2QQAvD_BwE"
     },
+    {
+      name: "Long Ranger Wireless Charger",
+      category: "Gear",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634526504/devup/devupWirelessCharger_ncmtj9.jpg",
+      description: "You have enough things on your desk, and one of those is most deffinately your phone. So Why not charge your phone without the mess with this hidden wireless charger.",
+      details: "Wireless Charging on most devices/nNo tools required/nCompatable with most non-metallic materials/nFast charges",
+      price: "64.95",
+      productURL: "https://ofgproducts.com/wirelesscharger"
+    }
 
   ]
 
@@ -365,6 +415,7 @@ const insertData = async () => {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       hashtags: "#Gamer #Duh",
     },
+    
   ]
 
   await Post.insertMany(posts)
