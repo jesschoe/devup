@@ -86,7 +86,7 @@ const Blog = ({ user, admin }) => {
         </div>
         <div className="flex justify-center flex-col items-center w-full px-10 md:px-20 lg:px-72">
           <div className="flex flex-col">
-            <div className="self-start text-3xl mt-10 mb-2 font-bold text-orange">Ergo, Ergonomics</div>
+            <div className="md:self-start self-center text-3xl mt-10 mb-2 font-bold text-orange">Ergo, Ergonomics</div>
             <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center mb-4 w-full border-red">
               <div className="mx-10 mt-10 w-full flex flex-col">
                 <div className="flex justify-center content-center">
