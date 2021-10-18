@@ -27,9 +27,9 @@ const insertData = async () => {
   await user2.save()
 
   const user3 = new User({
-    username: 'test3',
+    username: 'therealone',
     email: 'test2@gmail.com',
-    password_digest: await bcrypt.hash('test3', 11),
+    password_digest: await bcrypt.hash('therealone', 11),
     wishlist: [],
     roles: 'basic',
   })
@@ -65,24 +65,35 @@ const insertData = async () => {
             'The SteelSeries Apex Pro is a beautifully RGBed keyboard with an amazing level of customization, including per-key actuation that will change how you game. But tactile typing fans will want more from the linear switches.',
         },
         {
-          userId: user1,
+          userId: user2,
           author: 'theTechie',
           rating: 5,
           content:
             'The switches feel nice, and there are a few features you won’t find on a some other TKL keyboards like the OLED display (mostly a gimmick but cool nonetheless), usb passthrough, cable routing, and dial. The magnetic wrist rest isn’t plush, more like a flat rubber surface to prop up your hand. That isn’t to say it’s not comfortable or soft, but it is a pain to clean as it is a dust magnet. They keycaps feel cheap and are my main gripe for a premium keyboard, however I Luckily had higher quality shine-through keycaps from previously. Overall I am satisfied with the keyboard and would recommend to anyone thinking of purchasing.',
         },
+        {
+          userId: user1,
+          author: "Bruno",
+          rating: 5,
+          content: "I love this keyboard! Thank you so much for suggesting this on this beautiful website. Can I rate the website 5 stars as well?"
+        },
+        {
+          userId: user2,
+          author: "Corey",
+          rating: 4,
+          content: "I really thought this was going to be the key to impove my typing skills. Oh well, at least the lights are cool."
+        }
       ],
     },
     {
-      name: "Mount-It! Single Monitor Arm Desk Mount ",
-      category: "Accessories",
-      keywords: "Desk",
-      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634155941/devup/mountit-monitor-arm_sh5bbf_adobespark_xy5lz9.png",
-      description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
-      details:
-        "Gas spring monitor arm is heavy duty, counterbalanced and makes for effortless adjustments and comes with integrated, hide-away cable management./nAircraft grade aluminum alloy construction will stand the test of time./nMonitor arm desk mount quickly mounts to desks and comes with all mounting hardware, tools, and instructions necessary for assembly./nQuick-release detachable VESA plate mounts to back of monitor first, then slides onto arm in seconds!",
-      price: "74.99",
-      productURL: "https://mount-it.com/products/mount-it-gas-spring-single-monitor-desk-mount-mi-1771?variant=31453302096010&gclid=CjwKCAjw2P-KBhByEiwADBYWCmPvEGZMQQpIioNqTAostnHKObzkcknr6_TGqWSkV_oqvtW3sRG46BoC0fkQAvD_BwE",
+      name: "Autonomous WorkPod",
+      category: "Accessories ",
+      keywords: "Lifestyle",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634523352/devup/workpod_jehufn.jpg",
+      description: "WorkPod is a wind, rain, snow, and humidity-resistant pod that you can place right in your backyeard. Comfortable whether it’s -60 or 122 °F outside, and securely elevated to combat insects, heat, water, and mold. It's sound-insulated so you can hear yourself think, with floor-to-ceiling glass doors so you’ll never feel boxed in. Leave the office, be done for the day, and keep your commute at none. This is the workspace that gives you room to live your life.",
+      details: "It only takes a few enjoyable hours to complete the ultimate Lego set for adults./nWorkPod comes pre-wired and prepped with creature comforts – air conditioning, warm lighting, and handy outlets for all your gadgets and appliances./nNo prep needed. WorkPod’s fuss-free foundation is adjustable to accommodate uneven ground.",
+      price: "22800.00",
+      productURL: "https://www.autonomous.ai/autonomous-work-pod"
     },
     {
       name: "UXL Desk Mat",
@@ -93,6 +104,15 @@ const insertData = async () => {
       details: "80cm x 45cm /nUsed by employees from Apple, Amazon, GoPro and many more./nDesigned to be super minimal and clean, our desk mats can add some much needed texture and organisation to your desk./nMade from vegan leather which is specially designed to be durable and long-lasting./nIt will also protect your desk from any spills, scratches or scrapes.",
       price: "79.00",
       productURL: "https://ulxstore.com/products/black-leather-desk-mat",
+      reviews:[
+        {
+          userId: user2,
+          author: 'therealone',
+          rating: 5,
+          content:
+            'Pricey but high so far seems like the quality is worth is. Holding up well even with everything going on on top of it on a daily basis. Glad my magic mouse works well on it.',
+        }
+      ]
     },
     {
       name: "Airpod Max",
@@ -111,6 +131,18 @@ const insertData = async () => {
           content:
             'Using these headphones with Apple devices is pretty much as expected, seamless. I will say that you will need to ensure that you devices are updated to the latest operating system in order to fully enjoy all of the features. Battery life so far is very good! The smart case helps maintain battery life when not in use. From regular use I can go about three days before I need to charge them again. Now that is not travel days. If you travel a lot you may have to charge them more often. Everyones use case is different.',
         },
+        {
+          userId: user1,
+          author: "Angelica",
+          rating: 1,
+          content: "These were way too big for me and I tried to return them, but I couldn't because I didn't have a reciept and the lady on the phone was so rude to me. Then i asked my mom for the reciept and she didnt give it to me and said I was too spoiled. Why does everyone hate me???"
+        },
+        {
+          userId: user1,
+          author: "Tommy",
+          rating: 4,
+          content: "I found these at my cousin Angelica's house. They're really nice, score!"
+        }
       ]
     },
     {
@@ -122,7 +154,14 @@ const insertData = async () => {
       details: "All-Day Battery Life – Go longer than ever with up to 18 hours of battery life./nThe Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power./nSuperfast Memory – 8GB of unified memory makes your entire system speedy and responsive. That way it can support tasks like memory-hogging multitab browsing and opening a huge graphic file quickly and easily./nFanless Design – Your MacBook Air stays cool and runs quietly even while tackling intense workloads.",
       price: "999.00",
       productURL: "https://www.apple.com/macbook-air/",
-
+      reviews: [
+        {
+          userId: user2,
+          author: "Aaron",
+          rating: 5,
+          content: "This is the best laptop I've ever had. It's so fast even with 10 browser tabs open, a couple VS Code files, and the terminal, AND Youtube running on another screen AND on Zoom. It's super light, theres no fan, so no noise, and the battery life is pretty good for everything I do on it."
+         }
+       ]
     },
     {
       name: "EUREKA ERGONOMIC L Shaped Desk",
@@ -133,6 +172,24 @@ const insertData = async () => {
       details: "The Eureka L60 Gaming Desk comes equipped with an integrated power strip storage box and two cable grommets, getting that tangled mess of cords under control./nTwo pieces of desktop make your desk easier to assembly. All tools and detailed manual are included in the box, only 20 minutes needed.",
       price: "289.99",
       productURL: "https://eurekaergonomic.com/l60l-b/"
+    },
+    {
+      name: "Cup Hoslster",
+      category: "Accessories",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634524682/devup/devUpCupHolder_adobespark_bewfty.png",
+      description: "Not everyone can have a Fancy thermus or bottle. Maybe you like your tumblers or solos cups you already have at home. Heres a great remedy for not spilling all that precious liquid.",
+      details: "Strong Grip/nScratch Free/nPerfect for hot or cold drinks/nMade to Last/nQuality Materials",
+      price: "9.97",
+      productURL: "https://cup-holster.com/products/cup-holster",
+      reviews: [
+        {
+          userId: user1,
+          author: "Sammy",
+          rating: 4,
+          content: "Well I haven't spilled anything yet. Wish it had some spare parts in it."
+        }
+      ]
     },
     {
       name: "Nouhaus Ergo3D Ergonomic Office Chair",
@@ -152,7 +209,21 @@ const insertData = async () => {
       description: "Debuted in 2015 and for six years running, the Elite Series has been the favorite of reviewers and users. Many improvements have been made over the years. The desk has become more stable, quieter. We’ve updated packaging to reduce shipping damages to a minimum.",
       details: "One-piece solid 1” thick top. At 71” wide and 33” deep (27.6” at mid-section), it can hold up to three screens and is one of the largest standing desks in the market./nWith a fast speed of 1.5” per second, the desk can move anywhere between 29” to 49” with a push of a button. The load capacity is 235 lbs./nOriginally sold separately, we are now including a full-size cable management tray. Measuring 35.5” x 5.5”, the tray is large enough to hide all cables that comes with the desk and has space for one 12-outlet power strip and a few power adapters.",
       price: "679.99",
-      productURL: "https://www.apexdesk.com/collections/elite-71-series/products/elite-series-71-electric-height-adjustable-standing-desk"
+      productURL: "https://www.apexdesk.com/collections/elite-71-series/products/elite-series-71-electric-height-adjustable-standing-desk",
+      reviews: [
+        {
+          userId: user1,
+          author: "Kyle",
+          rating: 5,
+          content: "Fianlly a desk I can do kettle bells at. Excellent!"
+        },
+        {
+          userId: user2,
+          author: "Jarret",
+          rating: 3,
+          content: "It looked great...but I'm 6'7. I'm probably going to have to return this"
+        }
+      ]
     },
     {
       name: "minder Laptop Tower Stand",
@@ -175,6 +246,17 @@ const insertData = async () => {
       productURL: "https://www.taotronics.com/products/tt-dl13-led-desk-lamp"
     },
     {
+      name: "Mount-It! Single Monitor Arm Desk Mount ",
+      category: "Accessories",
+      keywords: "Desk",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634155941/devup/mountit-monitor-arm_sh5bbf_adobespark_xy5lz9.png",
+      description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
+      details:
+        "Gas spring monitor arm is heavy duty, counterbalanced and makes for effortless adjustments and comes with integrated, hide-away cable management./nAircraft grade aluminum alloy construction will stand the test of time./nMonitor arm desk mount quickly mounts to desks and comes with all mounting hardware, tools, and instructions necessary for assembly./nQuick-release detachable VESA plate mounts to back of monitor first, then slides onto arm in seconds!",
+      price: "74.99",
+      productURL: "https://mount-it.com/products/mount-it-gas-spring-single-monitor-desk-mount-mi-1771?variant=31453302096010&gclid=CjwKCAjw2P-KBhByEiwADBYWCmPvEGZMQQpIioNqTAostnHKObzkcknr6_TGqWSkV_oqvtW3sRG46BoC0fkQAvD_BwE",
+    },
+    {
       name: "Autonomous ErgoChair Pro",
       category: "Furniture",
       keywords: "Chair",
@@ -195,6 +277,16 @@ const insertData = async () => {
       productURL: "http://www.samsontech.com/samson/products/microphones/usb-microphones/gtrackpro/"
     },
     {
+      name: "Sciatica Chair Cushion",
+      category: "Furniture",
+      keywords: "Chair",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634525642/devup/devupChairPillow_b1b0uk.jpg",
+      description: "This is a luxury back pillow for all sizes. It is sure to help with all sorts of back pain or comfort issues. It corrects your position and eliminates all the discomfort of hard and painful chairs",
+      details: "Relieves sciatica and back pain/nProtects your column/nImproves productivity/nFor all types of seats/nVery easy to install",
+      price: "58.80",
+      productURL: "https://usamerica.shop/product/sciatica-cushion-fight-and-prevent-back-lumbar-and-cervical-pain/?attribute_color=Blue&utm_source=Google%20Shopping&utm_campaign=US%20AMERICA%20FEED&utm_medium=cpc&utm_term=61473"
+    },
+    {
       name: 'Sceptre Curved 30" LED Monitor',
       category: "Gear",
       keywords: "Monitor",
@@ -202,7 +294,21 @@ const insertData = async () => {
       description: "Sceptre's 21:9 UltraWide curved monitor immerses the attention of a larger audience with a 30 inch screen that accurately resembles the contours of the human eye.",
       details: "30 inch 21: 9 curved monitor 2560 x 1080P resolution/nDp up to 85Hz refresh rate/ HDMI up to 85Hz refresh rate/nAdaptiveSync/nFPS and RTS are Sceptre custom set Display settings/nBlue light shift reduce your MONITORS Blue light to protect you from eye fatigue/nEdgeless design",
       price: "399.99",
-      productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html"
+      productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html",
+      reviews: [
+        {
+          userId: user1,
+          author: "Trevor",
+          rating: 5,
+          content: "Bruh, this slaps, lets Goooo"
+        },
+        {
+          userId: user2,
+          author: "Skylar",
+          rating: 3,
+          content: "I still have some frame rate issues on certain games, but its cool."
+        }
+      ]
     },
     {
       name: "LG Gram 17",
@@ -217,7 +323,7 @@ const insertData = async () => {
     {
       name: "5-in-1 USB C media Hub",
       category: "Accessories",
-      keywords: "organization",
+      keywords: "Organization",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634500637/devup/devup-usbHub_adobespark_xxbrtt.png",
       description: "USB C Adapter, with 100W Power Delivery, 4K 60Hz HDMI Port, 10Gbps USB C and 2 USB A Data Ports, Ethernet Port, microSD and SD Card Reader, for MacBook Pro and More",
       details: "Instant Expansion: Add 2 USB-A ports, 1 HDMI port, a micro SD card slot, and an SD card slot to your MacBook — all from a single USB-C port/nTransfer Data in Seconds: Transfer and backup your files at speeds up to 5Gbps via 2 USB 3. 0 ports./nVivid Video: Mirror or extend your screen in a variety of resolutions including 4K@30Hz and 2K@60Hz via the HDMI port./nSD Ready: The micro SD and SD card slots support nearly all SD card formats for quick and easy access to photos and other media — perfect for photographers and designers/nWhat You Get: Anker Premium 5-in-1 USB-C Hub, travel pouch, welcome guide, worry-free 18-month , and friendly customer service",
@@ -227,7 +333,7 @@ const insertData = async () => {
     {
       name: "Rocketbook Smart Notebook",
       category: "Accessories",
-      keywords: "lifestyle",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634501479/devup/devup-notebook_adobespark_ky7uz2.png",
       description: "The Rocketbook Core notebook provides a classic pen and paper experience, yet is built for the digital age. Although it feels like a traditional notebook, the Core is endlessly reusable and connected to all of your favorite cloud services",
       details: "No more wasting paper - this environmentally-friendly 32 page dotted grid notebook can be used endlessly by wiping clean with a damp cloth/nBlast your notes to the cloud with Google Drive, Dropbox, Icloud, Slack or email/nAllow 15 seconds for ink from any Pilot Frixion pen, marker, or highlighter to dry in order for it to bond to our specialized pages/nSophisticated AI technology allows you to use Rocketbook’s smart titles, smart search, and email transcription for easier naming and searching of your notes",
@@ -237,7 +343,7 @@ const insertData = async () => {
     {
       name: "IRON Flask 180z",
       category: "Accessories",
-      keywords: "lifestyle",
+      keywords: "Lifestyle",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634503320/devup/devupWaterbottle_adobespark_xzonwz.png",
       description: "The Iron Flask is a great addition to the home office, stop spilling liquids everywhere and get to work!",
       details: "Insulated Sports Water Bottle/n3 Lids included/n18/8 Premium steel/nMultiple colors available/n100% satisfaction guaranteed",
@@ -247,7 +353,7 @@ const insertData = async () => {
     {
       name: "Apple Magic TrackPad 2",
       category: "Gear",
-      keywords: "mouse",
+      keywords: "Mouse",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634504341/devup/devupTrackPad_adobespark_njmokf.png",
       description: "Bring the best features of your laptop to your desktop, use all the same swiping gestures with a larger wireless trackpad.",
       details: "Rechargable with up to 10 hours of battery life/nForce touch sensors allow you to touch anywhere on the pad/n30 percent larger than the previous trackpad/nBluetooth/nType-C charging",
@@ -257,13 +363,24 @@ const insertData = async () => {
     {
       name: "RAZER Basilisk V3 Gaming Mouse",
       category: "Gear",
-      keywords: "mouse",
+      keywords: "Mouse",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634505176/devup/devUpMouse_agqua8.png",
       description: "Add more functionality and flair to your gaming setup with the Razer Base Station V2 Chroma, which features additional USB 3.1 SuperSpeed ports and a 3.5mm combo port",
       details: "Chroma RGB Lighting/n26k DPI Optical Sensor/n11 Progammable Buttons/nHyperscroll tilt Wheel/nErgonomic Design",
       price: "69.99",
       productURL: "https://www.razer.com/gaming-mice/razer-basilisk-v3?gclid=CjwKCAjwk6-LBhBZEiwAOUUDp45Onc8pqnf26c7kJmm1fYXPxmSbwPwgvJohQcpc9vClpppT29sqARoCA2QQAvD_BwE"
     },
+    {
+      name: "Long Ranger Wireless Charger",
+      category: "Gear",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634526504/devup/devupWirelessCharger_ncmtj9.jpg",
+      description: "You have enough things on your desk, and one of those is most deffinately your phone. So Why not charge your phone without the mess with this hidden wireless charger.",
+      details: "Wireless Charging on most devices/nNo tools required/nCompatable with most non-metallic materials/nFast charges",
+      price: "64.95",
+      productURL: "https://ofgproducts.com/wirelesscharger"
+    }
+
   ]
 
   await Product.insertMany(products)
@@ -298,6 +415,7 @@ const insertData = async () => {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       hashtags: "#Gamer #Duh",
     },
+    
   ]
 
   await Post.insertMany(posts)
