@@ -56,7 +56,7 @@ function App() {
         <SignUp setUser={setUser} />
       </Route>
       <Route path="/signin">
-        <SignIn setUser={setUser} />
+        <SignIn setUser={setUser} setAdmin={setAdmin}/>
       </Route>
       <Route path="/signout">
         <SignOut setUser={setUser} />
