@@ -107,8 +107,8 @@ const ProductDetail = ({user, admin}) => {
         <div>
           <ToastContainer hideProgressBar={true} autoClose={2000} toastStyle={{ color: "#FFA800", border: "1px, solid, #FFA800", backgroundColor: "#262626" }} />
         </div>
-      <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col items-center md:items-start"}>
-        <div className="mx-36 mt-10 mb-2 text-3xl font-black text-orange">
+      <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col"}>
+        <div className="self-center md:self-start mx-36 mt-10 mb-2 text-3xl font-black text-orange">
           Product Details
         </div>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mx-36 mb-10">
