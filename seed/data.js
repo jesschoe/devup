@@ -311,6 +311,16 @@ const insertData = async () => {
       productURL: "https://www.ironflask.com/"
     },
     {
+      name: "PERFECTSIGHT Cable Clips",
+      category: "Accessories",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634564802/devup/deveupCables_adobespark_pljj67.png",
+      description: "Use these Cable clips to organize your space and boost productivity. Stop fishing cables from behind your desk and get those cables managed.",
+      details: "Keep Your Desk Clean and Orderly, Space Saving/nPremium Eco-friendly Material/nStrong Adhesive/nWide Applicability",
+      price: "9.99",
+      productURL: "https://www.amazon.com/dp/B0921RJB64/ref=sspa_dk_detail_2?pd_rd_i=B0921RJB64&pd_rd_w=q2bYO&pf_rd_p=887084a2-5c34-4113-a4f8-b7947847c308&pd_rd_wg=E2nU1&pf_rd_r=1Q40EG2B1FN0DNKZ22Z5&pd_rd_r=2ac43dda-fb43-416a-afd4-cdb24ffd58bf&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFJNlZMREFVWkZERDAmZW5jcnlwdGVkSWQ9QTAyMDAxMDExWFlFN0gxNUFRNFNIJmVuY3J5cHRlZEFkSWQ9QTEwMzE2MDUyWTJTUlBVQlJDQUwzJndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1"
+    },
+    {
       name: "Apple Magic TrackPad 2",
       category: "Gear",
       keywords: "Mouse",
