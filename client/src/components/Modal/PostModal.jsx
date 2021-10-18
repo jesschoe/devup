@@ -9,6 +9,7 @@ export default function PostModal(props) {
           post={props.post}
           handleWrite={props.handleWrite}
           handleChange={props.handleChange}
+          setShowPostModal={props.setShowPostModal}
           user={props.user}
         /> :
 

@@ -7,7 +7,6 @@ import Layout from "../../components/Layout/Layout";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
 import Product from "../../components/Product/Product";
-import { useHistory } from "react-router";
 
 const WishList = (props) => {
   const [products, setProducts] = useState([]);
