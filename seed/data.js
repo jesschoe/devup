@@ -361,14 +361,14 @@ const insertData = async () => {
       productURL: "https://www.newegg.com/amd-ryzen-5-5600g-ryzen-5-5000-g-series/p/N82E16819113683?Description=ryzen%205&cm_re=ryzen_5-_-19-113-683-_-Product"
     },
     {
-      name: "Beats Studio Buds – True Wireless Noise Cancelling Earbuds",
+      name: "Beats Studio Buds",
       category: "Gear",
       keywords: "Audio",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634558209/itemImages/beats_studio_buds_adobespark_pkw0bn.png",
       description: "Experience immersive listening wherever you go with Beats Studio Buds—true wireless noise cancelling earphones.",
       details: "Custom Accoustic platform delivers powerful balanced sound/nUp to 8 hours of listening time/nIndustry-leading Class 1 Bluetooth for extended range and fewer dropouts/nPX4-Rated sweat and water resistant wireless earbuds",
       price: "129.95",
-      productURL: "hhttps://www.amazon.com/Beats-Studio-Cancelling-Earbuds-Built-Bluetooth-Headphones/dp/B096SV8SJG/ref=asc_df_B096SV8SJG/?tag=hyprod-20&linkCode=df0&hvadid=507647815824&hvpos=&hvnetw=g&hvrand=13187525101072497580&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9011941&hvtargid=pla-1375859818764&th=1"
+      productURL: "https://www.beatsbydre.com/earphones/studio-buds"
     },
     {
       name: "Post-it Super Sticky Notes, Assorted Sizes, 13 Pads",
@@ -378,7 +378,7 @@ const insertData = async () => {
       description: "Post-it Super Sticky Notes have 2X the sticking power to ensure your message gets through. They can stick and restick to move reminders with you throughout the day. Pack includes 1 7/8 in x 1 7/8 in, 3 in x 3 in, 4 in x 6 in Post-it Super Sticky Notes, Rio de Janeiro Collection.",
       details: "2X The Sticking Power/nPost-It Super Sticky Notes Stick and re-stick so your thoughts get noticed/nPost-It Super Sticky Notes are recyclable",
       price: "13.99",
-      productURL: "https://www.amazon.com/Janeiro-Collection-Sticky-Assorted-Colors/dp/B076V5P9HS/ref=sr_1_1_sspa?dchild=1&keywords=sticky+notes&qid=1634558989&s=office-products&sr=1-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzNEhZUlIzVVRWVkMzJmVuY3J5cHRlZElkPUEwNTQ4NDMwNk5WOVlDVksyVVNWJmVuY3J5cHRlZEFkSWQ9QTA1NTE0MzkxQ1BSRzZZT1k2UFg2JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+      productURL: "https://www.post-it.com/3M/en_US/post-it/products/~/Post-it-Products/Notes/Super-Sticky/?N=4327+5927575+7568222+3294529207+3294857497&rt=r3"
     },
     {
       name: "Lavender & Vanilla Scented Candle",
@@ -393,15 +393,15 @@ const insertData = async () => {
     {
       name: "HP OfficeJet Pro 6978 All-in-One Wireless Printer",
       category: "Gear",
-      keywords: "Organization",
+      keywords: "Hardware",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560351/itemImages/officejet_adobespark_jrcdam.png",
       description: "Main functions of this HP color inkjet photo printer: copy, scan, fax, wireless printing, two-sided duplex printing and scanning, color touchscreen, automatic document feeder, Instant Ink ready so you'll never run out of ink, and more",
       details: "2-Sided auto document feerder/nScan to email/nColor touchscreen/nOptional high-yield catridges/nEthernet networking/nHP Instant Ink eligible",
       price: "119.99",
-      productURL: "https://www.amazon.com/HP-OfficeJet-6978-Wireless-Replenishment/dp/B01FS2W6I8/ref=sr_1_3?dchild=1&keywords=officejet&qid=1634560049&s=office-products&sr=1-3&th=1"
+      productURL: "https://support.hp.com/us-en/product/hp-officejet-pro-6970-all-in-one-printer-series/8289585/model/11161264"
     },
     {
-      name: "SANMADROLA Stuffed Animal Storage Bean Bag Chair Cover",
+      name: "SANMADROLA Stuffed Animal Storage Bean Bag Chair",
       category: "Furniture",
       keywords: "Chair",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560797/itemImages/bean_bag_adobespark_ockfgm.png",
@@ -412,7 +412,7 @@ const insertData = async () => {
     },
     {
       name: "Long Ranger Wireless Charger",
-      category: "Gear",
+      category: "Accessories",
       keywords: "Organization",
       imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634526504/devup/devupWirelessCharger_ncmtj9.jpg",
       description: "You have enough things on your desk, and one of those is most deffinately your phone. So Why not charge your phone without the mess with this hidden wireless charger.",
@@ -430,32 +430,7 @@ const insertData = async () => {
   user1.products = user1products
   await user1.save()
 
-  const posts = [
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-  ]
+  const posts = []
 
   await Post.insertMany(posts)
   console.log('Created Posts')
