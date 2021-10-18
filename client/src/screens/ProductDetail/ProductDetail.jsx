@@ -137,7 +137,7 @@ const ProductDetail = ({user, admin}) => {
               <div className="flex flex-row justify-start">
                 <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button 
-                    className="w-36 text-sm mr-8 px-6 py-2 font-black my-2 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
+                    className="w-36 text-sm mr-8 px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
                   >See Retailer</button>
                 </a>
                 <button 
