@@ -120,6 +120,18 @@ const insertData = async () => {
           content:
             'Using these headphones with Apple devices is pretty much as expected, seamless. I will say that you will need to ensure that you devices are updated to the latest operating system in order to fully enjoy all of the features. Battery life so far is very good! The smart case helps maintain battery life when not in use. From regular use I can go about three days before I need to charge them again. Now that is not travel days. If you travel a lot you may have to charge them more often. Everyones use case is different.',
         },
+        {
+          userId: user1,
+          author: "Angelica",
+          rating: 1,
+          content: "These were way too big for me and I tried to return them, but I couldn't because I didn't have a reciept and the lady on the phone was so rude to me. Then i asked my mom for the reciept and she didnt give it to me and said I was too spoiled. Why does everyone hate me???"
+        },
+        {
+          userId: user1,
+          author: "Tommy",
+          rating: 4,
+          content: "I found these at my cousin Angelica's house. They're really nice, score!"
+        }
       ]
     },
     {
@@ -131,7 +143,14 @@ const insertData = async () => {
       details: "All-Day Battery Life – Go longer than ever with up to 18 hours of battery life./nThe Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power./nSuperfast Memory – 8GB of unified memory makes your entire system speedy and responsive. That way it can support tasks like memory-hogging multitab browsing and opening a huge graphic file quickly and easily./nFanless Design – Your MacBook Air stays cool and runs quietly even while tackling intense workloads.",
       price: "999.00",
       productURL: "https://www.apple.com/macbook-air/",
-
+      reviews: [
+        {
+          userId: user2,
+          author: "Aaron",
+          rating: 5,
+          content: "This is the best laptop I've ever had. It's so fast even with 10 browser tabs open, a couple VS Code files, and the terminal, AND Youtube running on another screen AND on Zoom. It's super light, theres no fan, so no noise, and the battery life is pretty good for everything I do on it."
+         }
+       ]
     },
     {
       name: "EUREKA ERGONOMIC L Shaped Desk",
@@ -161,7 +180,21 @@ const insertData = async () => {
       description: "Debuted in 2015 and for six years running, the Elite Series has been the favorite of reviewers and users. Many improvements have been made over the years. The desk has become more stable, quieter. We’ve updated packaging to reduce shipping damages to a minimum.",
       details: "One-piece solid 1” thick top. At 71” wide and 33” deep (27.6” at mid-section), it can hold up to three screens and is one of the largest standing desks in the market./nWith a fast speed of 1.5” per second, the desk can move anywhere between 29” to 49” with a push of a button. The load capacity is 235 lbs./nOriginally sold separately, we are now including a full-size cable management tray. Measuring 35.5” x 5.5”, the tray is large enough to hide all cables that comes with the desk and has space for one 12-outlet power strip and a few power adapters.",
       price: "679.99",
-      productURL: "https://www.apexdesk.com/collections/elite-71-series/products/elite-series-71-electric-height-adjustable-standing-desk"
+      productURL: "https://www.apexdesk.com/collections/elite-71-series/products/elite-series-71-electric-height-adjustable-standing-desk",
+      reviews: [
+        {
+          userId: user1,
+          author: "Kyle",
+          rating: 5,
+          content: "Fianlly a desk I can do kettle bells at. Excellent!"
+        },
+        {
+          userId: user2,
+          author: "Jarret",
+          rating: 3,
+          content: "It looked great...but I'm 6'7. I'm probably going to have to return this"
+        }
+      ]
     },
     {
       name: "minder Laptop Tower Stand",
@@ -211,7 +244,21 @@ const insertData = async () => {
       description: "Sceptre's 21:9 UltraWide curved monitor immerses the attention of a larger audience with a 30 inch screen that accurately resembles the contours of the human eye.",
       details: "30 inch 21: 9 curved monitor 2560 x 1080P resolution/nDp up to 85Hz refresh rate/ HDMI up to 85Hz refresh rate/nAdaptiveSync/nFPS and RTS are Sceptre custom set Display settings/nBlue light shift reduce your MONITORS Blue light to protect you from eye fatigue/nEdgeless design",
       price: "399.99",
-      productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html"
+      productURL: "https://www.sceptre.com/Monitors/UltraWide/C305B-200UN-30-Curved-Monitor-product1134category12category95.html",
+      reviews: [
+        {
+          userId: user1,
+          author: "Trevor",
+          rating: 5,
+          content: "Bruh, this slaps, lets Goooo"
+        },
+        {
+          userId: user2,
+          author: "Skylar",
+          rating: 3,
+          content: "I still have some frame rate issues on certain games, but its cool."
+        }
+      ]
     },
     {
       name: "LG Gram 17",
