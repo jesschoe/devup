@@ -118,7 +118,7 @@ const ProductEdit = (props) => {
                 <label className="text-xs">Keyword:</label>
                 <select
                   className="flex-1 border border-orange w-full py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
-                  name="keyword"
+                  name="keywords"
                   onChange={handleChange}
                 >
                   {product.category==="Furniture" ? 
