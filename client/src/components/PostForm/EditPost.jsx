@@ -1,10 +1,8 @@
 import { deletePost, updatePost } from '../../services/posts'
 import { useHistory } from 'react-router'
-import { useState } from 'react';
 
-const EditPost = ({ post, handleChange }) => {
+const EditPost = ({ post, handleChange, setShowPostModal }) => {
   const history = useHistory();
-  const [showPostModal, setShowPostModal] = useState(false);
 
 
   const handleSubmit = async () => {

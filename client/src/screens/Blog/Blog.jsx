@@ -192,6 +192,7 @@ const Blog = ({ user, admin }) => {
         </div>
         <PostModal
           showPostModal={showPostModal}
+          setShowPostModal={setShowPostModal}
           handleWrite={handleWrite}
           post={post}
           handleChange={handleChange}
