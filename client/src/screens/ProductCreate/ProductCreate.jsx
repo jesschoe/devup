@@ -120,6 +120,7 @@ export default function ProductCreate(props) {
                     name="keyword"
                     onChange={handleChange}
                   >
+                    {}
                     <option value="Desk">Desk</option>
                     <option value="Chair">Chair</option>
                     <option value="Laptop">Laptop</option>
