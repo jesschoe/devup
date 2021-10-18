@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link, useHistory } from "react-router-dom"
-import { getPosts, createPost } from "../../services/posts"
+import { getPosts, createPost, getPost } from "../../services/posts"
 import Layout from "../../components/Layout/Layout"
 import Footer from "../../components/Footer/Footer"
 import PostModal from "../../components/Modal/PostModal"
@@ -9,7 +8,6 @@ import Post from "../../components/Post/Post"
 const Blog = ({ user, admin }) => {
 
   const [posts, setPosts] = useState([]);
-  const history = useHistory();
   const [showPostModal, setShowPostModal] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -36,18 +34,19 @@ const Blog = ({ user, admin }) => {
     e.preventDefault()
     addPost();
     setShowPostModal(prev => !prev)
-    history.push("/blog");
+    window.location.reload()
   }
 
   const addPost = async () => {
     await createPost(post)
   }
 
-  const handleEdit = async () => {
+  const handleEdit = async (id) => {
     setEdit(true);
+    const res = await getPost(id)
+    setPost(res)
     setShowPostModal(prev => !prev)
   }
-
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -163,8 +162,7 @@ const Blog = ({ user, admin }) => {
               </div>
             </div>
           </div>
-
-          <div>
+          <div className="mb-20">
             {posts.map((post) => {
               return (
                 <div key={post._id}>
@@ -178,10 +176,9 @@ const Blog = ({ user, admin }) => {
                       name={post.name}
                       description={post.description}
                       hastags={post.hastags}
-
                     />
                     {admin ? <button
-                      onClick={handleEdit}
+                      onClick={() => handleEdit(post._id)}
                       className="self-end text-sm px-6 py-2 mr-8 font-black mb-6 text-purple md:rounded md:border-none md:text-white md:bg-orange bg-black border border-purple"
                     >Edit Post</button> : ''}
                   </div>

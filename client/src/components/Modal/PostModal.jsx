@@ -1,9 +1,8 @@
-import EditPost from "../../screens/Blog/EditPost"
+import EditPost from "../PostForm/EditPost"
 import PostForm from "../PostForm/PostForm"
 
-
 export default function PostModal(props) {
-
+  console.log(props.post, '1')
   return (
     <div>
       {props.showPostModal ? (props.edit ?
@@ -11,7 +10,6 @@ export default function PostModal(props) {
           post={props.post}
           handleWrite={props.handleWrite}
           handleChange={props.handleChange}
-          handleSubmit={props.handleSubmit}
           user={props.user}
         /> :
 
