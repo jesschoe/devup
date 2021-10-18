@@ -58,7 +58,7 @@ const SignIn = (props) => {
     <Layout>
       <div className="container">
           <div className="flex flex-col w-9/12 items-center px-2 md:px-20 lg:w-7/12 xl:w-5/12">
-            <div className="self-start mt-20 mb-2 text-3xl font-black text-orange">
+            <div className="self-center md:self-start mt-20 mb-2 text-3xl font-black text-orange">
               Sign In
             </div>
             <div className="flex flex-col justify-center items-center bg-black w-full mb-10 px-10 lg:mx-36">

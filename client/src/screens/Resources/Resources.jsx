@@ -7,7 +7,7 @@ const Resources = (props) => {
     <Layout user={props.user}>
       <div className="container">
         <div className="flex flex-col">
-          <div className="mt-10 mb-2 text-3xl font-black text-orange self-start ml-20">
+          <div className="mt-10 mb-2 text-3xl font-black text-orange self-center md:self-start md:ml-20">
             Resources
           </div>
           <div className="p-4 max-w-md md:max-w-full md:p-8 bg-black mx-20 mb-20">

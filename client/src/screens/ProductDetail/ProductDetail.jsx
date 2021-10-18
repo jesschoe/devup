@@ -107,8 +107,8 @@ const ProductDetail = ({user, admin}) => {
         <div>
           <ToastContainer hideProgressBar={true} autoClose={2000} toastStyle={{ color: "#FFA800", border: "1px, solid, #FFA800", backgroundColor: "#262626" }} />
         </div>
-      <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col"}>
-        <div className="self-start mx-36 mt-10 mb-2 text-3xl font-black text-orange">
+      <div className={(showModal) ? "mx-56 px-56 flex flex-col opacity-40" : "mx-56 px-56 flex flex-col items-center md:items-start"}>
+        <div className="mx-36 mt-10 mb-2 text-3xl font-black text-orange">
           Product Details
         </div>
         <div className="flex flex-col overflow-y-auto bg-black justify-center items-center mx-36 mb-10">
@@ -125,13 +125,15 @@ const ProductDetail = ({user, admin}) => {
                 {product.avgRating >= 4 ? <span>★</span> : <span>☆</span>}
                 {product.avgRating >= 5 ? <span>★</span> : <span>☆</span>}
               </div>
-              <div className="text-xl font-black text-orange mt-4 mb-1.5">Features</div>
+              <div className="text-xl font-black text-orange mt-8 mb-1.5">Features</div>
               <div className="mb-8">
                 <ul className="">{(product.details).split("/n").map((detail, i) => {
                   return <li className="p-1 font-bold" key={i}>- {detail}</li>
                 })}</ul>
               </div>
-              <h1 className="text-lg font-bold text-white text-right md:text-xl -mt-3.5 mb-1.5">{`$${product.price}`}</h1>
+              <div className="text-lg font-bold text-white text-right md:text-xl mb-1.5">
+                ${product.price.length > 6 ? product.price.slice(0, product.price.length-6) + "," + product.price.slice(product.price.length-6, product.price.length) : `${product.price}`}
+              </div>
               <div className="flex flex-row justify-start">
                 <a href={product.productURL} rel="noreferrer" target="_blank">
                   <button 
@@ -162,11 +164,12 @@ const ProductDetail = ({user, admin}) => {
               Reviews
             </div>
             <div>
-              <button 
-                className="w-36 text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
-                onClick={user ? handleWrite : ''}
-              >Write a Review
-                </button>
+              {user ? 
+                <button 
+                  className="w-36 text-sm px-6 py-2 font-black my-6 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
+                  onClick={handleWrite}
+                >Write a Review</button> : ""
+              }
             </div>
           </div>
         <div className="flex flex-col justify-center items-center mx-36 mb-8">
