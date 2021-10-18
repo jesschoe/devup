@@ -12,6 +12,7 @@ const Blog = ({ user, admin }) => {
   const history = useHistory();
   const [showPostModal, setShowPostModal] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [edit, setEdit] = useState(false);
   const [post, setPost] = useState({
     title: "",
     name: "",
@@ -41,6 +42,12 @@ const Blog = ({ user, admin }) => {
   const addPost = async () => {
     await createPost(post)
   }
+
+  const handleEdit = async () => {
+    setEdit(true);
+    setShowPostModal(prev => !prev)
+  }
+
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -126,6 +133,38 @@ const Blog = ({ user, admin }) => {
           </div>
 
           <div>
+            <div className="self-start text-3xl mt-10 mb-2 font-bold text-orange">It's Different</div>
+            <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center mb-4 w-full border-red">
+              <div className="mx-10 mt-10 w-full flex flex-col">
+                <div className="flex justify-center content-center">
+                </div>
+                <div className="mb-8 text-white">
+                  Being someone who enjoys the company of technology I would find it very beneficial to browse a website that allows me to scroll through and see many different options that i can choose from. These days, you're almost pretty much required to have a small area if not a room dedicated to a computer. Let it be from your kids doing homework to you simply using it to search information on a particular subject that you grew curious about. I've come to see and learn that the more customized and accessible things are in that specific area the more productive i become.
+                  <br />
+                  <br />
+                  I find it really nice having a website dedicated to refereing me to different items i can purchase either to "liven" up my workspace or ad functionality to desk. Whenever i go on amazon im bombarded with lots of items i don't have a particular interest in at the moment such as vitamins, Dev Up grants one many options on improving work from home. It's goal is to optimize productivity through supplying everyone the information and recommendations of amazing products. I cant think of any websites from the top of my head that focusses on improving or providing optimum productivity. Since we also allow user reviews, we can recieve the feedback on items and through those we can properly determine the best products that a user can buy. DevUp has a goal, and that goal is to be the guide to what you may need when it comes to choosing good products.
+                  <br />
+                  <br />
+                  Stay Comfy
+                  <div className="font-bold text-white mt-5 text-sm text-right">by Benjamin Jean</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="self-start text-3xl mt-10 mb-2 font-bold text-orange">A Smooth Transition</div>
+            <div className="flex max-w-7xl mx-auto bg-black rounded justify-start items-center mb-4 w-full border-red">
+              <div className="mx-10 mt-10 w-full flex flex-col">
+                <div className="flex justify-center content-center">
+                </div>
+                <div className="mb-8 text-white">
+                  My transition to remote work has been phenomenal. I enjoy the flexibility in my schedule, the interactions with diverse team members, and the comfort of being home. When I was reporting to an office, I struggled to find time for myself and my family. Now I get to enjoy the spontaneity of life and come and go when I please. In addition to the increased flexibility, working remotely also means I get to interact with people from different cultures. On the Devup team, Jessica has informed me about different tech trends in Asia, Ben has shared delicious recipes from the Caribbean, and Aaron has told stories about life in Texas. These types of cultural interactions would be less frequent if it weren’t for the nature of remote work. One of the biggest perks of this all is being home. The comfort of sitting on my couch, or the subtleties of being able to control the tempter, have made the remote experience much more enjoyable than being at an office.                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
             {posts.map((post) => {
               return (
                 <div key={post._id}>
@@ -141,10 +180,10 @@ const Blog = ({ user, admin }) => {
                       hastags={post.hastags}
 
                     />
-                    {admin ? <Link
-                      to={`/blog/edit/${post._id}`}
+                    {admin ? <button
+                      onClick={handleEdit}
                       className="self-end text-sm px-6 py-2 mr-8 font-black mb-6 text-purple md:rounded md:border-none md:text-white md:bg-orange bg-black border border-purple"
-                    >Edit Post</Link> : ''}
+                    >Edit Post</button> : ''}
                   </div>
                 </div>
               );
@@ -158,6 +197,7 @@ const Blog = ({ user, admin }) => {
           post={post}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          edit={edit}
         />
       </div>
     </Layout>
