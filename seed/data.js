@@ -71,18 +71,6 @@ const insertData = async () => {
           content:
             'The switches feel nice, and there are a few features you won’t find on a some other TKL keyboards like the OLED display (mostly a gimmick but cool nonetheless), usb passthrough, cable routing, and dial. The magnetic wrist rest isn’t plush, more like a flat rubber surface to prop up your hand. That isn’t to say it’s not comfortable or soft, but it is a pain to clean as it is a dust magnet. They keycaps feel cheap and are my main gripe for a premium keyboard, however I Luckily had higher quality shine-through keycaps from previously. Overall I am satisfied with the keyboard and would recommend to anyone thinking of purchasing.',
         },
-        {
-          userId: user1,
-          author: "Bruno",
-          rating: 5,
-          content: "I love this keyboard! Thank you so much for suggesting this on this beautiful website. Can I rate the website 5 stars as well?"
-        },
-        {
-          userId: user2,
-          author: "Corey",
-          rating: 4,
-          content: "I really thought this was going to be the key to impove my typing skills. Oh well, at least the lights are cool."
-        }
       ],
     },
     {
@@ -104,13 +92,13 @@ const insertData = async () => {
       details: "80cm x 45cm /nUsed by employees from Apple, Amazon, GoPro and many more./nDesigned to be super minimal and clean, our desk mats can add some much needed texture and organisation to your desk./nMade from vegan leather which is specially designed to be durable and long-lasting./nIt will also protect your desk from any spills, scratches or scrapes.",
       price: "79.00",
       productURL: "https://ulxstore.com/products/black-leather-desk-mat",
-      reviews: [
+      reviews:[
         {
           userId: user2,
           author: 'therealone',
           rating: 5,
           content:
-            'Pricey but high so far seems like the quality is worth is. Holding up well even with everything going on on top of it on a daily basis. Glad my magic mouse works well on it.',
+            'Pricey but high so far seems like the quality is worth it. Holding up well even with everything going on on top of it on a daily basis. Glad my magic mouse works well on it.',
         }
       ]
     },
@@ -172,24 +160,6 @@ const insertData = async () => {
       details: "The Eureka L60 Gaming Desk comes equipped with an integrated power strip storage box and two cable grommets, getting that tangled mess of cords under control./nTwo pieces of desktop make your desk easier to assembly. All tools and detailed manual are included in the box, only 20 minutes needed.",
       price: "289.99",
       productURL: "https://eurekaergonomic.com/l60l-b/"
-    },
-    {
-      name: "Cup Hoslster",
-      category: "Accessories",
-      keywords: "Organization",
-      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634524682/devup/devUpCupHolder_adobespark_bewfty.png",
-      description: "Not everyone can have a Fancy thermus or bottle. Maybe you like your tumblers or solos cups you already have at home. Heres a great remedy for not spilling all that precious liquid.",
-      details: "Strong Grip/nScratch Free/nPerfect for hot or cold drinks/nMade to Last/nQuality Materials",
-      price: "9.97",
-      productURL: "https://cup-holster.com/products/cup-holster",
-      reviews: [
-        {
-          userId: user1,
-          author: "Sammy",
-          rating: 4,
-          content: "Well I haven't spilled anything yet. Wish it had some spare parts in it."
-        }
-      ]
     },
     {
       name: "Nouhaus Ergo3D Ergonomic Office Chair",
@@ -277,16 +247,6 @@ const insertData = async () => {
       productURL: "http://www.samsontech.com/samson/products/microphones/usb-microphones/gtrackpro/"
     },
     {
-      name: "Sciatica Chair Cushion",
-      category: "Furniture",
-      keywords: "Chair",
-      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634525642/devup/devupChairPillow_b1b0uk.jpg",
-      description: "This is a luxury back pillow for all sizes. It is sure to help with all sorts of back pain or comfort issues. It corrects your position and eliminates all the discomfort of hard and painful chairs",
-      details: "Relieves sciatica and back pain/nProtects your column/nImproves productivity/nFor all types of seats/nVery easy to install",
-      price: "58.80",
-      productURL: "https://usamerica.shop/product/sciatica-cushion-fight-and-prevent-back-lumbar-and-cervical-pain/?attribute_color=Blue&utm_source=Google%20Shopping&utm_campaign=US%20AMERICA%20FEED&utm_medium=cpc&utm_term=61473"
-    },
-    {
       name: 'Sceptre Curved 30" LED Monitor',
       category: "Gear",
       keywords: "Monitor",
@@ -349,6 +309,16 @@ const insertData = async () => {
       details: "Insulated Sports Water Bottle/n3 Lids included/n18/8 Premium steel/nMultiple colors available/n100% satisfaction guaranteed",
       price: "21.95",
       productURL: "https://www.ironflask.com/"
+    },
+    {
+      name: "PERFECTSIGHT Cable Clips",
+      category: "Accessories",
+      keywords: "Organization",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634564802/devup/deveupCables_adobespark_pljj67.png",
+      description: "Use these Cable clips to organize your space and boost productivity. Stop fishing cables from behind your desk and get those cables managed.",
+      details: "Keep Your Desk Clean and Orderly, Space Saving/nPremium Eco-friendly Material/nStrong Adhesive/nWide Applicability",
+      price: "9.99",
+      productURL: "https://www.amazon.com/dp/B0921RJB64/ref=sspa_dk_detail_2?pd_rd_i=B0921RJB64&pd_rd_w=q2bYO&pf_rd_p=887084a2-5c34-4113-a4f8-b7947847c308&pd_rd_wg=E2nU1&pf_rd_r=1Q40EG2B1FN0DNKZ22Z5&pd_rd_r=2ac43dda-fb43-416a-afd4-cdb24ffd58bf&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFJNlZMREFVWkZERDAmZW5jcnlwdGVkSWQ9QTAyMDAxMDExWFlFN0gxNUFRNFNIJmVuY3J5cHRlZEFkSWQ9QTEwMzE2MDUyWTJTUlBVQlJDQUwzJndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1"
     },
     {
       name: "Apple Magic TrackPad 2",
@@ -450,6 +420,7 @@ const insertData = async () => {
       price: "64.95",
       productURL: "https://ofgproducts.com/wirelesscharger"
     }
+
   ]
 
   await Product.insertMany(products)
@@ -466,6 +437,27 @@ const insertData = async () => {
       description: "After coding everyday for the last 4 months, I believe sitting down is a skill. Being in the restaurant industry for 15 years, I’m used to running like crazy at work. I would usually average over 10K steps a day! When I first started coding I was worried about my energy and focus just sitting down all day, usually I chug coffee and start running around and get the blood pumping, but now I have to chug coffee and sit down and stare at a screen./nAt first I struggled sitting down all day. I would adjust my posture or put my feet up, and try pillows to sit on. When I would get up to take a break my back would feel terrible. I started to second guess if I was physically up to sitting down over 8 hours a day. Then I looked at my chair. An old wooden kitchen table chair, nothing special. It occurred to me that if I was going to sit down all day I would need to upgrade my hard-ware. So I went out to my local niche furniture store, Amazon.com, and got a decent cheap office chair for my desk and it was the best purchase I’ve made in a long time. No more aching back and my focus went up ten fold. So if you’re deciding to start working from home, don’t be like me and think you’re just going to sit at your kitchen table or on the couch with a laptop. Buy any office chair you can and get to work. You’ll be surprised how long you can actually sit down.",
       hashtags: "#Gamer #Duh",
     },
+<<<<<<< HEAD
+=======
+    {
+      title: "Why Dev Up",
+      name: "Benjamin Jean2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      hashtags: "#Gamer #Duh",
+    },
+    {
+      title: "Why Dev Up",
+      name: "Benjamin Jean3",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      hashtags: "#Gamer #Duh",
+    },
+    {
+      title: "Why Dev Up",
+      name: "Benjamin Jean4",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      hashtags: "#Gamer #Duh",
+    },
+>>>>>>> ab29e989ce8ccac4be143c09e2aadc63de97a0ff
   ]
 
   await Post.insertMany(posts)

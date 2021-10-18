@@ -110,7 +110,7 @@ const Products = (props) => {
         </div> */}
         <div className="w-full px-20 flex flex-col">
           <div className="flex flex-wrap justify-center mb-24">
-            <div className="w-full self-start mt-16 mb-8 text-3xl font-black text-orange">
+            <div className="w-full md:self-start mt-16 mb-8 text-3xl font-black text-orange">
               <div className="mb-2">
                 {sortTitle}
               </div>
