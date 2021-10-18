@@ -7,6 +7,7 @@ import Layout from "../../components/Layout/Layout";
 import Sort from "../../components/Sort/Sort";
 import Categories from "../../components/Categories/Categories";
 import Product from "../../components/Product/Product";
+import { useHistory } from "react-router";
 
 const WishList = (props) => {
   const [products, setProducts] = useState([]);
@@ -64,14 +65,14 @@ const WishList = (props) => {
 
   const handleCategories = (option) => {
     const results = products.filter((product) =>
-    product.category.includes(option)
+      product.category.includes(option)
     );
     setCategory(results);
     setApplySort(true);
   };
 
   const handleDelete = (userId, id) => {
-    deleteWishListItem(userId,id)
+    deleteWishListItem(userId, id)
     window.location.reload()
   }
 
@@ -79,7 +80,7 @@ const WishList = (props) => {
     <Layout user={props.user} admin={props.admin}>
       <div className="container">
         <div className="w-9/12 flex flex-col mt-10">
-        <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
+          <div className="mt-10 mb-4 text-3xl font-black text-white self-start ml-20">
             <div className="mb-2 text-3xl text-orange">
               My Wishlist
             </div>
@@ -95,7 +96,7 @@ const WishList = (props) => {
           <div className="flex flex-wrap items-center justify-center mb-24">
             {category.map((product) => {
               return (
-                <div className="flex flex-col"key={product._id}>
+                <div className="flex flex-col" key={product._id}>
                   <Product
                     _id={product._id}
                     name={product.name}
@@ -104,10 +105,10 @@ const WishList = (props) => {
                     keywords={product.keywords}
                     category={product.category}
                   />
-                    <button 
-                      className="self-center w-24 text-xs px-6 py-1 font-black mb-8 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
-                      onClick={() => handleDelete(userId, product._id)}
-                    >Remove</button>
+                  <button
+                    className="self-center w-24 text-xs px-6 py-1 font-black mb-8 text-orange md:rounded md:border-none md:text-white md:bg-orange bg-black border border-orange"
+                    onClick={() => handleDelete(userId, product._id)}
+                  >Remove</button>
                 </div>
               );
             })}
