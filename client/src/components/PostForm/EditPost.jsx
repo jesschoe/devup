@@ -1,19 +1,24 @@
 import { deletePost, updatePost } from '../../services/posts'
 import { useHistory } from 'react-router'
+import { useState } from 'react';
 
 const EditPost = ({ post, handleChange }) => {
   const history = useHistory();
+  const [showPostModal, setShowPostModal] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+
+  const handleSubmit = async () => {
     await updatePost(post._id, post)
-    window.location.reload()
   }
 
 
   const handleDelete = async () => {
     await deletePost(post._id)
     history.push(`/blog/`)
+  }
+
+  const handleWrite = async () => {
+    setShowPostModal(prev => !prev)
   }
 
   return (
@@ -60,9 +65,12 @@ const EditPost = ({ post, handleChange }) => {
           <button className="py-2 px-4 mr-4 md:mr-20 bg-orange text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
             Update post
           </button>
-          <button className="py-2 px-4 bg-orange text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" onClick={handleDelete}>
+          <button className="py-2 px-4 mr-4 md:mr-20 bg-orange text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" onClick={handleDelete}>
             Delete post
           </button>
+
+          <button onClick={handleWrite} className="py-2 px-4 bg-orange text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md">Cancel</button>
+
         </div>
       </form>
     </div>
