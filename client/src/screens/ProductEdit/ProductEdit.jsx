@@ -121,14 +121,26 @@ const ProductEdit = (props) => {
                   name="keyword"
                   onChange={handleChange}
                 >
-                  <option value="Desk">Desk</option>
-                  <option value="Chair">Chair</option>
-                  <option value="Laptop">Laptop</option>
-                  <option value="Monitor">Monitor</option>
-                  <option value="Keyboard">Keyboard</option>
-                  <option value="Mouse">Mouse</option>
-                  <option value="Mount">Mount</option>
-                  <option value="Audio">Audio</option>
+                  {product.category==="Furniture" ? 
+                      <>
+                        <option value="Desk">Desk</option>
+                        <option value="Chair">Chair</option>
+                      </> :
+                      product.category==="Gear" ?
+                        <>
+                          <option value="Laptop">Laptop</option>
+                          <option value="Monitor">Monitor</option>
+                          <option value="Keyboard">Keyboard</option>
+                          <option value="Mouse">Mouse</option>
+                          <option value="Audio">Audio</option>
+                          <option value="Hardware">Hardware</option>
+                        </> :
+                      product.category==="Accessories" ?
+                        <>
+                          <option value="Organization">Organization</option>
+                          <option value="Lifestyle">Lifestyle</option>
+                        </> : ""
+                    }
                 </select>
               </div>
             </div>
