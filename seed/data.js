@@ -437,27 +437,6 @@ const insertData = async () => {
       description: "After coding everyday for the last 4 months, I believe sitting down is a skill. Being in the restaurant industry for 15 years, I’m used to running like crazy at work. I would usually average over 10K steps a day! When I first started coding I was worried about my energy and focus just sitting down all day, usually I chug coffee and start running around and get the blood pumping, but now I have to chug coffee and sit down and stare at a screen./nAt first I struggled sitting down all day. I would adjust my posture or put my feet up, and try pillows to sit on. When I would get up to take a break my back would feel terrible. I started to second guess if I was physically up to sitting down over 8 hours a day. Then I looked at my chair. An old wooden kitchen table chair, nothing special. It occurred to me that if I was going to sit down all day I would need to upgrade my hard-ware. So I went out to my local niche furniture store, Amazon.com, and got a decent cheap office chair for my desk and it was the best purchase I’ve made in a long time. No more aching back and my focus went up ten fold. So if you’re deciding to start working from home, don’t be like me and think you’re just going to sit at your kitchen table or on the couch with a laptop. Buy any office chair you can and get to work. You’ll be surprised how long you can actually sit down.",
       hashtags: "#Gamer #Duh",
     },
-<<<<<<< HEAD
-=======
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
-    {
-      title: "Why Dev Up",
-      name: "Benjamin Jean4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      hashtags: "#Gamer #Duh",
-    },
->>>>>>> ab29e989ce8ccac4be143c09e2aadc63de97a0ff
   ]
 
   await Post.insertMany(posts)
