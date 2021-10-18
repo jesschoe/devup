@@ -2,7 +2,6 @@ import EditPost from "../PostForm/EditPost"
 import PostForm from "../PostForm/PostForm"
 
 export default function PostModal(props) {
-  console.log(props.post, '1')
   return (
     <div>
       {props.showPostModal ? (props.edit ?
