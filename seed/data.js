@@ -434,7 +434,7 @@ const insertData = async () => {
       name: "SANMADROLA Stuffed Animal Storage Bean Bag Chair Cover",
       category: "Furniture",
       keywords: "Chair",
-      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560351/itemImages/officejet_adobespark_jrcdam.png",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634560797/itemImages/bean_bag_adobespark_ockfgm.png",
       description: "PREMIUM BEANBAGS COVER: Bean bag chair covers(NO BEANS) will turn the stuffed animal chaos into functional storage that works.Extra Large Posh beanbags cover are durable, ultra soft, We've upgraded the fabric to a thicker, more luxurious material built to stand the test of time.",
       details: "QUALITY CONTRUCT/SOFT, WASHABLE COVER/FUN FOR EVERYONE/GENEROUS SIZE",
       price: "35.99",
