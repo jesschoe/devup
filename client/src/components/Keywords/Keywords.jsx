@@ -26,6 +26,7 @@ const Categories = ({ handleKeywords, category }) => {
         <option value="Keyboard">Keyboard</option>
         <option value="Mouse">Mouse</option>
         <option value="Audio">Audio</option>
+        <option value="Hardware">Hardware</option>
       </select> 
     </form>
   </>
@@ -37,7 +38,6 @@ const Categories = ({ handleKeywords, category }) => {
       <select className="bg-background border border-orange text-center p-1" onChange={handleChange}>
         <option className="" value="Accessories" >Accessories</option>
         <option value="Organization">Organization</option>
-        <option value="Hardware">Hardware</option>
         <option value="Lifestyle">Lifestyle</option>
       </select> 
     </form>
