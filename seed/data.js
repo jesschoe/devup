@@ -74,15 +74,14 @@ const insertData = async () => {
       ],
     },
     {
-      name: "Mount-It! Single Monitor Arm Desk Mount ",
-      category: "Accessories",
-      keywords: "Desk",
-      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634155941/devup/mountit-monitor-arm_sh5bbf_adobespark_xy5lz9.png",
-      description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
-      details:
-        "Gas spring monitor arm is heavy duty, counterbalanced and makes for effortless adjustments and comes with integrated, hide-away cable management./nAircraft grade aluminum alloy construction will stand the test of time./nMonitor arm desk mount quickly mounts to desks and comes with all mounting hardware, tools, and instructions necessary for assembly./nQuick-release detachable VESA plate mounts to back of monitor first, then slides onto arm in seconds!",
-      price: "74.99",
-      productURL: "https://mount-it.com/products/mount-it-gas-spring-single-monitor-desk-mount-mi-1771?variant=31453302096010&gclid=CjwKCAjw2P-KBhByEiwADBYWCmPvEGZMQQpIioNqTAostnHKObzkcknr6_TGqWSkV_oqvtW3sRG46BoC0fkQAvD_BwE",
+      name: "Autonomous WorkPod",
+      category: "Accessories ",
+      keywords: "Lifestyle",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634523352/devup/workpod_jehufn.jpg",
+      description: "WorkPod is a wind, rain, snow, and humidity-resistant pod that you can place right in your backyeard. Comfortable whether it’s -60 or 122 °F outside, and securely elevated to combat insects, heat, water, and mold. It's sound-insulated so you can hear yourself think, with floor-to-ceiling glass doors so you’ll never feel boxed in. Leave the office, be done for the day, and keep your commute at none. This is the workspace that gives you room to live your life.",
+      details: "It only takes a few enjoyable hours to complete the ultimate Lego set for adults./nWorkPod comes pre-wired and prepped with creature comforts – air conditioning, warm lighting, and handy outlets for all your gadgets and appliances./nNo prep needed. WorkPod’s fuss-free foundation is adjustable to accommodate uneven ground.",
+      price: "22800.00",
+      productURL: "https://www.autonomous.ai/autonomous-work-pod"
     },
     {
       name: "UXL Desk Mat",
@@ -184,6 +183,17 @@ const insertData = async () => {
       productURL: "https://www.taotronics.com/products/tt-dl13-led-desk-lamp"
     },
     {
+      name: "Mount-It! Single Monitor Arm Desk Mount ",
+      category: "Accessories",
+      keywords: "Desk",
+      imgURL: "https://res.cloudinary.com/devupapp/image/upload/v1634155941/devup/mountit-monitor-arm_sh5bbf_adobespark_xy5lz9.png",
+      description: "Free up space on your desktop with this Mount-It! full-motion single monitor desk mount. The full-motion arms tilt, swivel and adjust in height for a customized setup, while the cable management system tucks all connecting cables away, increasing neatness. This Mount-It! full-motion single monitor desk mount has a clamp at the base for easy, secure installation on the edge of a desk.",
+      details:
+        "Gas spring monitor arm is heavy duty, counterbalanced and makes for effortless adjustments and comes with integrated, hide-away cable management./nAircraft grade aluminum alloy construction will stand the test of time./nMonitor arm desk mount quickly mounts to desks and comes with all mounting hardware, tools, and instructions necessary for assembly./nQuick-release detachable VESA plate mounts to back of monitor first, then slides onto arm in seconds!",
+      price: "74.99",
+      productURL: "https://mount-it.com/products/mount-it-gas-spring-single-monitor-desk-mount-mi-1771?variant=31453302096010&gclid=CjwKCAjw2P-KBhByEiwADBYWCmPvEGZMQQpIioNqTAostnHKObzkcknr6_TGqWSkV_oqvtW3sRG46BoC0fkQAvD_BwE",
+    },
+    {
       name: "Autonomous ErgoChair Pro",
       category: "Furniture",
       keywords: "Chair",
@@ -273,6 +283,7 @@ const insertData = async () => {
       price: "69.99",
       productURL: "https://www.razer.com/gaming-mice/razer-basilisk-v3?gclid=CjwKCAjwk6-LBhBZEiwAOUUDp45Onc8pqnf26c7kJmm1fYXPxmSbwPwgvJohQcpc9vClpppT29sqARoCA2QQAvD_BwE"
     },
+
   ]
 
   await Product.insertMany(products)
