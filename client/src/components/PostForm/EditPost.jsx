@@ -3,11 +3,10 @@ import { useHistory } from 'react-router'
 
 const EditPost = ({ post, handleChange }) => {
   const history = useHistory();
-  console.log(post)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const updated = await updatePost(post._id, post)
+    await updatePost(post._id, post)
     window.location.reload()
   }
 

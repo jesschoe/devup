@@ -14,8 +14,6 @@ import Products from "./screens/Products/Products";
 import Blog from "./screens/Blog/Blog";
 import WishList from "./screens/WishList/WishList";
 import SignOut from "./screens/SignOut/SignOut"
-import EditPost from "./components/PostForm/EditPost";
-
 
 function App() {
   const [user, setUser] = useState(null);
