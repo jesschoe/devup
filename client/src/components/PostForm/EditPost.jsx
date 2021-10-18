@@ -53,14 +53,14 @@ const EditPost = ({ post, handleChange }) => {
           required
           onChange={handleChange}
         />
-        <input
+        {/* <input
           className="flex-1 m-4 w-full border border-orange mb-5 py-2 px-4 bg-black text-sm text-white placeholder-primary focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
           placeholder="Hashtags"
           value={post.hashtags}
           name="hashtags"
           required
           onChange={handleChange}
-        />
+        /> */}
         <div className="flex justify-between ">
           <button className="py-2 px-4 mr-4 md:mr-20 bg-orange text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md" type="submit">
             Update post
