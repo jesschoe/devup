@@ -92,9 +92,13 @@ const ProductDetail = ({user, admin}) => {
   }
 
 
-  const wishListSubmit = async (event) => {
-    await addToWishList(user.id, id)
-    notify()
+  const wishListSubmit = async () => {
+    if(!user) {
+      history.push('/signin')
+    } else {
+      await addToWishList(user.id, id)
+      notify()
+    }
   }
 
   if (!isLoaded) {
