@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-
 const Nav = ({ toggle, user, admin }) => {
   const authenticatedOptionsBasic = (
     <>

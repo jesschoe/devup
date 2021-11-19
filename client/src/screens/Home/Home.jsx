@@ -4,7 +4,6 @@ import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer"
 
 const Home = (props) => {
-  console.log(props.admin)
   return (
     <Layout user={props.user} setUser={props.setUser} admin={props.admin} >
       <div className="container-home" >
