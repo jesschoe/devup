@@ -8,6 +8,7 @@ const Layout = (props) => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   useEffect(() => {
     const hideMenu = () => {
       if (window.innerWidth > 768 && isOpen) {
@@ -16,6 +17,7 @@ const Layout = (props) => {
     };
     window.addEventListener("resize", hideMenu);
   });
+  
   return (
     <div className="flex-auto flex flex-col w-screen min-h-screen">
       <div className="">

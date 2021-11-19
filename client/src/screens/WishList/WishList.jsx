@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { getWishList, deleteWishListItem } from "../../services/users";
 import { priceLowHigh, priceHighLow } from "../../utils/sort";
+import Categories from "../../components/Categories/Categories";
 import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
-import Sort from "../../components/Sort/Sort";
-import Categories from "../../components/Categories/Categories";
 import Product from "../../components/Product/Product";
+import Sort from "../../components/Sort/Sort";
 
 const WishList = (props) => {
   const [products, setProducts] = useState([]);
@@ -72,7 +72,7 @@ const WishList = (props) => {
 
   const handleDelete = (userId, id) => {
     deleteWishListItem(userId, id)
-    window.location.reload()
+    
   }
 
   return (
