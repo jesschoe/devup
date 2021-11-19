@@ -13,6 +13,7 @@ const WishList = (props) => {
   const [category, setCategory] = useState([]);
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState("price-low-high");
+  const [toggle, setToggle] = useState(false);
   const location = useLocation();
   const { userId } = useParams();
   let cat = "";
@@ -44,7 +45,7 @@ const WishList = (props) => {
       }
     };
     fetchUserWishList();
-  }, [userId, cat, keyword]);
+  }, [userId, cat, keyword, toggle]);
 
   const handleSort = (type) => {
     if (type !== "" && type !== undefined) {
@@ -72,7 +73,7 @@ const WishList = (props) => {
 
   const handleDelete = (userId, id) => {
     deleteWishListItem(userId, id)
-    
+    setToggle(prev => !prev)
   }
 
   return (
